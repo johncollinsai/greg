@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+        {% if title %}
+        <title>{{ title }} - johncollins.ai</title>
+        {% else %}
+        <title>johncollins.ai</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>johncollins.ai: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
+

@@ -8,9 +8,22 @@ that follows it.
 3. The order in which decorators are written matters.
 """
 
+from flask import render_template
 from app import app    # import app variable, which is a member of app package.
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return 'Boom!'
+
+    posts = [
+        {
+            'author':  'John',
+            'body': 'Lets go out for lunch'
+        },
+        {
+            'author': 'Chiafen',
+            'body': 'What are we going to have to eat?'
+        }
+    ]
+
+    return render_template('index.html', title='Home', posts=posts)
