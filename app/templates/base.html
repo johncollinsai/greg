@@ -2,13 +2,15 @@
 <html>
 	<head>
         {% if title %}
-        <title>{{ title }} - johncollins.ai</title>
+        <title>{{ title }} - johncollins</title>
         {% else %}
-        <title>johncollins.ai</title>
+        <title>johncollins</title>
         {% endif %}
     </head>
     <body>
-        <div>johncollins.ai: <a href="/index">Home</a></div>
+        <div>
+            <a href="{{ url_for('index') }}">johncollins</a>
+        </div>
         <hr>
         {% block content %}{% endblock %}
     </body>

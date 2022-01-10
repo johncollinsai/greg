@@ -15,7 +15,7 @@ https://stackoverflow.com/questions/52162882/set-flask-environment-to-developmen
 '''
 
 class Config(object):
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'jc96627'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' \
             + os.path.join(basedir, 'app.db') 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
