@@ -1,8 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Posts</h1>
+    <form action="" method="post">
+        <p>
+            {{ form.post.label }}<br>
+            {{ form.post(cols=32, rows=4) }}<br>
+            {% for error in form.post.errors %}
+            <span style="color: orange;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
     {% for post in posts %}
-    <div><p><b>{{ post.body }}</b></p></div>
+    <p>
+    <b>{{ post.title }}</b>
+    {{ post.author }} 
+    {{ post.body }}
+    </p>
     {% endfor %}
 {% endblock %}
+
+
+

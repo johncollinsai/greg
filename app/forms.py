@@ -7,7 +7,7 @@ web form classes.
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, \
-    TestAreaField
+    TextAreaField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
 from app.models import Post
@@ -21,7 +21,7 @@ in config.py. If I take care of these two things, Flask-WTF does the rest.
 
 # A basic post form may be helpful?
 class PostForm(FlaskForm):
-    post = TextAreaField('Say something', validators=[DataRequired()])
+    post = TextAreaField('Post', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
