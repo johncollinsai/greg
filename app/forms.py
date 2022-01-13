@@ -20,8 +20,8 @@ in config.py. If I take care of these two things, Flask-WTF does the rest.
 '''
 
 # A basic post form may be helpful?
-class PostForm(FlaskForm):
-    post = TextAreaField('Post', validators=[DataRequired()])
-    submit = SubmitField('Submit')
+# class PostForm(FlaskForm):
+#     post = TextAreaField('Post', validators=[DataRequired()])
+#     submit = SubmitField('Submit')
 
 

@@ -10,11 +10,16 @@ from app import db
 # Post class
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    author = db.Column(db.String(100), default='johncollins')
     title = db.Column(db.String(250))
     body = db.Column(db.String(25000))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    author = db.Column(db.String(100))
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+    def followed_posts(self):
+        followed = Post.query.all()
+        return followed.union(own).order_by(Post.timestamp.desc())
+
 
