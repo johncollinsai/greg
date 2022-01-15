@@ -18,8 +18,9 @@ class Post(db.Model):
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
-    def followed_posts(self):
-        followed = Post.query.all()
-        return followed.union(own).order_by(Post.timestamp.desc())
+    # followed_posts below is replaced by a simple Post.query.all() in routes.py
+    # def followed_posts(self):
+        # followed = Post.query.all()
+        # return followed.union(own).order_by(Post.timestamp.desc())
 
 

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+    <p>
+    <em><b>{{ post.title }}</b></em><br>
+    {{ post.author }} posted this on: {{ post.timestamp }}<br> 
+    {{ post.body }}<br>
+    </p>
+    {% endfor %}
+{% endblock %}
+
+
+

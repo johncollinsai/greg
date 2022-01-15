@@ -1,6 +1,9 @@
 	<table>
 		<tr valign="top">
-			<td>{{ post.title }} posted:<br>{{ post.timestamp }}</td>
-			<td>{{ post.body }}</td>
+			<td>
+                <em><b>{{ post.title }}</b></em><br>
+                {{ post.author }} posted this on: {{post.timestamp }}<br>
+                {{ post.body }}
+            </td>
 		</tr>
 	</table>

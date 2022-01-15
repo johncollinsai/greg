@@ -27,7 +27,15 @@ def index():
     #     flash('Database updated')
     #     return redirect(url_for('index'))   # i.e., post/redirect/get pattern
 
-    # posts = followed_posts().all()  # replaces followed_posts() method in the User model
-    posts = Post.query.all()
-
+    # posts = Post.query.all()
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
     return render_template('index.html', title='Home', posts=posts)
+
+# Reuse the index.html template to create a page for older posts
+@app.route('/archive')
+def archive():
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
+    return render_template('index.html', title='archive', posts=posts)
+
+
+
