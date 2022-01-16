@@ -29,7 +29,7 @@ class Config(object):
     ADMINS = ['john.collins@edhec.com']
 
     # configuration element confining how many posts the page will render
-    POSTS_PER_PAGE = 10
+    POSTS_PER_PAGE = 5
 
 
 
