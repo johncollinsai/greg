@@ -13,8 +13,8 @@ from flask import render_template, flash, redirect, url_for, request
 from werkzeug.urls import url_parse
 from app import app    # import app variable, which is a member of app package.
 from app import db     # import database for posting forms [REM later?]
-# from app.forms import PostForm
-from app.models import Post
+from app.forms import ContactForm
+from app.models import Post, Contact
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -37,6 +37,22 @@ def archive():
     prev_url = url_for('index', page=posts.prev_num) if posts.has_prev else None
     return render_template('index.html', title='archive', posts=posts.items,
                            next_url=next_url, prev_url=prev_url)
+
+@app.route('/me', methods=['GET', 'POST'])
+def me():
+    form = ContactForm()
+    if form.validate_on_submit():
+        contact = Contact(name=form.name.data, email=form.email.data, 
+                          message=form.message.data)
+        db.session.add(contact)
+        db.session.commit()
+        flash('Thank you, John will get back to you')
+        return redirect(url_for('index'))
+    return render_template('me.html', title='me', form=form)
+        
+
+
+
 
 
 

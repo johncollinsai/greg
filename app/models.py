@@ -18,9 +18,18 @@ class Post(db.Model):
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
-    # followed_posts below is replaced by a simple Post.query.all() in routes.py
-    # def followed_posts(self):
-        # followed = Post.query.all()
-        # return followed.union(own).order_by(Post.timestamp.desc())
+# Contact class, for contact form on me page
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64))
+    email = db.Column(db.String(64))
+    message = db.Column(db.String(640))
+
+    def __repr__(self):
+        return '<Contact {}'.format(self.message)
+
+
+
+
 
 

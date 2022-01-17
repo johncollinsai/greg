@@ -19,9 +19,11 @@ protected is include this hidden field and have the SECRET_KEY variable defined
 in config.py. If I take care of these two things, Flask-WTF does the rest.
 '''
 
-# A basic post form may be helpful?
-# class PostForm(FlaskForm):
-#     post = TextAreaField('Post', validators=[DataRequired()])
-#     submit = SubmitField('Submit')
+# Contact form, which is located on me.html
+class ContactForm(FlaskForm):
+    name = StringField('name', validators=[DataRequired()])
+    email = StringField('email', validators=[DataRequired(), Email()])
+    message = TextAreaField('message', validators=[DataRequired()])
+    submit = SubmitField('submit')        # see routes.py re submission
 
 
