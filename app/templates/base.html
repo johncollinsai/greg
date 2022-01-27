@@ -4,6 +4,11 @@
     {% if title %}{{ title }} - johncollins{% else %}johncollins{% endif %}
 {% endblock %}
 
+{% block styles -%}
+    {{super()}}
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+{% endblock styles %}
+
 {% block navbar %}
 	<nav class="navbar navbar-inverse">
 		<div class="container">
@@ -20,8 +25,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ url_for('archive') }}">archive</a></li>
                     <li><a href="{{ url_for('me') }}">me</a></li>
-                    <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/johncollinsai" title="my github" target="_blank"><i class="fa fa-github"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -29,16 +33,29 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert-info" role="alert">{{ message }}</div>
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
+	<div class="container">
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<div class="alert alert-info" role="alert">{{ message }}</div>
+				{% endfor %}
+        	{% endif %}
+		{% endwith %}
 
-        {# application content needs to be provided in the app_content block #}
-        {% block app_content %}{% endblock %}
-    </div>
+		{# application content needs to be provided in the app_content block #}
+		{% block app_content %}
 {% endblock %}
+
+
+{%- block footer %}
+	<div class="container">
+		<div id="footer">
+			<p class="text-center">&copy 2022 johncollins</p>
+     </div>
+  </div>
+{%- endblock footer %}
+
+
+
+{% endblock %}
+
