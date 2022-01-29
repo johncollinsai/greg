@@ -15,6 +15,7 @@ from app import app    # import app variable, which is a member of app package.
 from app import db     # import database for posting forms [REM later?]
 from app.forms import ContactForm
 from app.models import Post, Contact
+from app.email import send_contact_email
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -44,9 +45,13 @@ def me():
     if form.validate_on_submit():
         contact = Contact(name=form.name.data, email=form.email.data, 
                           message=form.message.data)
+        # add contact to database
         db.session.add(contact)
         db.session.commit()
-        flash('Thank you, John will get back to you')
+        # pass contact to send_contact_email(contact) function in email.py
+        if contact:
+            send_contact_email(contact)
+        flash('Thank you, John will get back to you')    
         return redirect(url_for('index'))
     return render_template('me.html', title='me', form=form)
         
