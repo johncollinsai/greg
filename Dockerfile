@@ -20,6 +20,9 @@ ENV FLASK_APP johncollins.py
 # USER microblog
 
 # https://www.cloudsavvyit.com/14880/whats-the-difference-between-exposing-and-publishing-a-docker-port/
-EXPOSE 5000
+# EXPOSE 5000  NB: 5000 follows grinberg, see https://github.com/miguelgrinberg/microblog/blob/main/Dockerfile
+
+# following https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/blob/main/hello-app/Dockerfile
+ENV PORT 8080
 ENTRYPOINT ["./boot.sh"]
 

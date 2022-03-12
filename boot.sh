@@ -14,4 +14,8 @@ while true; do
 done
 
 flask translate compile
-exec gunicorn -b :5000 --access-logfile - --error-logfile - johncollins:app
+# following https://github.com/miguelgrinberg/microblog/blob/main/boot.sh
+# exec gunicorn -b :5000 --access-logfile - --error-logfile - johncollins:app
+
+# following https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/blob/main/hello-app/Dockerfile
+exec gunicorn -b :8080 --access-logfile - --error-logfile - johncollins:app
