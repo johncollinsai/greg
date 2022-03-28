@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hfd
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: hfd
+  template:
+    metadata:
+      labels:
+        run: hfd
+    spec:
+      containers:
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/high-frequency-data:v0.2.8
+        imagePullPolicy: IfNotPresent
+        name: hfd
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+
+
+
+
