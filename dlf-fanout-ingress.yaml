@@ -4,7 +4,8 @@ metadata:
   name: dlf-fanout-ingress
 spec:
   rules:
-  - http:
+  - host: johncollins.ai
+    http:
       paths:
       - path: /*
         pathType: ImplementationSpecific
@@ -13,16 +14,13 @@ spec:
             name: web
             port:
               number: 8080
-      - path: /deep-learning-finance/*
+      - path: /deep-learning-finance
         pathType: ImplementationSpecific
         backend:
           service:
             name: dlf
             port:
-              number: 8080
-
-
-
+              number: 8081
 
 
 
