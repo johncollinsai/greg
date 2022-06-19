@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fanout-ingress-nginx
+spec:
+  rules:
+  - host: "johncollins.ai"
+    http:
+      paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: web
+            port:
+              number: 8080
+  - host: "johncollins.ai"
+    http:
+      paths:
+      - path: /foo
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: foo
+            port:
+              number: 8080
+
