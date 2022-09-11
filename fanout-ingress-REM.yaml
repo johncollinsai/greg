@@ -1,11 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fanout-ingress-nginx
+  name: fanout-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
+    networking.gke.io/managed-certificates: managed-cert
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-  - host: "johncollins.ai"
-    http:
+  - http:
       paths:
       - path: /*
         pathType: ImplementationSpecific
@@ -14,9 +17,6 @@ spec:
             name: web
             port:
               number: 8080
-  - host: "johncollins.ai"
-    http:
-      paths:
       - path: /foo
         pathType: ImplementationSpecific
         backend:
@@ -24,4 +24,7 @@ spec:
             name: foo
             port:
               number: 8080
+
+
+
 
