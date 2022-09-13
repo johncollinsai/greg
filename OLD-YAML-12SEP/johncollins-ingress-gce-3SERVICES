@@ -9,24 +9,24 @@ spec:
   rules:
   - http:
       paths:
-      - path: /*
+      - path: "/*"
         pathType: ImplementationSpecific
         backend:
           service:
             name: johncollins-service
             port:
               number: 8080
-      - path: /foo
+      - path: "/foo"
         pathType: ImplementationSpecific
         backend:
           service:
             name: foo-service
             port:
-              number: 8080
-      - path: /h-w
+              number: 8081
+      - path: "/h-w"
         pathType: ImplementationSpecific
         backend:
           service:
             name: h-w-service
             port:
-              number: 8080
+              number: 8082

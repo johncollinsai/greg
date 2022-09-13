@@ -19,4 +19,4 @@ spec:
         image: "asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.15.0"
         env:
         - name: "PORT"
-          value: "50000"
+          value: "8080"
