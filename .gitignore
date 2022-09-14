@@ -6,8 +6,9 @@ data/
 # jupyter checkpoints
 .ipynb_checkpoints/
 
-# working files, which I generally name 'rem'
+# working files and directories, which I generally name 'rem'
 rem.*
+REM*/
 
 # environment variables
 .env
