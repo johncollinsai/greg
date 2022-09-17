@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
   name: johncollins-ingress
   annotations:
+    kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
+    networking.gke.io/managed-certificates: managed-cert
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
   - http:

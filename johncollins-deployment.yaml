@@ -1,22 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: johncollins-deployment
+  name: johncollins
+  namespace: default
 spec:
   selector:
     matchLabels:
-      greeting: hello
-      version: one
-  replicas: 3
+      run: johncollins
   template:
     metadata:
       labels:
-        greeting: hello
-        version: one
+        run: johncollins
     spec:
       containers:
-      - name: johncollins
-        image: "asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.15.0"
-        env:
-        - name: "PORT"
-          value: "8080"
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.15.0
+        imagePullPolicy: IfNotPresent
+        name: johncollins
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+
+
+
+
+
