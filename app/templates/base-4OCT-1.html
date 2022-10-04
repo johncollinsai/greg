@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+            <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        {% endblock %}
+
+        <!-- <title>Your page title</title> -->
+        {% if title %}{{ title }} - johncollins{% else %}johncollins{% endif %}
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Page content -->
+        {% block content %}{% endblock %}
+            <div class="container">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for message in messages %}
+							<div class="alert alert-info" role="alert">{{ message }}</div>
+						{% endfor %} 
+					{% endif %}
+				{% endwith %}
+				
+				{# application content needs to be provided in the app_content block #}
+				{% block app_content %}
+		{% endblock %}
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+
+        {% block navbar %}
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ url_for('index') }}">johncollins.ai</a
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{ url_for('archive') }}">archive</a></li>
+                            <li><a href="{{ url_for('me') }}">me</a></li>
+                            <li><a href="//github.com/johncollinsai" title="follow me on github" target="_blank"><i class="fa fa-github-square"></i></a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>
+        {% endblock %}
+
+		{% block footer %}
+			<div class="container">
+				<div id="footer"> 
+					<p class="text-center">&copy 2022 johncollins</p> 
+				</div> 
+			</div>
+		{% endblock footer %}
+
+    </body>
+</html>
+

@@ -8,7 +8,8 @@ from flask import Flask
 from config import Config  # Config class (upper case) imported from config.py (lower case)
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from flask_bootstrap import Bootstrap
+# from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap4
 from flask_fontawesome import FontAwesome
 from flask_mail import Mail  # import Mail class
 # Error handling per miguelgrinberg ch7
@@ -22,7 +23,7 @@ app.config.from_object(Config)
 app.config['FONTAWESOME_STYLES'] = ['brands']
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-bootstrap = Bootstrap(app)
+bootstrap = Bootstrap4(app)
 fa = FontAwesome(app)
 mail = Mail(app)
 
