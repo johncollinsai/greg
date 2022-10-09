@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+            <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        {% endblock %}
+
+        <!-- {% if title %}{{ title }} - johncollins{% else %}johncollins{% endif %} -->
+        <title>johncollins.ai</title>
+        {% endblock %}
+
+        {% block navbar %}
+        <!-- <nav class="navbar navbar-inverse navbar-dark bg-dark fixed-top"> -->
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{{ url_for('index') }}">johncollins.ai</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <!-- source https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_right&stacked=h -->
+                            <!-- NB is the space before the menu item name deliberate? -->
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                            <li><a href="{{ url_for('archive') }}">archive</a></li>
+                            <li><a href="{{ url_for('me') }}">bio</a></li>
+                            <li><a href="//github.com/johncollinsai" title="follow me on github" target="_blank"><i class="fa fa-github-square"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        {% endblock %}
+    </head>
+    
+    <body>
+        <!-- Page content -->
+        {% block content %}
+            <div class="container">
+        {% endblock %}
+				
+		{# application content needs to be provided in the app_content block #}
+		{% block app_content %}{% endblock %}
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+
+        {% block footer %}
+			<div class="container">
+				<div id="footer"> 
+					<p class="text-center fixed-bottom">&copy 2022 johncollins</p> 
+				</div> 
+			</div>
+		{% endblock footer %}
+
+    </body>
+</html>
+

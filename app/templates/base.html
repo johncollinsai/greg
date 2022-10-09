@@ -1,73 +1,59 @@
 <!doctype html>
 <html lang="en">
     <head>
-        {% block head %}
+        <title>johncollins.ai</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        {% block styles %}
-            <!-- Bootstrap CSS -->
-            {{ bootstrap.load_css() }}
-            <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        {% endblock %}
-
-        {% if title %}{{ title }} - johncollins{% else %}johncollins{% endif %}
-        <!-- <title>johncollins.ai</title> -->
-        {% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS helper function -->
+        {{ bootstrap.load_css() }}
+        <!-- link immediately below enables me to see the github icon -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
-    
+
     <body>
-        <!-- Page content -->
-        {% block content %}{% endblock %}
-            <div class="container">
-				{% with messages = get_flashed_messages() %}
-					{% if messages %}
-						{% for message in messages %}
-							<div class="alert alert-info" role="alert">{{ message }}</div>
-						{% endfor %} 
-					{% endif %}
-				{% endwith %}
-				
-				{# application content needs to be provided in the app_content block #}
-				{% block app_content %}
-		{% endblock %}
 
-        {% block scripts %}
-            <!-- Optional JavaScript -->
-            {{ bootstrap.load_js() }}
-        {% endblock %}
-
-        {% block navbar %}
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></sp
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{{ url_for('index') }}">johncollins.ai</a
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{ url_for('archive') }}">archive</a></li>
-                            <li><a href="{{ url_for('me') }}">bio</a><
-                            <li><a href="//github.com/johncollinsai" title="follow me on github" target="_blank"><i class="fa fa-github-square"></i></a></li>
-                        </ul>
-                    </div>
+        <!-- <nav class="navbar navbar-inverse navbar-dark bg-dark fixed-top"> -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ url_for('index') }}">johncollins.ai</a>
                 </div>
-            </nav>
-        {% endblock %}
-		
-		{% block footer %}
-			<div class="container">
-				<div id="footer"> 
-					<p class="text-center fixed-bottom">&copy 2022 johncollins</p> 
-				</div> 
-			</div>
-		{% endblock footer %}
+                <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Posts <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url_for('me') }}">foo</a></li>
+                            <li><a href="{{ url_for('me') }}">hellow world</a></li>
+                            <li><a href="{{ url_for('me') }}">deep learning in finance</a></li>
+							<li><a href="{{ url_for('me') }}">high frequency data</a></li>
+							<li><a href="{{ url_for('me') }}">screen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- source https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_right&stacked=h -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url_for('me') }}">contact</a></li>
+                    <li><a href="{{ url_for('me') }}">bio</a></li>
+                    <li><a href="//github.com/johncollinsai" title="follow me on github" target="_blank"><i class="fa fa-github-square"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        
+
+        <!-- Page content -->
+        <div class="container">
+        {{ bootstrap.load_js() }}
+
+		<div class="container">
+			<div id="footer"> 
+				<p class="text-center fixed-bottom">&copy 2022 johncollins</p> 
+			</div> 
+		</div>
 
     </body>
 </html>
