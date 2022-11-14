@@ -1,60 +1,42 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>johncollins.ai</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Bootstrap CSS helper function -->
-        {{ bootstrap.load_css() }}
-        <!-- link immediately below enables me to see the github icon -->
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
+<head>
 
-    <body>
+    <!-- MUST ADD block head ETC.  SEE https://bootstrap-flask.readthedocs.io/en/stable/migrate/ CREATE BASE TEMPLATE SECTION -->
+    {% block head %}
+ 	<title>Bootstrap Example</title>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    {% endblock  %}
+</head>
 
-        <!-- <nav class="navbar navbar-inverse navbar-dark bg-dark fixed-top"> -->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url_for('index') }}">johncollins.ai</a>
-                </div>
-                <ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Posts <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('me') }}">foo</a></li>
-                            <li><a href="{{ url_for('me') }}">hellow world</a></li>
-                            <li><a href="{{ url_for('me') }}">deep learning in finance</a></li>
-							<li><a href="{{ url_for('me') }}">high frequency data</a></li>
-							<li><a href="{{ url_for('me') }}">screen</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- source https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_right&stacked=h -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url_for('me') }}">contact</a></li>
-                    <li><a href="{{ url_for('me') }}">bio</a></li>
-                    <li><a href="//github.com/johncollinsai" title="follow me on github" target="_blank"><i class="fa fa-github-square"></i></a></li>
-                </ul>
-            </div>
-        </nav>
-    
-        
+<body>
+	{% block content %}
+    <!-- source https://bootstrap-flask.readthedocs.io/en/stable/macros/ -->
+    {% from 'bootstrap4/nav.html' import render_nav_item %}
 
-        <!-- Page content -->
-        <div class="container">
-        {{ bootstrap.load_js() }}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    	<div class="navbar-nav mr-auto">
+        	{{ render_nav_item('index', 'Home') }}
+        	{{ render_nav_item('me', 'me') }}
+    	</div>
+	</nav>
+  
+    <div class="container">
+        <h3>Right Aligned Navbar</h3>
+        <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+    </div>
 
-		<div class="container">
-			<div id="footer"> 
-				<p class="text-center fixed-bottom">&copy 2022 johncollins</p> 
-			</div> 
-		</div>
+	<div class="container">
+		<div id="footer"> 
+			<p class="text-center fixed-bottom">&copy 2022 johncollins</p> 
+		</div> 
+	</div>
+    {% endblock %}
 
-    </body>
+</body>
 </html>
 
