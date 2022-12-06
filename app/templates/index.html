@@ -1,35 +1,61 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>My Blog</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-
 	<link rel="stylesheet" href="static/styles.css">
+
+    <title>johncollins.ai</title>
+
+    <style>
+      .container {
+        max-width: 960px;
+      }
+    </style>
 
   </head>
   <body>
-    <div class="container mt-5">
-      <h1>My Blog</h1>
-      <p>Hello, welcome to my blog!</p>
-    </div>
+    <!-- navbar.html -->
+    <nav class="navbar navbar-expand fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('index') }}">johncollins.ai</a>
+      
+      <!-- <a class="navbar-brand" href="#">johncollins</a> -->
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <nav class="nav">
-      <ul class="nav-items">
-        <li class="nav-item">
-          <a href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="/about">About</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          
+
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item active">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('me') }}" title="about me" target="_blank">me</a>
+              </li>
+              <!-- link to github, replace with github icon -->
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/johncollinsai" title="follow me on github" target="_blank">my github</a>
+              </li>
+
+
+
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        
+
+        </ul>
+      </div>
     </nav>
-
-
 
 
 
