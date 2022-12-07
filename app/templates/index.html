@@ -1,70 +1,86 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-	<link rel="stylesheet" href="static/styles.css">
-
-    <title>johncollins.ai</title>
-
-    <style>
-      .container {
-        max-width: 960px;
-      }
-    </style>
-
-  </head>
-  <body>
-    <!-- navbar.html -->
-    <nav class="navbar navbar-expand fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="{{ url_for('index') }}">johncollins.ai</a>
-      
-      <!-- <a class="navbar-brand" href="#">johncollins</a> -->
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          
-
-          <ul class="navbar-nav justify-content-end">
-            <li class="nav-item active">
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('me') }}" title="about me" target="_blank">me</a>
-              </li>
-              <!-- link to github, replace with github icon -->
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/johncollinsai" title="follow me on github" target="_blank">my github</a>
-              </li>
-
-
-
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-        
-
-        </ul>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>johncollins.ai</title>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.2/dist/umd/popper.min.js" integrity="sha384-ZRQgMf+zD5HtB5x8yhJ4y4Y4YO/7fMeRX/PV/v2t+5Dt7FJ8NpW4LN3ZYpDV7yoA" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <style>
+    .container {
+      max-width: 960px;
+    }
+    body {
+      background-color: black;
+      color: white;
+      font-family: "Roboto", sans-serif;
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <a class="navbar-brand ml-2" href="{{ url_for('index') }}">johncollins.ai</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url_for('me') }}" title="about me" target="_blank">me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/johncollinsai" title="follow me on github" target="_blank">my github</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Container 1</h1>
+  </div>
+  <div class="container">
+    <h1>Container 2</h1>
+  </div>
+  <div class="container">
+    <h1>Container 3</h1>
+  </div>
+  <div class="container">
+    <h1>Container 4</h1>
+  </div>
+  
+  <div class="container">
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text-white">Title 1</h1>
+        </div>
+        <img class="card-img-top" src="image1.jpg" alt="Card image cap">
+        <div class="card-body">  
+          <a href="page1.html" class="card-link">Click to open page 1</a>
+        </div>
       </div>
-    </nav>
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text-white">Title 2</h1>
+        </div>
+        <img class="card-img-top" src="image2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <a href="page2.html" class="card-link">Click to open page 2</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
 
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.1/dist/umd/popper.min.js" integrity="sha384-eCGQQyq3Gcg8bZJ8NU6zkZ6Y/U9Bb7p95/5SmDor7C+nEQ8lQ/lgGKfZLk/ZwoKp" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/
   
 
