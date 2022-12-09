@@ -4,11 +4,13 @@
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <link rel="stylesheet" href="static/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
   <title>johncollins.ai</title>
 
   <!-- Optional JavaScript -->
@@ -25,7 +27,7 @@
     body {
       background-color: black;
       color: white;
-      font-family: "Roboto", sans-serif;
+      font-family: "Quicksand", sans-serif;
     }
     .bg-black {
       background-color: #000000;
@@ -47,7 +49,6 @@
     .card-spacer {
     padding: 1rem;
     }
-
   </style>
 
 </head>
@@ -57,27 +58,32 @@
   <!-- navbar -->
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-      <a class="navbar-brand ml-2" href="{{ url_for('index') }}">johncollins.ai</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('me') }}" title="about me" target="_blank">Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/johncollinsai" title="follow me on github" target="_blank">Github</a>
-          </li>
-        </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand ml-2" href="{{ url_for('index') }}">johncollins.ai</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://twitter.com/AiClimate" title="Follow me on Twitter" target=_blank"><i class="fab fa-twitter fa-lg fa-inverse fa-fw"></i></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://www.linkedin.com/in/johncollins-ai/" title="Connect with me on LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+            </li>
+            <li class="nav-item ml-2">
+              <a href="https://github.com/johncollinsai"><img src="https://github.githubassets.com/favicon.ico" title="Follow me on GitHub" target="_blank" alt="GitHub icon" style="filter: invert(100%);"></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </div>
 
   <div class="jumbotron jumbotron-fluid jumbotron-black-top">
     <div class="container">
-      <h1 class="display-4">My stuff</h1>
-      <p class="lead">My ideas and research.</p>
+      <h1 class="display-4">Personal work</h1>
+      <p class="lead">I created and lead <a href="https://ftiai.com" target-"_blank">FTIAI</a>. This is my personal site, where I share my own work and explore things that I find interesting. Code can be found on my <a href="https://github.com/johncollinsai" target-"_blank">GitHub</a>.</p>
     </div>
   </div>
 
