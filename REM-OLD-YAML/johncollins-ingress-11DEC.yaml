@@ -14,11 +14,11 @@ spec:
             name: johncollins
             port:
               number: 8080
-      - path: /dlf
+      - path: /foo
         pathType: ImplementationSpecific
         backend:
           service:
-            name: dlf
+            name: foo
             port:
               number: 8080
       - path: /h-w

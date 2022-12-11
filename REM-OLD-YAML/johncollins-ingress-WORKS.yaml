@@ -3,28 +3,23 @@ kind: Ingress
 metadata:
   name: johncollins-ingress
   annotations:
+    # If the class annotation is not specified it defaults to "gce".
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
   - http:
       paths:
+      - path: /foo
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: johncollins-service
+            port:
+              number: 8080
       - path: /*
         pathType: ImplementationSpecific
         backend:
           service:
-            name: johncollins
+            name: foo-service
             port:
-              number: 8080
-      - path: /dlf
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: dlf
-            port:
-              number: 8080
-      - path: /h-w
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: h-w
-            port:
-              number: 8080
+              number: 8081

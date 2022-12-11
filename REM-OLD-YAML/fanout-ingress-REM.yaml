@@ -1,8 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: johncollins-ingress
+  name: fanout-ingress
   annotations:
+    kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
+    networking.gke.io/managed-certificates: managed-cert
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
   - http:
@@ -11,20 +14,17 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-            name: johncollins
+            name: web
             port:
               number: 8080
-      - path: /dlf
+      - path: /foo
         pathType: ImplementationSpecific
         backend:
           service:
-            name: dlf
+            name: foo
             port:
               number: 8080
-      - path: /h-w
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: h-w
-            port:
-              number: 8080
+
+
+
+

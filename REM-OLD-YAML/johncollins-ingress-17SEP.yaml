@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
   name: johncollins-ingress
   annotations:
+    kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
+    networking.gke.io/managed-certificates: managed-cert
 spec:
   rules:
   - http:
@@ -11,20 +14,20 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-            name: johncollins
+            name: johncollins-service
             port:
               number: 8080
-      - path: /dlf
+      - path: /foo
         pathType: ImplementationSpecific
         backend:
           service:
-            name: dlf
+            name: foo-service
             port:
               number: 8080
       - path: /h-w
         pathType: ImplementationSpecific
         backend:
           service:
-            name: h-w
+            name: h-w-service
             port:
               number: 8080

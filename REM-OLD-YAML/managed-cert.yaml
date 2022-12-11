@@ -1,0 +1,16 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: managed-cert
+spec:
+  domains:
+    - johncollins.ai
+    - www.johncollins.ai
+    - johncollins.blog
+    - www.johncollins.blog
+
+
+
+
+
+

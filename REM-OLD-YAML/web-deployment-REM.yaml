@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: web
+  template:
+    metadata:
+      labels:
+        run: web
+    spec:
+      containers:
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.15.0
+        imagePullPolicy: IfNotPresent
+        name: web
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+
+
+
+
+
