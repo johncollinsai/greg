@@ -28,3 +28,15 @@ spec:
             name: h-w
             port:
               number: 8080
+      - path: /foo
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: foo
+            port:
+              number: 8080
+
+
+
+
+
