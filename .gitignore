@@ -16,4 +16,5 @@ rem.*
 
 # environment variables
 .env
+.flaskenv
 
