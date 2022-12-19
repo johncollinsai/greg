@@ -28,7 +28,13 @@ spec:
             name: foo
             port:
               number: 8080
-
+      - path: /voila/files/dlf
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: dlf
+            port:
+              number: 8080
 
 
 
