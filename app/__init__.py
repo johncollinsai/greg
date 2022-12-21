@@ -6,8 +6,6 @@ from flask import Flask
 import os
 from dotenv import load_dotenv
 
-# from config import Config  # Config class (upper case) imported from config.py (lower case)
-
 app = Flask(__name__)
 # app.config.from_object method tells Flask to read and apply the Config class, 
 # which it finds in config.py
