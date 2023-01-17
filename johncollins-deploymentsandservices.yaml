@@ -1,0 +1,145 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: johncollins
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: johncollins
+  template:
+    metadata:
+      labels:
+        run: johncollins
+    spec:
+      containers:
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.2.16
+        imagePullPolicy: IfNotPresent
+        name: johncollins
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: johncollins
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: johncollins
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dlf
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: dlf
+  template:
+    metadata:
+      labels:
+        run: dlf
+    spec:
+      containers:
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.15.0
+        imagePullPolicy: IfNotPresent
+        name: dlf
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dlf
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: dlf
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foo
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: foo
+  template:
+    metadata:
+      labels:
+        run: foo
+    spec:
+      containers:
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.15.0
+        imagePullPolicy: IfNotPresent
+        name: foo
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: foo
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: foo
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: h-w
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: h-w
+  template:
+    metadata:
+      labels:
+        run: h-w
+    spec:
+      containers:
+      - image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+        imagePullPolicy: IfNotPresent
+        name: h-w
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: h-w
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: h-w
+  type: NodePort
+
+

@@ -4,11 +4,12 @@ metadata:
   name: johncollins-ingress
   annotations:
     kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
-    networking.gke.io/managed-certificates: johncollinsmanagedcertificate
+    networking.gke.io/managed-certificates: "johncollinsmanagedcertificate" 
     kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-  - http:
+  - host: johncollins.ai
+    http:
       paths:
       - path: /*
         pathType: ImplementationSpecific
