@@ -4,6 +4,7 @@ metadata:
   name: ingress-resource
   annotations:
     kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.global-static-ip-name: web-static-ip
 spec:
   rules:
   - http:
