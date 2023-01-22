@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: johncollins-ingress
+  annotations:
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: johncollins
+            port:
+              number: 8080
+      - path: /h-w
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: h-w
+            port:
+              number: 8080
+      - path: /foo
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: foo
+            port:
+              number: 8080
+      - path: /dlf
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: dlf
+            port:
+              number: 8080
+
+
+
+

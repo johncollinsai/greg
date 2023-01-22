@@ -1,41 +1,77 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: johncollins-ingress
-  annotations:
+  name: johncollins-ingress-resource
+  annotations: 
+    cert-manager.io/issuer: "letsencrypt-production"
 spec:
+  tls:
+  - hosts:
+    - johncollins.ai
+    - www.johncollins.ai
+    secretName: johncollins-ai-tls
+  ingressClassName: nginx
   rules:
-  - http:
+  - host: johncollins.ai
+    http:
       paths:
-      - path: /*
-        pathType: ImplementationSpecific
+      - path: "/"
+        pathType: Prefix
         backend:
           service:
             name: johncollins
             port:
               number: 8080
       - path: /h-w
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: h-w
             port:
               number: 8080
       - path: /foo
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: foo
             port:
               number: 8080
       - path: /dlf
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: dlf
             port:
               number: 8080
-
-
-
+  - host: www.johncollins.ai
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: johncollins
+            port:
+              number: 8080
+      - path: /h-w
+        pathType: Prefix
+        backend:
+          service:
+            name: h-w
+            port:
+              number: 8080
+      - path: /foo
+        pathType: Prefix
+        backend:
+          service:
+            name: foo
+            port:
+              number: 8080
+      - path: /dlf
+        pathType: Prefix
+        backend:
+          service:
+            name: dlf
+            port:
+              number: 8080
 
