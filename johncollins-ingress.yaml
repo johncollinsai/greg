@@ -40,7 +40,14 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: dlf
+            name: dlf-cloudrun
+            port:
+              number: 8080
+      - path: /deep-learning-finance
+        pathType: Prefix
+        backend:
+          service:
+            name: deep-learning-finance-cloudrun
             port:
               number: 8080
   - host: www.johncollins.ai
@@ -71,7 +78,13 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: dlf
+            name: dlf-cloudrun
             port:
               number: 8080
-
+      - path: /deep-learning-finance
+        pathType: Prefix
+        backend:
+          service:
+            name: deep-learning-finance-cloudrun
+            port:
+              number: 8080
