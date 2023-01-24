@@ -36,11 +36,18 @@ spec:
             name: foo
             port:
               number: 8080
-      - path: /dlf
+      - path: /dlf-voila
         pathType: Prefix
         backend:
           service:
             name: dlf-voila
+            port:
+              number: 8080
+      - path: /dlf-flask
+        pathType: Prefix
+        backend:
+          service:
+            name: dlf-flask
             port:
               number: 8080
       - path: /dlf-voila-cloudrun
@@ -74,10 +81,10 @@ spec:
             name: foo
             port:
               number: 8080
-      - path: /dlf
+      - path: /dlf-flask
         pathType: Prefix
         backend:
           service:
-            name: dlf-voila
+            name: dlf-flask
             port:
               number: 8080
