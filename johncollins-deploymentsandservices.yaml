@@ -37,21 +37,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dlf
+  name: dlf-voila
   namespace: default
 spec:
   selector:
     matchLabels:
-      run: dlf
+      run: dlf-voila
   template:
     metadata:
       labels:
-        run: dlf
+        run: dlf-voila
     spec:
       containers:
-      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/dlf:v0.1.9
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:dlf-voila
         imagePullPolicy: IfNotPresent
-        name: dlf
+        name: dlf-voila
         ports:
         - containerPort: 8080
           protocol: TCP
@@ -59,7 +59,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dlf
+  name: dlf-voila
   namespace: default
 spec:
   ports:
@@ -67,7 +67,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    run: dlf
+    run: dlf-voila
   type: NodePort
 ---
 apiVersion: apps/v1
