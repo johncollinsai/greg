@@ -50,13 +50,6 @@ spec:
             name: dlf-flask
             port:
               number: 8080
-      - path: /dlf-voila-cloudrun
-        pathType: Prefix
-        backend:
-          service:
-            name: dlf-voila-cloudrun
-            port:
-              number: 8080
   - host: www.johncollins.ai
     http:
       paths:
