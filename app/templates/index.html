@@ -24,28 +24,35 @@
     .container {
       max-width: 1140px;
     }
+
     body {
       background-color: black;
       color: white;
       font-family: "Quicksand", sans-serif;
     }
+
     .bg-black {
       background-color: #000000;
     }
+
     .border {
       border: 1px solid;
     }
+
     .border-white {
       border-color: #fff;
     } 
+
     .jumbotron-black-top {
           border-top: 50px solid #000;
     }
+
     .card-group-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;
     }
+
     .card-spacer {
     padding: 1rem;
     }
@@ -83,7 +90,7 @@
   <div class="jumbotron jumbotron-fluid jumbotron-black-top">
     <div class="container">
       <h1 class="display-4">Personal work</h1>
-      <p class="lead">I created and lead <a href="https://ftiai.com" target-"_blank">FTIAI</a>. This is my personal site, where I share my own work and explore things that I find interesting. Code for work that I present here can be found on my <a href="https://github.com/johncollinsai" target-"_blank">GitHub</a>. Generally I am interested in how AI can be applied commercially and scaled, so most of what I am doing here explores these themes in one way or another.</p>
+      <p class="lead">I created and lead <a href="https://ftiai.com" target-"_blank">FTIAI</a>. This is my personal site, where I share my own work and explore things that I find interesting. The code for my site and posts can be found on my <a href="https://github.com/johncollinsai" target-"_blank">GitHub</a>. Generally I am interested in how AI can be applied commercially and scaled, so most of what I am doing here explores these themes in one way or another.</p>
     </div>
   </div>
 
@@ -91,47 +98,33 @@
   <div class="container">
     <div class="card-group card-group-2 card-spacer">
 
+      <!-- Add new card here -->  
       <div class="card bg-black border border-secondary">
         <div class="card-header">
-          <h4 class="text-white">Implementing a transformer</h4>
-        </div>
-        <img class="card-img-top" src="static/images/me-ai-1.png" alt="Card image cap" style="width: 250px; height: 250px">
-        <div class="card-body text right">
-          <p class="card-text">Does a transformer move the dial on performance?</p>
-          <a href="https://johncollins.ai/h-w" target="_blank" class="card-link">Continue reading ...</a>
-        </div>
-      </div>
-      
-      <div class="card bg-black border border-secondary">
-        <div class="card-header">
-          <h4 class="text-white">Keras FeatureSpace</h4>
-        </div>
-        <img class="card-img-top" src="static/images/me-ai-2.png" alt="Card image cap" style="width: 250px; height: 250px">
-        <div class="card-body text right">
-          <p class="card-text">Impact on performance of replacing word embeddings with FeatureSpace.</p>
-          <a href="https://johncollins.ai/h-w" target="_blank" class="card-link">Continue reading ...</a>
-      </div>
-
-      </div>
-      <div class="card bg-black border border-secondary">
-        <div class="card-header">
-          <h4 class="text-white">Applying AI to trade sanctions</h4>
+          <h4 class="text-white">Building a ChatGPT like model</h4>
         </div>
         <img class="card-img-top" src="static/images/me-ai-3.png" alt="Card image cap" style="width: 250px; height: 250px">
         <div class="card-body test right">
-          <p class="card-text">Trade sanctions are the geopolitical weapon of choice. How can AI improve reduce costs and improve risk management.</p>
+          <p class="card-text">Generative AI, specifically Foundation models and Large Language Models, have created enormous interest. I built and trained a ChatGPT like model, here are the insights I gained.</p>
           <a href="https://johncollins.ai/h-w" target="_blank" class="card-link">Continue reading ...</a>
         </div>
+        <div class="card-footer">
+          <small class="text-muted">Image prompt: [prompt to be added]. Model: [MODEL]</small>
+        </div>
+
       </div>
       
       <div class="card bg-black border border-secondary">
         <div class="card-header">
           <h4 class="text-white">Stable Diffusion 2.1</h4> 
         </div>
-        <img class="card-img-top" src="static/images/me-ai-4.png" alt="Card image cap" style="width: 250px; height: 250px">
+        <img class="card-img-top" src="static/images/stable-diffusion-dalle.png" alt="Card image cap" style="width: 250px; height: 250px">
         <div class="card-body text right">
           <p class="card-text">Implementation of Stable Diffusion 2.1 to generate some of the images used on this site.</p>
-          <a href="https://johncollins.ai/h-w" target="_blank" class="card-link">Continue reading ...</a>
+          <a href="https://johncollinsai-stable-diffusion-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Image prompt: Stable diffusion in the style of Euan Uglow. Model: DALL·E</small>
         </div>
       </div>
 
@@ -139,10 +132,13 @@
         <div class="card-header">
           <h4 class="text-white">High Frequency Data</h4>
         </div>
-        <img class="card-img-top" src="static/images/me-ai-5.png" alt="Card image cap" style="width: 250px; height: 250px;">
+        <img class="card-img-top" src="static/images/high-frequency-data-dalle.png" alt="Card image cap" style="width: 250px; height: 250px;">
         <div class="card-body text right">
           <p class="card-text">Lengthy and detailed post discussion preparation of high frequency datasets for AAPL, JPM, and EURUSD, for subsequent work on volatility prediction using deep learning.</p>
-          <a href="https://johncollins.ai/foo" target="_blank" class="card-link">Continue reading ...</a>
+          <a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Image prompt: High frequency datasets in the style of benoit mandelbrot. Model: DALL·E</small>
         </div>
       </div>
       
@@ -150,10 +146,13 @@
         <div class="card-header">
           <h4 class="text-white">Deep Learning in Finance</h4>
         </div>
-        <img class="card-img-top" src="static/images/me-ai-6.png" alt="Card image cap" style="width: 250px; height: 250px">
+        <img class="card-img-top" src="static/images/deep-learning-finance-dalle.png" alt="Card image cap" style="width: 250px; height: 250px">
         <div class="card-body text right">
           <p class="card-text">In this post I discuss some of the academic papers I have read and found useful when considering deep learning in general, and specifically its application in finance.</p>
           <a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link" title="Deep learning in Finance">Continue reading ...</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Deep learning in finance in the style of Egon Schiele. Model: DALL·E</small>
         </div>
       </div>
 
@@ -171,7 +170,4 @@
 
 </body>
 </html>
-
-
-  
 
