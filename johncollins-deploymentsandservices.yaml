@@ -13,7 +13,7 @@ spec:
         run: johncollins
     spec:
       containers:
-      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.3.8
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.3.10
         imagePullPolicy: IfNotPresent
         name: johncollins
         ports:
@@ -157,7 +157,7 @@ spec:
         run: h-w
     spec:
       containers:
-      - image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+      - image: asia-southeast1-docker.pkg.dev/johncollins/nanogpt/nanogpt:v0.1.0
         imagePullPolicy: IfNotPresent
         name: h-w
         ports:
