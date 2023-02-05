@@ -13,7 +13,7 @@ spec:
         run: johncollins
     spec:
       containers:
-      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.3.10
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.3.14
         imagePullPolicy: IfNotPresent
         name: johncollins
         ports:
@@ -145,19 +145,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: h-w
+  name: lstm
   namespace: default
 spec:
   selector:
     matchLabels:
-      run: h-w
+      run: lstm
   template:
     metadata:
       labels:
-        run: h-w
+        run: lstm
     spec:
       containers:
-      - image: asia-southeast1-docker.pkg.dev/johncollins/nanogpt/nanogpt:v0.1.0
+      - image: asia-southeast1-docker.pkg.dev/johncollins/lstm/lstm:v0.1.3
         imagePullPolicy: IfNotPresent
         name: h-w
         ports:
@@ -167,7 +167,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: h-w
+  name: lstm
   namespace: default
 spec:
   ports:
@@ -175,7 +175,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    run: h-w
+    run: lstm
   type: NodePort
 
 
