@@ -100,7 +100,7 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" src="static/images/nanogpt-dalle.png" alt="Card image cap" style="width: 440px; height: 440px">
+            <img class="card-img-top" class="img-responsive" src="static/images/nanogpt-dalle.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -116,66 +116,67 @@
     </div>
   </div>
 
-  <!-- Older posts organized in 2-card rows underneath the most recent post -->
+  <!-- Older posts organized in single-card rows underneath the most recent post -->
   <div class="container">
-    <div class="card-group card-group-2 card-spacer">
-
+    <div class="card-group card-group card-spacer">
       <div class="card bg-black border border-secondary">
-        <div class="card-header">
-          <h4 class="text-white">Stable Diffusion</h4> 
-        </div>
-        <img class="card-img-top" src="static/images/stable-diffusion-dalle.png" alt="Card image cap" style="width: 250px; height: 250px">
-        <div class="card-body text right">
-          <p class="card-text">Implementation of Stable Diffusion 2.1 to create some of the images used on this site.</p>
-          <a href="https://johncollinsai-stable-diffusion-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Image prompt: Stable diffusion in the style of Euan Uglow. Model: DALL·E</small>
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img class="card-img-top" class="img-responsive" src="static/images/lstm-dalle.png" alt="Card image cap">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h4 class="text-white">LSTM</h4>
+                <p class="card-text">I devote considerable effort in this post to a mathematical enunciation of LSTM, based upon the framework set out by Sherstinsky. A thorough derivation of the LSTM network is generally skipped in finance deep learning literature that features the LSTM. </p>
+                <p class="card-text">I seek to understand each aspect of the operation of RNN and LSTM's elegant and effective systems in considerable depth. I describe firstly the RNN, followed by its evolution to the LSTM form, much more completely than is usually the case in finance DL papers.  These include unrolling the RNN, the motivations for the LSTM, namely managing the phenomena of vanishing gradients, and the subsequent mechanics of learning, which are the forward and backward passes and gradient descent.</p>
+                <a href="https://johncollinsai-lstm-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <p class="card-text"><small class="text-muted">Image prompt: Long and short term memories in Sin City. Model: DALL·E</small></p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <div class="card-group card-group card-spacer">
       <div class="card bg-black border border-secondary">
-        <div class="card-header">
-          <h4 class="text-white">LSTM</h4> 
-        </div>
-        <img class="card-img-top" src="static/images/lstm-dalle.png" alt="Card image cap" style="width: 250px; height: 250px">
-        <div class="card-body text right">
-          <p class="card-text">A thorough derivation of the LSTM network, based upon the framework set out by Sherstinsky.</p>
-          <a href="https://johncollinsai-lstm-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Image prompt: Long and short term memories in Sin City. Model: DALL·E</small>
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img class="card-img-top" class="img-responsive" src="static/images/high-frequency-data-dalle.png" alt="Card image cap">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h4 class="text-white">High Frequency Data</h4>
+                <p class="card-text">In this post I discuss the preparation of high frequency datasets for Apple (Apple Inc., NASDAQ, ticker: AAPL), JPM (JPMorgan Chase & Co., NYSE, ticker: JPM), and the EURUSD currency pair.</p>
+                <p class="card-text">I use volatility prediction as my problem setting because the second moment dominates. Careful data cleaning is one of the most important aspects of working with high frequency data and it is not always straightforward to construct a time series of interest from raw tick data. The methods I employ to prepare my data and compute a returns series are therefore are not trivial.</p>
+                <a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <p class="card-text"><small class="text-muted">Image prompt: High frequency datasets in the style of benoit mandelbrot. Model: DALL·E</small></p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <div class="card-group card-group card-spacer">
       <div class="card bg-black border border-secondary">
-        <div class="card-header">
-          <h4 class="text-white">High Frequency Data</h4>
-        </div>
-        <img class="card-img-top" src="static/images/high-frequency-data-dalle.png" alt="Card image cap" style="width: 250px; height: 250px;">
-        <div class="card-body text right">
-          <p class="card-text">Lengthy and detailed post discussion preparation of high frequency datasets for AAPL, JPM, and EURUSD, for subsequent work on volatility prediction using deep learning.</p>
-          <a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Image prompt: High frequency datasets in the style of benoit mandelbrot. Model: DALL·E</small>
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img class="card-img-top" class="img-responsive" src="static/images/deep-learning-finance-dalle.png" alt="Card image cap">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h4 class="text-white">Deep Learning in Finance</h4>
+                <p class="card-text">In this post I discuss some of the academic papers I have read and found useful when considering deep learning in general, and specifically its application in finance.</p>
+                <p class="card-text">I discuss academic literature here because a rigorous consideration of deep learning in finance is important, imho. This is my attempt at that and I hope it provides some useful background and context to some of my subsequent posts. This post was written around 2020-1, so is not particularly current. However, it covers important ground that is foundational.].</p>
+                <a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <p class="card-text"><small class="text-muted">Image prompt: Billions of financial data points in the style of Lucian Freud. Model: DALL·E</small></p>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="card bg-black border border-secondary">
-        <div class="card-header">
-          <h4 class="text-white">Deep Learning in Finance</h4>
-        </div>
-        <img class="card-img-top" src="static/images/deep-learning-finance-dalle.png" alt="Card image cap" style="width: 250px; height: 250px">
-        <div class="card-body text right">
-          <p class="card-text">In this post I discuss some of the academic papers I have read and found useful when considering deep learning in general, and specifically its application in finance.</p>
-          <a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link" title="Deep learning in Finance">Continue reading ...</a>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Image prompt: Billions of financial data points in the style of Lucian Freud. Model: DALL·E</small>
-        </div>
-      </div>
-
     </div>
   </div>
 
