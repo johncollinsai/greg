@@ -109,6 +109,28 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
+            <img class="card-img-top" class="img-responsive" src="static/images/volgpt-image-jenny-saville.png" alt="Card image cap">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h4 class="text-white">Predicting volatility with NanoGPT</h4>
+                <p class="card-text">In this post, I train <a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">my implementation</a> of Karpathy's NanoGPT, on high-frequency (tick-by-tick) data for <a href="https://www.google.com/search?q=aapl&oq=AAPL&aqs=chrome.0.0i512l5j69i61l3.1590j1j9&sourceid=chrome&ie=UTF-8" target="_blank">Apple</a> (Apple Inc., NASDAQ, ticker: AAPL), and <a href="https://www.google.com/search?q=jpm+stock+price&oq=JPM+stock+pri&aqs=chrome.0.0i512j69i57j0i512l8.4577j1j9&sourceid=chrome&ie=UTF-8" target="_blank">JP Morgan</a> (JPMorgan Chase & Co., NYSE, ticker: JPM) to see how a simple GPT performs as a volatility predictor. I also want to explore the use of LLMs for tasks, in this case volatility prediction, that are typically performed by models more specific to finance.  In the case of volatility prediction, the established model classes include stochastic volatility models such as the <a href="https://github.com/johncollinsai/markov-switching-multifractal" target="_blank">MSM</a> of Calvet & Fisher, ARCH and GARCH, and Jump Diffusion models. Deep learning has also been applied to volatility prediction and <a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app/" target="_blank">this post</a> describes these developments in some detail. However, the application of LLMs to volatility prediction appears to be quite novel and the use of nanoGPT provides a great basis for an under-the-hood examination.</p>
+                <p class="card-text">The code for this post can be found as always on <a href="https://github.com/johncollinsai/vogpt" target="_blank">my GitHub</a> and is basically arranged in two python files, one for tick-data preparation and computation of the retuns data using a weighted mid-price, and one for my NanoGPT implementation.  A couple of Jupyter notebooks provide commentary, statistical analysis, and visualization of results. NanoGPT does a pretty good job of volatility forecasting, which I think is extremely interesting ... </p>
+                <a href="https://johncollinsai-volgpt-post-temp-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <p class="card-text"><small class="text-muted">Image prompt: Two young people are observing volatile stock price movements.  They are seen by Jenny Saville. Model: DALL·E 2</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Older posts organized in single-card rows underneath the most recent post -->
+  <div class="container">
+    <div class="card-group card-group card-spacer">
+      <div class="card bg-black border border-secondary">
+        <div class="row g-0">
+          <div class="col-md-5">
             <img class="card-img-top" class="img-responsive" src="static/images/nanogpt-dalle.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
@@ -125,7 +147,6 @@
     </div>
   </div>
 
-  <!-- Older posts organized in single-card rows underneath the most recent post -->
   <div class="container">
     <div class="card-group card-group card-spacer">
       <div class="card bg-black border border-secondary">
