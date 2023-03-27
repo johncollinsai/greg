@@ -22,6 +22,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.2/dist/umd/popper.min.js" integrity="sha384-ZRQgMf+zD5HtB5x8yhJ4y4Y4YO/7fMeRX/PV/v2t+5Dt7FJ8NpW4LN3ZYpDV7yoA" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
 
   <style>
     .container {
@@ -109,14 +110,13 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/gpt4-image.png" alt="Card image cap">
+            <img class="card-img-top" class="img-responsive" src="static/images/volgpt-image-jenny-saville-1.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
-              <h4 class="text-white">GPT4 builds a website. In seconds. And it works.</h4>
-                <p class="card-text">OpenAI released GPT4 today, so this evening, while I'm waiting to join a call with the US, I took a deeper look. Wow! I asked GPT4 to create a simple website based upon an instruction typed into the ChatGPT-Plus UI, to see how well it works in practice.</p>
-                <p class="card-text">This is the <a href="https://johncollinsai-gpt4-website-voqqf4ls3a-as.a.run.app" target="_blank">website created by GPT4</a>.</p>
-                <p class="card-text">GPT4 prompting moves toward a much more structured format that gives the new model the opportunity to understand that I am asking it to do something specific.  So you see in the post that I am quite specific about what I want: A simple website, built using Flask, just a single page, with a professional look and feel, for a subject that I call "GPT 4 builds a website". I also ask GPT4 to provide the code that is necessary to deploy the website on GCP as a Cloud Run service. From concept to reality! The code for this post can be found as always on <a href="https://github.com/johncollinsai" target="_blank">my GitHub</a>.</p>
+              <h4 class="text-white">How does a GPT compare to a stochastic volatility model when asked to predict volatility?</h4>
+                <p class="card-text">Earlier in my career I was a quantitative risk manager and built models where the input and output modalities were numbers. For example, I implemented the Heston stochastic volatility model to obtain certain dynamics of a stock's price from two stochastic differential equations <p>\( dS(t) = \mu S(t) dt + \sqrt{v(t)} S(t) dW_1(t) \)</p> and <p>\( dv(t) = \kappa (\theta - v(t)) dt + \sigma \sqrt{v(t)} dW_2(t) \)</p>. I would also back out implied vols and use the asset price paths to compute things like expected shortfall. However, with AI now and specifically models like the GPTs behind ChatGPT, we have many more permutations of input and output modalities, including text-to-image such as OpenAI's <a href="https://labs.openai.com/" target="_blank">DALL·E</a>, and Google Brain's text-to-video <a href="https://imagen.research.google/" target="_blank">Imagen</a>.</p>
+                <p class="card-text">So what happens if I ask one of the powerful new GPT models to solve a problem that is normally handled by a number-to-number model like the Heston? In this post I use <a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">my implementation</a> of Karpathy's NanoGPT and the extraordinary new GPT4 model to obtain volatility predictions.  The results are remarkable ... Please read on.</p>
                 <a href="https://johncollinsai-gpt4-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
                 <p class="card-text"><small class="text-muted">Image prompt: Anish Kapoor observes GPT4 do fantastic things. Model: DALL·E 2</small></p>
             </div>
