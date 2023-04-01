@@ -110,16 +110,15 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/volgpt-image-jenny-saville-1.png" alt="Card image cap">
+            <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
-              <h4 class="text-white">How does a GPT compare to a stochastic volatility model when given a returns dataset and asked to predict volatility?</h4>
-                <p class="card-text">I have worked in risk and technology, in areas considered innovative (i.e., OTC derivs), but the pace AI now advances at is breathtaking and unlike anything I have seen before.</p>
+              <h4 class="text-white">Using a GPT to do things normally done by an asset pricing or risk model</h4>
                 <p class="card-text"> In the past we built models where the input and output modalities were numbers. For example, I used the Heston model to obtain certain dynamics of a stock's price from two stochastic differential equations \( dS(t) = \mu S(t) dt + \sqrt{v(t)} S(t) dW_1(t) \) and \( dv(t) = \kappa (\theta - v(t)) dt + \sigma \sqrt{v(t)} dW_2(t) \) and used the asset price paths to compute things like ES.</p>
                 <p class="card-text">AI now has many more permutations of input/output, i.e., text-to-image (<a href="https://labs.openai.com/" target="_blank">OpenAI's DALL·E</a>), and text-to-video <a href="https://imagen.research.google/" target="_blank">Google's Imagen</a>. So what happens if I ask a text-to-text GPT to solve problems normally handled by the number-to-number Heston? I use <a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">NanoGPT</a> and <a href="https://openai.com/product/gpt-4" target="_blank">GPT4</a> to obtain volatility predictions, to show how incredibly versatile LLMs are.</p>
-                <a href="https://johncollinsai-gpt4-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-                <p class="card-text"><small class="text-muted">Image prompt: Two young people are observing volatile stock price movements. They are seen by Jenny Saville.Model: SDXL</small></p>
+                <a href="https://johncollinsai-volgpt-post-temp-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <p class="card-text"><small class="text-muted">Image prompt: Cecily Brown compares volatility and returns. Model: SDXL</small></p>
             </div>
           </div>
         </div>
@@ -134,16 +133,16 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/gpt4-image.png" alt="Card image cap">
+            <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-1.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
               <h4 class="text-white">GPT4 builds a website. In seconds. And it works.</h4>
                 <p class="card-text">OpenAI released GPT4 today, so this evening, while I'm waiting to join a call with the US, I took a deeper look. Wow! I asked GPT4 to create a simple website based upon an instruction typed into the ChatGPT-Plus UI, to see how well it works in practice.</p>
                 <p class="card-text">This is the <a href="https://johncollinsai-gpt4-website-voqqf4ls3a-as.a.run.app" target="_blank">website created by GPT4</a>.</p>
-                <p class="card-text">GPT4 prompting moves toward a much more structured format that gives the new model the opportunity to understand that I am asking it to do something specific.  So you see in the post that I am quite specific about what I want: A simple website, built using Flask, just a single page, with a professional look and feel, for a subject that I call "GPT 4 builds a website". I also ask GPT4 to provide the code that is necessary to deploy the website on GCP as a Cloud Run service. From concept to reality! The code for this post can be found as always on <a href="https://github.com/johncollinsai" target="_blank">my GitHub</a>.</p>
+                <p class="card-text">GPT4 prompting moves toward a much more structured format that gives the new model the opportunity to understand that I am asking it to do something specific.  So you see in the post that I am quite specific about what I want: A simple website, built using Flask, just a single page, with a professional look and feel, for a subject that I call "GPT 4 builds a website". I also ask GPT4 to provide the code that is necessary to deploy the website on GCP as a Cloud Run service. The code for this post can be found as always on <a href="https://github.com/johncollinsai" target="_blank">my GitHub</a>.</p>
                 <a href="https://johncollinsai-gpt4-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-                <p class="card-text"><small class="text-muted">Image prompt: Anish Kapoor observes GPT4 do fantastic things. Model: DALL·E 2</small></p>
+                <p class="card-text"><small class="text-muted">Image prompt: Jenny Saville watches GPT build a website. Model: SDXL</small></p>
             </div>
           </div>
         </div>
@@ -156,28 +155,7 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/volgpt-image-jenny-saville.png" alt="Card image cap">
-          </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h4 class="text-white">Predicting volatility with NanoGPT</h4>
-                <p class="card-text">In this post, I train <a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">my implementation</a> of Karpathy's NanoGPT, on high-frequency (tick-by-tick) data for <a href="https://www.google.com/search?q=aapl&oq=AAPL&aqs=chrome.0.0i512l5j69i61l3.1590j1j9&sourceid=chrome&ie=UTF-8" target="_blank">Apple</a> (Apple Inc., NASDAQ, ticker: AAPL), and <a href="https://www.google.com/search?q=jpm+stock+price&oq=JPM+stock+pri&aqs=chrome.0.0i512j69i57j0i512l8.4577j1j9&sourceid=chrome&ie=UTF-8" target="_blank">JP Morgan</a> (JPMorgan Chase & Co., NYSE, ticker: JPM) to see how a simple GPT performs as a volatility predictor. I also want to explore the use of a simple GPT for tasks, in this case volatility prediction, that have to date been typically performed by other models.  The application of a GPT to volatility prediction appears to be quite novel and the use of nanoGPT provides a great basis for an under-the-hood examination.</p>
-                <p class="card-text">The code for this post can be found as always on <a href="https://github.com/johncollinsai/vogpt" target="_blank">my GitHub</a> and is arranged in two python files, one for input data, and one for NanoGPT.  A Jupyter notebook provides commentary, statistical analysis, and visualizations. NanoGPT does a pretty good job of volatility forecasting, which I think is very interesting ... </p>
-                <a href="https://johncollinsai-volgpt-post-temp-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-                <p class="card-text"><small class="text-muted">Image prompt: Two young people are observing volatile stock price movements.  They are seen by Jenny Saville. Model: DALL·E 2</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="card-group card-group card-spacer">
-      <div class="card bg-black border border-secondary">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/nanogpt-dalle.png" alt="Card image cap">
+            <img class="card-img-top" class="img-responsive" src="static/images/nanogpt-sdxl-1.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -185,7 +163,7 @@
                 <p class="card-text">I built and trained a Generative Pretrained Transformer (GPT), the same class of model behind <a href="https://chat.openai.com/chat" target="_blank">ChatGPT</a>, <a href="https://blog.google/technology/ai/bard-google-ai-search-updates/" target="_blank">Bard</a>, and <a href="https://www.bing.com/new" target="_blank">Bing</a>, but in my case a much simpler version.  GPTs are Large Language Models, in turn deep learning neural network architectures. GPTs are pre-trained on large amounts of text data using unsupervised learning. This pre-training step is crucial, as it enables the models to perform well on a variety of downstream natural language processing tasks without requiring large amounts of task-specific training data.</p>
                 <p class="card-text">I followed <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY" target="_blank">Karpathy's approach</a>, which helped me gain a better understanding of how GPTs work under the hood. I examined through construction the transformer architecture and returned to the seminal AI papers <a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need</a>, which introduced the transformer architecture, and the GPT-3 paper <a href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a>.  Overall, this post is a hands-on exploration of GPTs and the transformer architecture, with the goal of insight into how these models can be used commercially.</p>
                 <a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading for the takeaways from this post ...</a>
-                <p class="card-text"><small class="text-muted">Image prompt: Knowledge in the style of Egon Schiele. Model: DALL·E</small></p>
+                <p class="card-text"><small class="text-muted">Image prompt: Knowledge in the style of Egon Schiele. Model: SDXL</small></p>
             </div>
           </div>
         </div>
@@ -198,7 +176,7 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/lstm-dalle.png" alt="Card image cap">
+            <img class="card-img-top" class="img-responsive" src="static/images/lstm-sdxl.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -206,7 +184,7 @@
                 <p class="card-text">I devote considerable effort in this post to a mathematical enunciation of LSTM, based upon the framework set out by Sherstinsky. A thorough derivation of the LSTM network is generally skipped in finance deep learning literature that features the LSTM. </p>
                 <p class="card-text">I seek to understand each aspect of the operation of RNN and LSTM's elegant and effective systems in considerable depth. I describe firstly the RNN, followed by its evolution to the LSTM form, much more completely than is usually the case in finance DL papers.  These include unrolling the RNN, the motivations for the LSTM, namely managing the phenomena of vanishing gradients, and the subsequent mechanics of learning, which are the forward and backward passes and gradient descent.</p>
                 <a href="https://johncollinsai-lstm-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-                <p class="card-text"><small class="text-muted">Image prompt: Long and short term memories volatility, with style. Model: DALL·E</small></p>
+                <p class="card-text"><small class="text-muted">Image prompt: Long and short term memories of Ai Wei Wei. Model: SDXL</small></p>
             </div>
           </div>
         </div>
@@ -219,7 +197,7 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/high-frequency-data-dalle.png" alt="Card image cap">
+            <img class="card-img-top" class="img-responsive" src="static/images/high-frequency-data-sdxl.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -227,7 +205,7 @@
                 <p class="card-text">In this post I discuss the preparation of high frequency datasets for Apple (Apple Inc., NASDAQ, ticker: AAPL), JPM (JPMorgan Chase & Co., NYSE, ticker: JPM), and the EURUSD currency pair. I use volatility prediction as my problem setting because the second moment dominates.</p>
                 <p class="card-text">Careful data cleaning is one of the most important aspects of working with high frequency data and it is not always straightforward to construct a time series of interest from raw tick data. The methods I employ to prepare the data and compute a returns series are therefore are not trivial. I shall use these datasets a lot, so a thorough exposition of the steps taken is important. I hope to show, amongst other things, that simply fitting a time series of asset prices to a deep learning neural network, without proper consideration of the data itself and what it means, is a necessary but not sufficient condition for robust results. Put another way, when we obtain a prediction from our model, how certain can we be that what we observe is signal and not noise.</p>
                 <a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-                <p class="card-text"><small class="text-muted">Image prompt: High frequency datasets in the style of benoit mandelbrot. Model: DALL·E</small></p>
+                <p class="card-text"><small class="text-muted">Image prompt: High frequency datasets seen by benoit mandelbrot. Model: SDXL</small></p>
             </div>
           </div>
         </div>
@@ -240,7 +218,7 @@
       <div class="card bg-black border border-secondary">
         <div class="row g-0">
           <div class="col-md-5">
-            <img class="card-img-top" class="img-responsive" src="static/images/deep-learning-finance-dalle.png" alt="Card image cap">
+            <img class="card-img-top" class="img-responsive" src="static/images/dlf-jenny-saville.png" alt="Card image cap">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -248,7 +226,7 @@
                 <p class="card-text">In this post I discuss some of the papers I have read and found useful when considering deep learning in finance. I discuss academic literature here because a rigorous consideration of deep learning in finance is important, imho. This is my attempt at that and I hope it provides some useful background and context to my subsequent posts. This post was written around 2020-1, so is not particularly current. However, it covers important ground that is foundational.</p>
                 <p class="card-text">This post is identical to <a href="https://github.com/johncollinsai/dlf" target="_blank">johncollinsai/dlf</a>. However, this post is deployed via Voila, whereas the other is deployed as html via a flask app. I think the voila deployment works better and thought the contrast between the two was interesting, hence having both up, for comparison. The code for both can be found on my github, <a href="https://github.com/johncollinsai/dlf" target="_blank">here</a> and <a href="https://github.com/johncollinsai/deep-learning-finance" target="_blank">here</a>.</p>
                 <a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-                <p class="card-text"><small class="text-muted">Image prompt: Billions of financial data points in the style of Lucian Freud. Model: DALL·E</small></p>
+                <p class="card-text"><small class="text-muted">Image prompt: Deep learning in the style of Jenny Saville. Model: SDXL</small></p>
             </div>
           </div>
         </div>
