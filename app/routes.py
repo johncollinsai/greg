@@ -18,4 +18,8 @@ from app import app    # import app variable, which is a member of app package.
 def index():
     return render_template('index.html', title='home')
 
+@app.route('/volgpt', methods=['GET'])
+def volgpt():
+    return render_template('volgpt.html')
+
 

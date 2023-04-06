@@ -117,7 +117,7 @@
               <h4 class="text-white">Using a GPT for volatility prediction in risk management</h4>
                 <p class="card-text"> Asset pricing and risk management models have number-to-number input/output modalities. For example, I can implement the Heston model using two stochastic differential equations \( dS_t = \mu S_t dt + \sqrt{v_t} S_t dW_t^S \) and \( dv_t = \kappa (\theta - v_t) dt + \xi \sqrt{v_t} dW_t^v \) and with it simulate paths for asset price and volatility processes. Then, for each path, I can calculate corresponding returns, compute implied volatility, and use the average of the simulated volatilities as a predicted volatility.</p>
                 <p class="card-text">AI now has many more permutations of input/output, i.e., text-to-image (<a href="https://labs.openai.com/" target="_blank">OpenAI's DALL·E</a>), and text-to-video (<a href="https://imagen.research.google/" target="_blank">Google's Imagen</a>). I trained a small text-to-text GPT (<a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">Karpathy's NanoGPT</a>) on high-frequency OHLC data and it performed well at volatility prediction. This is a very interesting result indeed that suggests LLMs might be used for certain tasks in risk management.</p>
-                <a href="https://johncollinsai-volgpt-post-temp-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
                 <p class="card-text"><small class="text-muted">Image prompt: Cecily Brown compares volatility and returns. Model: SDXL</small></p>
             </div>
           </div>
