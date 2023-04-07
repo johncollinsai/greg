@@ -3,9 +3,87 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>volgpt-post-temp</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Using a GPT for volatility prediction in risk management</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="static/images/nanogpt-dalle.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.2/dist/umd/popper.min.js" integrity="sha384-ZRQgMf+zD5HtB5x8yhJ4y4Y4YO/7fMeRX/PV/v2t+5Dt7FJ8NpW4LN3ZYpDV7yoA" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    .container {
+      max-width: 1140px;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .bg-black {
+      background-color: #000000;
+    }
+
+    .border {
+      border: 0.5px solid;
+    }
+
+    .border-white {
+      border-color: #fff;
+    } 
+
+    .jumbotron-black-top {
+          border-top: 50px solid #000;
+    }
+
+    .card-group-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+
+    .card-spacer {
+    padding: 1rem;
+    }
+
+    .text-white {
+    color: white;
+    }
+
+    .text-center {
+    text-align: center;
+    }
+
+    .jp-InputPrompt.jp-InputPrompt-ExecutionCount {
+    display: none !important;
+    }
+
+  </style>
 
 
+<link rel="apple-touch-icon" sizes="180x180" href="static/images/volgpt-favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/images/volgpt-favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/images/volgpt-favicon/favicon-16x16.png">
+<link rel="manifest" href="static/images/volgpt-favicon/site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="static/images/volgpt-favicon/favicon.ico">
 
 
 <style type="text/css">
@@ -14604,9 +14682,64 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --></head>
+    <!-- End of mathjax configuration -->
+  
+</head>
+
+ 
 <body class="jp-Notebook" data-jp-theme-light="false" data-jp-theme-name="JupyterLab Dark">
 
+<!-- navbar -->
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ml-2" href="{{ url_for('index') }}">johncollins.ai</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://twitter.com/johncollinsai" title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter fa-lg fa-inverse fa-fw"></i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.linkedin.com/in/johncollins-ai/" title="Connect with me on LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+          </li>
+          <li class="nav-item ml-2">
+            <a href="https://github.com/johncollinsai"><img src="https://github.githubassets.com/favicon.ico" title="Follow me on GitHub" alt="GitHub icon" style="filter: invert(100%);" target="_blank"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="jumbotron jumbotron-fluid jumbotron-black-top">
+  <div class="container">
+    <h1 class="display-4"></h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="TL;DR">TL;DR<a class="anchor-link" href="#TL;DR">&#182;</a></h1><ul>
+<li><p>I trained Karpathy's nanoGPT, a small GPT using a simple bigram language model and a transformer architecture with multi-head self-attention, on OHLC tick-by-tick stock price data and found that if performs well at volatility prediction, a risk management activity.</p>
+</li>
+<li><p>I convert numbers to text and train the text-to-text nanoGPT to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>
+</li>
+<li><p>Under this setup NanoGPT seems to perform well as a volatility predictor, at least as well as number-to-number asset pricing models traditionally used for this task.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14625,19 +14758,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><p>In this post, I train Karpathy's <strong><a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app/">nanoGPT</a></strong> on high-frequency (tick-by-tick) data for <strong><a href="https://www.google.com/search?q=aapl&amp;oq=AAPL&amp;aqs=chrome.0.0i512l5j69i61l3.1590j1j9&amp;sourceid=chrome&amp;ie=UTF-8">AAPL</a></strong> and <strong><a href="https://www.google.com/search?q=jpm+stock+price&amp;oq=JPM+stock+pri&amp;aqs=chrome.0.0i512j69i57j0i512l8.4577j1j9&amp;sourceid=chrome&amp;ie=UTF-8">JPM</a></strong>. I want to see how nanoGPT performs as a volatility predictor.  I also want to explore the use of LLMs for tasks, in this case volatility prediction, that are typically performed by models more specific to asset pricing and risk management.  In the case of volatility prediction, the established model classes include stochastic volatility models such as the <strong><a href="https://github.com/johncollinsai/markov-switching-multifractal">MSM</a></strong> of Calvet &amp; Fisher, ARCH and GARCH, and Jump Diffusion models. Deep learning is also used for volatility prediction and this <strong><a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app/">post</a></strong> provides colour. However, the application of LLMs to volatility prediction appears to be quite novel and the use of nanoGPT provides a great basis for an under-the-hood examination.</p>
+<li><p>In this post, I explore the use of LLMs for tasks that are typically performed by models more specific to asset pricing and risk management. I train Karpathy's <strong><a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app/">nanoGPT</a></strong> on high-frequency (tick-by-tick) data for <strong><a href="https://www.google.com/search?q=aapl&amp;oq=AAPL&amp;aqs=chrome.0.0i512l5j69i61l3.1590j1j9&amp;sourceid=chrome&amp;ie=UTF-8">AAPL</a></strong> and <strong><a href="https://www.google.com/search?q=jpm+stock+price&amp;oq=JPM+stock+pri&amp;aqs=chrome.0.0i512j69i57j0i512l8.4577j1j9&amp;sourceid=chrome&amp;ie=UTF-8">JPM</a></strong>. I want to see how nanoGPT performs as a volatility predictor.  Volatility prediction is used in risk management to estimate the potential fluctuations in the value of an asset or portfolio over a given period of time. Volatility, the second moment, is a measure of how much the return fluctuates around its mean, and it is a key input in risk management models used by financial institutions and required by regulators.</p>
 </li>
-<li><p>I begin with <strong><a href="https://github.com/johncollinsai/nanogpt">my earlier implementation of Karpathy's nanoGPT</a></strong>. Starting with a very simple bigram language model, following Karpathy, I define and build a transformer piece by piece. Then I train it on a rigorously prepared tick-by-tick price dataset comprising some 1.079 million rows in total . In order to negate or reduce the impact of microstructure noise, and in particular Bid-Ask bounce, I compute a weighted mid-price using the CloseBid and CloseAsk prices and sizes. I discuss microstructure noise, Bid-Ask bounce, weighted mid-price, and my motivation for using it, in detail in my post <strong><a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app">high frequency data</a></strong>.  I obtain returns from the WMP and, for tractability, log returns. I present the analysis for AAPL below, but this application works equally well for JPM as I process the data for both securities.  I don't write up JPM below because it gets a bit repetitive, but the results are broadly in line with AAPL.</p>
+<li><p>The established model classes for vol prediction include stochastic volatility models such as the <strong><a href="https://github.com/johncollinsai/markov-switching-multifractal">MSM</a></strong> of Calvet &amp; Fisher, ARCH and GARCH, and Jump Diffusion models. Deep learning is also used for vol prediction and this <strong><a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app/">post</a></strong> provides colour. However, the application of LLMs to this problem is quite novel and the use of nanoGPT provides a great basis for an under-the-hood examination of the application of text-to-text LLMs to numeric problems.</p>
 </li>
-<li><p>As always when working with high-frequency tick-by-tick data, I have to do a lot of work up-front to prepare the data.  I also have to devote quite a bit of effort to processing the generated text output from nanoGPT, in order that it can be used for what is essentially a numeric purpose.</p>
+<li><p>I begin with <strong><a href="https://github.com/johncollinsai/nanogpt">my earlier implementation of Karpathy's nanoGPT</a></strong>, which I train on a cleansed dataset comprising some 1.079 million rows in total . In order to negate or reduce the impact of microstructure noise, and in particular Bid-Ask bounce, I compute a weighted mid-price using the CloseBid and CloseAsk prices and sizes. I discuss microstructure noise, Bid-Ask bounce, weighted mid-price, and my motivation for using it, in detail in my post <strong><a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app">high frequency data</a></strong>.  I obtain returns from the WMP and, for tractability, log returns. I present the analysis for AAPL in this post, but I process the data for both securities.  I don't write up JPM here because it gets a bit repetitive, but the results are broadly in line with AAPL.</p>
 </li>
-<li><p>[ADD SUMMARY OF HOW THE CODE IS ARRANGED]</p>
-</li>
-<li><p>Based upon my experience using other models for vol prediction these are not bad results, not bad at all tbh. The raw and log returns MSE's, 0.05078798 and 0.00000192 respectively, are low, as are the MAEs, 0.17065891 and 0.00099668, and appear to indicate good predictive performance. Paired t-tests (raw returns T-stat = 0.69149665, p-value = 0.50499000 and log returns T-stat = 0.71337283, p-value = 0.49192750) also indicate nanoGPT can be set up to operate in a number-to-number context and perform well as a vol predictor.</p>
-</li>
-<li><p>The implications of this, imho, are actually quite profound.  What this work appears to show is that it is possible to convert numbers to text and train a LLM to understand the patterns in the data that enable forward prediction of volatility with a level accuracy that is comparible to, indeed if not better than, asset pricing models built specifically for the purpose, and suggests that LLMs can be used in a variety of ways for asset pricing and risk management.</p>
-</li>
-<li><p>I use an NVIDIA GeForce RTX 3080 Ti Laptop GPU and a deep learning framework that includes PyTorch, CUDA, cuDNN, and NVIDIA Drivers, on Ubuntu 22.04 LTS.  Source code as always may be found on <strong><a href="https://github.com/johncollinsai/nanogpt">my GitHub</a></strong>.</p>
+<li><p>As always when working with high-frequency data, I have to do a lot of work up-front to prepare the data.  I also have to devote quite a bit of effort to processing the generated text output from nanoGPT, in order that it can be used for a numeric purpose.</p>
 </li>
 </ul>
 
@@ -14651,7 +14778,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Implementing-nanoGPT-in-a-classic-number-to-number-modality-(in-this-case,-volatility-prediction)">Implementing nanoGPT in a classic number-to-number modality (in this case, volatility prediction)<a class="anchor-link" href="#Implementing-nanoGPT-in-a-classic-number-to-number-modality-(in-this-case,-volatility-prediction)">&#182;</a></h1>
+<ul>
+<li><p>Roughly speaking my code is organized as follows. The volgpt_import function checks if a GPU is available and prints the device and device name, then calls the high_frequency_data function, which reads AAPL and JPM from 500+ daily NYSE TAQ files and combines the data into a single DataFrame and sets appropriate column names and data types. A DateTimeIndex column is created by combining Date and OpenBarTime, set as the index, then the DataFrame is trimmed to only include relevant columns and computes the WeightedMidPrice. At some stage it may be worth reintroducing a larger set of columns as I suspect that may improve model performance, but will require more data preparation steps on both the input side and with regard to the generated text.</p>
+</li>
+<li><p>The high_frequency_data function splits the data into separate DataFrames for AAPL and JPM, and computes raw returns and log returns for both stocks and merges them into their respective DataFrames. Descriptive statistics are computed using the returns. Specified columns are then formatted with a fixed number of decimal place (this helps greatly with respect to the tractability of the text generated by the model) and missing values replaced with &quot;UNK&quot;. Then all columns are converted to strings. The function returns two DataFrames (df_data_AAPL, df_data_JPM), raw returns (AAPL_rr, JPM_rr), log returns (AAPL_lr, JPM_lr), and descriptive statistics (AAPL_stats, JPM_stats) for both stocks.</p>
+</li>
+<li><p>The vol_import function identifies and prints any missing values in the AAPL and JPM data, then saves the AAPL and JPM data to text files with a comma delimiter. Finally it checks if the text files were saved correctly by reading them back into dataframes and comparing their shapes with the original data, and returns the AAPL and JPM data, their respective risk ratios, leverage ratios, and statistics.</p>
+</li>
+<li><p>The nanoGPT model is written in the volgpt_model.py file.  The train_and_generate function trains the model on a given text file and generates new text. The function accepts several arguments (i.e., text_file_path, the path to the input text file; max_iters, the maximum number of iterations to run the training loop (I set a default: 5000); learning_rate, for the optimizer (default: 1e-3); device, so that operations can be passed to the GPU; and max_new_tokens, the maximum number of new tokens to generate (default: 5000). It then tokenizes the input text, splits it into training, validation, and test sets, and defines a simple bigram language model using Karpathy's transformer architecture with multi-head self-attention. It trains the model in a loop for max_iters iterations and evaluates the loss periodically on the train, validation, and test sets. After training, the function generates new text using the trained model and returns a tuple containing the test data tensor, the generated text, and a mapping from indices to characters (itos).</p>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14662,7 +14799,66 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Import-high-frequency-data,-prepare,-describe-and-visualize-it">Import high-frequency data, prepare, describe and visualize it<a class="anchor-link" href="#Import-high-frequency-data,-prepare,-describe-and-visualize-it">&#182;</a></h4>
+<ul>
+<li><p>Having generated text, it is necessary to clean it and convert it back to numeric form to perform the volatility predictions. The clean_data function takes in high-frequency price data text generated by nanoGPT in the form of text format tabular data, plus an optional column_names parameter. It cleans and validates the input data, ensuring that the date format is correct. I experimented with 3 variants of the date format check (2 are commented out) and all work, though somewhat differently depending upon other settings. It then checks that all numeric values are valid. The function reads the data into a DataFrame, checks the date format, and validates numeric values. It then removes invalid rows and converts the data types of each column appropriately. Finally, the function returns three objects: the original DataFrame, the cleaned DataFrame, and a list of invalid row indices.</p>
+</li>
+<li><p>Finally, the function volgpt_stats takes in generated_text, test_data, and the itos mapping, and calculates the statistics for evaluating the performance of nanoGPT's generated text compared to the held-out test data. The function first converts test data tensors to strings using the itos mapping and cleans both the generated text and test data using the clean_data function. Next, it merges the cleaned data based on the 'DateTimeIndex' column and removes rows with spurious values for 'rr_generated' and 'lr_generated'. The function then calculates the Mean Squared Error (MSE) and Mean Absolute Error (MAE) for raw returns (rr) and log returns (lr), as well as paired t-tests for both. The results are printed, and the function returns the cleaned generated data, cleaned test data, merged data, and calculated statistics.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>NanoGPT appears to perform well under this setup. The MSE's (0.05078798 and 0.00000192 respectively) and MAEs (0.17065891 and 0.00099668) are low and paired t-tests (raw returns T-stat = 0.69149665, p-value = 0.50499000 and log returns T-stat = 0.71337283, p-value = 0.49192750) indicate there is no significant difference between predicted and true values. This suggests good predictive performance, but it's difficult to determine the overall quality of the predictions without comparing them to the performance of other models or benchmarks in the same context.</p>
+</li>
+<li><p>I think these results are quite profound because they show that it is possible to convert numbers to text and train a LLM to understand patterns in data that enable forward prediction of volatility with a level accuracy comparible to asset pricing models built specifically for the purpose.  This suggests that LLMs can be used in a variety of ways for asset pricing and risk management.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>I use an NVIDIA GeForce RTX 3080 Ti Laptop GPU and a deep learning framework that includes PyTorch, CUDA, cuDNN, and NVIDIA Drivers, on Ubuntu 22.04 LTS.  Source code as always may be found on <strong><a href="https://github.com/johncollinsai/volgpt">my GitHub</a></strong>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Using-nanoGPT-to-solve-a-number-to-number-problem">Using nanoGPT to solve a number-to-number problem<a class="anchor-link" href="#Using-nanoGPT-to-solve-a-number-to-number-problem">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Import-high-frequency-data,-prepare,-describe-and-visualize-it">Import high-frequency data, prepare, describe and visualize it<a class="anchor-link" href="#Import-high-frequency-data,-prepare,-describe-and-visualize-it">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14675,11 +14871,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import the high frequency OHLC data from NYSE TAQ, prepare it</span>
-<span class="sd">&#39;&#39;&#39;from volgpt_get_and_describe import volgpt_import, volgpt_describe </span>
-<span class="sd">df_data_AAPL, df_data_JPM, AAPL_rr, JPM_rr, AAPL_lr, JPM_lr, AAPL_stats, JPM_stats, device = volgpt_import(dp=8) # set dp&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">volgpt_get_and_describe</span> <span class="kn">import</span> <span class="n">volgpt_import</span><span class="p">,</span> <span class="n">volgpt_describe</span> 
+<span class="n">df_data_AAPL</span><span class="p">,</span> <span class="n">df_data_JPM</span><span class="p">,</span> <span class="n">AAPL_rr</span><span class="p">,</span> <span class="n">JPM_rr</span><span class="p">,</span> <span class="n">AAPL_lr</span><span class="p">,</span> <span class="n">JPM_lr</span><span class="p">,</span> <span class="n">AAPL_stats</span><span class="p">,</span> <span class="n">JPM_stats</span><span class="p">,</span> <span class="n">device</span> <span class="o">=</span> <span class="n">volgpt_import</span><span class="p">(</span><span class="n">dp</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># set dp</span>
 
 <span class="c1"># describe and visualize the data</span>
-<span class="sd">&#39;&#39;&#39;volgpt_describe(AAPL_stats, JPM_stats, df_data_AAPL, df_data_JPM, AAPL_rr, JPM_rr, AAPL_lr, JPM_lr)&#39;&#39;&#39;</span>
+<span class="n">volgpt_describe</span><span class="p">(</span><span class="n">AAPL_stats</span><span class="p">,</span> <span class="n">JPM_stats</span><span class="p">,</span> <span class="n">df_data_AAPL</span><span class="p">,</span> <span class="n">df_data_JPM</span><span class="p">,</span> <span class="n">AAPL_rr</span><span class="p">,</span> <span class="n">JPM_rr</span><span class="p">,</span> <span class="n">AAPL_lr</span><span class="p">,</span> <span class="n">JPM_lr</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14727,6 +14923,23 @@ Variance = 0.38692
 Standard deviation = 0.62203 
 Skewness = -1.59559 
 Kurtosis = 1684.46534
+
+Augmented Dickey-Fuller test for AAPL log returns:
+ADF Statistic: -731.091962
+p-value: 0.000000
+Critical Values:
+	1%: -3.430
+	5%: -2.862
+	10%: -2.567
+
+Augmented Dickey-Fuller test for JPM log returns:
+ADF Statistic: -523.029047
+p-value: 0.000000
+Critical Values:
+	1%: -3.430
+	5%: -2.862
+	10%: -2.567
+
 </pre>
 </div>
 </div>
@@ -14757,8 +14970,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Observations-re-prepared-high-frequency-returns-and-log-returns">Observations re prepared high-frequency returns and log returns<a class="anchor-link" href="#Observations-re-prepared-high-frequency-returns-and-log-returns">&#182;</a></h4><ul>
-<li><p>The data illustrates the stylized facts of returns: almost unpredictable, fat tails, and volatility clustering. The mean is close to zero relative to the standard deviations and the standard deviation is high for both AAPL and JPM. The time series includes the start of 2020 and the outbreak of COVID, which saw the highest volatility since the 1920's. This is evident too in the minimum and maximum returns, which are quite far from the mean.</p>
+<h3 id="Observations-re-prepared-high-frequency-returns-and-log-returns">Observations re prepared high-frequency returns and log returns<a class="anchor-link" href="#Observations-re-prepared-high-frequency-returns-and-log-returns">&#182;</a></h3><ul>
+<li><p>The data illustrates the stylized facts of returns: almost unpredictable, fat tails, and volatility clustering. The mean is close to zero relative to the standard deviations and the standard deviation is high for both AAPL and JPM. The time series includes the start of 2020 and the outbreak of COVID, which saw the highest volatility since the 1920's. This is evident too in the minimum and maximum returns, which are quite far from the mean.  It would be normal to remove outliers in data processing, but I have not done so, in order to make things a bit more difficult for the model.</p>
 </li>
 <li><p>ADF test results indicate stationarity. The ADF statistics (-731.091962 and -523.029047) are much lower than the critical values at 1% significance levels, and the p-values are very small (0.000000).</p>
 </li>
@@ -14774,7 +14987,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Train-NanoGPT-and-generate-new-high-frequency-data">Train NanoGPT and generate new high-frequency data<a class="anchor-link" href="#Train-NanoGPT-and-generate-new-high-frequency-data">&#182;</a></h4><ul>
+<h3 id="Train-NanoGPT-and-generate-new-high-frequency-data">Train NanoGPT and generate new high-frequency data<a class="anchor-link" href="#Train-NanoGPT-and-generate-new-high-frequency-data">&#182;</a></h3><ul>
 <li><p>I generate 50k tokens, and then decode the tokens into a string. The output string contains a list of financial data points, including stock names (e.g., AAPL, JPM), timestamps, and the various numerical values, as text. Each row of data starts with the stock symbol (e.g., AAPL or JPM), followed by a timestamp. After the timestamp, the other text generated by the model shows data separated by commas, following the structure I imposed upon the training text.</p>
 </li>
 <li><p>Note that I generate 50k tokens because I need a lot of generated text to get datetimestamps that align between the generated high frequency data and the real high frequency data.</p>
@@ -14793,20 +15006,20 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Train the model on AAPL and JPM OHLC data and use it to generate high-frequency data in the form of text</span>
-<span class="sd">&#39;&#39;&#39;from volgpt_model import train_and_generate</span>
-<span class="sd">text_file_path = &#39;df_data_AAPL.txt&#39; # specify the path to the text file</span>
-<span class="sd">max_iters = 6000</span>
-<span class="sd">learning_rate = 1e-4</span>
-<span class="sd">max_new_tokens=50000 # Set max_new_tokens sufficiently high that date-time stamps match the original data</span>
+<span class="kn">from</span> <span class="nn">volgpt_model</span> <span class="kn">import</span> <span class="n">train_and_generate</span>
+<span class="n">text_file_path</span> <span class="o">=</span> <span class="s1">&#39;df_data_AAPL.txt&#39;</span> <span class="c1"># specify the path to the text file</span>
+<span class="n">max_iters</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1e-4</span>
+<span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">50000</span> <span class="c1"># Set max_new_tokens sufficiently high that date-time stamps match the original data</span>
 
-<span class="sd">test_data, generated_text, itos = train_and_generate(text_file_path,</span>
-<span class="sd">                                                     max_iters=max_iters,</span>
-<span class="sd">                                                     learning_rate=learning_rate,</span>
-<span class="sd">                                                     device=device,</span>
-<span class="sd">                                                     max_new_tokens=max_new_tokens)&#39;&#39;&#39;</span>
+<span class="n">test_data</span><span class="p">,</span> <span class="n">generated_text</span><span class="p">,</span> <span class="n">itos</span> <span class="o">=</span> <span class="n">train_and_generate</span><span class="p">(</span><span class="n">text_file_path</span><span class="p">,</span>
+                                                     <span class="n">max_iters</span><span class="o">=</span><span class="n">max_iters</span><span class="p">,</span>
+                                                     <span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">,</span>
+                                                     <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
+                                                     <span class="n">max_new_tokens</span><span class="o">=</span><span class="n">max_new_tokens</span><span class="p">)</span>
 
 <span class="c1"># print the first 10 lines of generated text</span>
-<span class="sd">&#39;&#39;&#39;print(&#39;\n&#39;.join(generated_text.splitlines()[:10]))&#39;&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">generated_text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]))</span>
 <span class="c1"># print(generated_text)</span>
 </pre></div>
 
@@ -14904,8 +15117,8 @@ step 4999: train loss 0.7196, val loss 0.7179, test loss 0.7234
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Observations-re-model-training">Observations re model training<a class="anchor-link" href="#Observations-re-model-training">&#182;</a></h4><ul>
-<li><p>Under this set up volGPT (this implementation of Karpathy's nanoGPT I call volGPT to align with some of the annotation in my code and make this implementation distinct from <strong><a href="https://github.com/johncollinsai/nanogpt">my earlier implementation of Karpathy's nanoGPT</a></strong>), has 0.207149 million parameters, which is of course very small compared to large-scale language models like GPT-3. This means the model might have less capacity to learn complex patterns in the data.</p>
+<h3 id="Observations-re-model-training">Observations re model training<a class="anchor-link" href="#Observations-re-model-training">&#182;</a></h3><ul>
+<li><p>Under this set up the model has 0.207149 million parameters, which is of course very small compared to large-scale language models like GPT-3. This means the model might have less capacity to learn complex patterns in the data, though that doesn't seem to be an issue here.</p>
 </li>
 <li><p>The model appears to train well: the training loss steadily decreases as the number of steps increases, showing that the model is learning from the high-frequency data; the validation and test losses also decrease alongside the training loss, which indicates that the model is generalizing well to the unseen data; and there is no significant gap between the training loss and the validation/test losses. The model therefore seems to have a reasonable balance between fitting the training data and generalizing to the unseen data.</p>
 </li>
@@ -14921,7 +15134,7 @@ step 4999: train loss 0.7196, val loss 0.7179, test loss 0.7234
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Cleaning-the-high-frequency-data-generated-by-volGPT-and-setting-up-the-model-evaluation">Cleaning the high-frequency data generated by volGPT and setting up the model evaluation<a class="anchor-link" href="#Cleaning-the-high-frequency-data-generated-by-volGPT-and-setting-up-the-model-evaluation">&#182;</a></h4><ul>
+<h3 id="Cleaning-the-high-frequency-data-generated-by-volGPT-and-setting-up-the-model-evaluation">Cleaning the high-frequency data generated by volGPT and setting up the model evaluation<a class="anchor-link" href="#Cleaning-the-high-frequency-data-generated-by-volGPT-and-setting-up-the-model-evaluation">&#182;</a></h3><ul>
 <li>It is necessary to clean the generated data, so in that respect it is no different to real OHLC data! I clean the generated text and the test data and merge the cleaned data. I align the timing of the predictions and the test data. If the model's predictions and the test data have different time steps, it is not possible to accurately calculate the MSE and MAE.</li>
 </ul>
 
@@ -14935,11 +15148,8 @@ step 4999: train loss 0.7196, val loss 0.7179, test loss 0.7234
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Evaluate-the-model:-MSE,-MAE,-and-paired-t-test">Evaluate the model: MSE, MAE, and paired t-test<a class="anchor-link" href="#Evaluate-the-model:-MSE,-MAE,-and-paired-t-test">&#182;</a></h4><ul>
-<li><p>I evaluate the accuracy of the raw return and log return predictions by the model using MSE and MAE. Mean Squared Error (MSE) measures the average squared difference between the predicted values and the actual values. A lower MSE indicates better accuracy. Mean Absolute Error (MAE) measures the average absolute difference between the predicted values and the actual values, and this metric is less sensitive to outliers compared to MSE.</p>
-</li>
-<li><p>I also perform a hypothesis test to compare the performance of two models or evaluate the significance of the model's errors, using a paired t-test. The paired t-test determines if there is a significant difference between the true values and the predicted values. If the p-value is small (typically below 0.05), it suggests that the difference is significant, and the model's errors are not likely due to random chance.</p>
-</li>
+<h1 id="Model-performance">Model performance<a class="anchor-link" href="#Model-performance">&#182;</a></h1><ul>
+<li>I evaluate the accuracy of the raw return and log return predictions by the model using MSE and MAE. Lower values of course indicate better accuracy and the MAE is less sensitive to outliers than the MSE. I also compute a paired t-test to determine if there is a significant difference between the true values and the predicted values.</li>
 </ul>
 
 </div>
@@ -14954,8 +15164,8 @@ step 4999: train loss 0.7196, val loss 0.7179, test loss 0.7234
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># clean generated high-frequency data currently in text form, convert to numeric form and evaluate the model</span>
-<span class="sd">&#39;&#39;&#39;from volgpt_stats import volgpt_stats</span>
-<span class="sd">generated_clean, test_data_clean, merged_data, rr_mae, rr_mse, lr_mae, lr_mse, raw_t_stat, raw_p_value, log_t_stat, log_p_value = volgpt_stats(generated_text, test_data, itos)&#39;&#39;&#39;</span>
+<span class="kn">from</span> <span class="nn">volgpt_stats</span> <span class="kn">import</span> <span class="n">volgpt_stats</span>
+<span class="n">generated_clean</span><span class="p">,</span> <span class="n">test_data_clean</span><span class="p">,</span> <span class="n">merged_data</span><span class="p">,</span> <span class="n">rr_mae</span><span class="p">,</span> <span class="n">rr_mse</span><span class="p">,</span> <span class="n">lr_mae</span><span class="p">,</span> <span class="n">lr_mse</span><span class="p">,</span> <span class="n">raw_t_stat</span><span class="p">,</span> <span class="n">raw_p_value</span><span class="p">,</span> <span class="n">log_t_stat</span><span class="p">,</span> <span class="n">log_p_value</span> <span class="o">=</span> <span class="n">volgpt_stats</span><span class="p">(</span><span class="n">generated_text</span><span class="p">,</span> <span class="n">test_data</span><span class="p">,</span> <span class="n">itos</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15048,11 +15258,11 @@ Log returns paired t-test results: T-statistic = 0.71337283, p-value = 0.4919275
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h1><ul>
-<li><p>Based upon my experience with other models in a volatility prediction setting these are not bad results. Not bad at all tbh.</p>
+<li><p>Based upon my experience using ARCH, GARCH, multifractal, other SV, and other models for volatility prediction these are not bad results. Not bad at all tbh.</p>
 </li>
-<li><p>The raw and log returns MSE's, 0.05078798 and 0.00000192 respectively, are low, as are the MAEs, 0.17065891 and 0.00099668 respectively. These metrics appear to indicate good predictive performance. But it is not possible to say definitively that the performance is strong in the absence of benchmarks in the same context.</p>
+<li><p>The raw and log returns MSE's (0.05078798 and 0.00000192 respectively) are low, as are the MAE's (0.17065891 and 0.00099668 respectively). These metrics appear to indicate good predictive performance. But it is not possible to say definitively that the performance is strong in the absence of benchmarks in the same context.</p>
 </li>
-<li><p>The paired t-test indicates if there is a statistically significant difference between the means of two paired samples (in this case, the predicted and true values). The T-statistic represents the test statistic, and the p-value indicates the probability of observing a test statistic at least as extreme as the one computed, assuming the null hypothesis is true (i.e., there is no significant difference between the means). The raw returns T-stat = 0.69149665, and p-value = 0.50499000; and the log returns T-statistic = 0.71337283, and p-value = 0.49192750.  The p-values for both raw and log returns are clearly greater than the typical threshold of 0.05, suggesting that there is no statistically significant difference between the true and predicted values.  This also suggests that the model may be a good volatility predictor.</p>
+<li><p>The paired t-test indicates if there is a statistically significant difference between the means of two paired samples (in this case, the predicted and true values). The raw returns T-stat = 0.69149665, and p-value = 0.50499000; and the log returns T-statistic = 0.71337283, and p-value = 0.49192750.  The p-values for both raw and log returns are clearly greater than the typical threshold of 0.05, indicating there is no statistically significant difference between the true and predicted values.</p>
 </li>
 </ul>
 
@@ -15069,7 +15279,7 @@ Log returns paired t-test results: T-statistic = 0.71337283, p-value = 0.4919275
 <h1 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h1><ul>
 <li><p>The results suggest that a text-to-text LLM trained on high-frequency OHLC data can perform well as a volatility predictor, at least as well as the number-to-number asset pricing models traditionally used for this task.</p>
 </li>
-<li><p>I think the implication so of this are actually quite profound.  What this work appears to show is that it is possible to convert numbers to text and train a LLM to understand the patterns in the data that enable forward prediction of volatility with a level accuracy that is comparible to, indeed if not better than, asset pricing models built specifically for the purpose.  This has potentially important implications for asset pricing and risk management and further study, including head-to-head comparison of LLMs to traditional asset pricing models, is likely to be a fertile area for researchers.</p>
+<li><p>I think the implication so of this are actually quite profound.  What this work appears to show is that it is possible to convert numbers to text and train a LLM to understand the patterns in the data that enable forward prediction of volatility with a level accuracy that is comparible to, indeed if not better than, asset pricing models built specifically for the purpose.  This has potentially important implications for asset pricing and risk management and further investigation of use of LLMs in risk management appears warranted.</p>
 </li>
 </ul>
 
@@ -15179,18 +15389,21 @@ Log returns paired t-test results: T-statistic = 0.71337283, p-value = 0.4919275
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr />
-<p>End</p>
+
+<!-- Footer -->
+<div class="container-fluid py-3" style="background-color: rgba(0, 0, 0, 0);">
+  <div class="row">
+    <div class="col text-center text-white">
+      <p>&copy; 2023 johncollins</p>
+    </div>
+  </div>
+</div>
+
 
 </div>
 </div>
 </div>
 </div>
 </body>
-
-
-
-
-
-
 
 </html>
