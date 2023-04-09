@@ -62,12 +62,12 @@
     }
   </style>
 
-<link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
-<link rel="manifest" href="static/images/site.webmanifest">
-<link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.ico">
-<a href="https://johncollins.ai/"><img src="https://johncollins.ai/static/images/favicon.ico" alt="Favicon" style="display:none;"></a>
+<link rel="apple-touch-icon" sizes="180x180" href="static/images/johncollins-favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/images/johncollins-favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/images/johncollins-favicon/favicon-16x16.png">
+<link rel="manifest" href="static/images/johncollins-favicon/site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="static/images/johncollins-favicon/favicon.ico">
+<a href="https://johncollins.ai/"><img src="https://johncollins.ai/static/images/johncollins-favicon/favicon.ico" alt="Favicon" style="display:none;"></a>
 
 
 
@@ -144,7 +144,7 @@
                 <p class="card-text">OpenAI released GPT4 today, so this evening, while I'm waiting to join a call with the US, I took a deeper look. Wow! I asked GPT4 to create a simple website based upon an instruction typed into the ChatGPT-Plus UI, to see how well it works in practice.</p>
                 <p class="card-text">This is the <a href="https://johncollinsai-gpt4-website-voqqf4ls3a-as.a.run.app" target="_blank">website created by GPT4</a>.</p>
                 <p class="card-text">GPT4 prompting moves toward a much more structured format that gives the new model the opportunity to understand that I am asking it to do something specific.  So you see in the post that I am quite specific about what I want: A simple website, built using Flask, just a single page, with a professional look and feel, for a subject that I call "GPT 4 builds a website". I also ask GPT4 to provide the code that is necessary to deploy the website on GCP as a Cloud Run service. The code for this post can be found as always on <a href="https://github.com/johncollinsai" target="_blank">my GitHub</a>.</p>
-                <a href="https://johncollinsai-gpt4-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <a href="{{ url_for('gpt4') }}" target="_blank" class="card-link">Continue reading ...</a>
                 <p class="card-text"><small class="text-muted">Image prompt: Jenny Saville watches GPT build a website. Model: SDXL</small></p>
             </div>
           </div>
@@ -165,7 +165,7 @@
               <h4 class="text-white">Building a GPT</h4>
                 <p class="card-text">I built and trained a Generative Pretrained Transformer (GPT), the same class of model behind <a href="https://chat.openai.com/chat" target="_blank">ChatGPT</a>, <a href="https://blog.google/technology/ai/bard-google-ai-search-updates/" target="_blank">Bard</a>, and <a href="https://www.bing.com/new" target="_blank">Bing</a>, but in my case a much simpler version.  GPTs are Large Language Models, in turn deep learning neural network architectures. GPTs are pre-trained on large amounts of text data using unsupervised learning. This pre-training step is crucial, as it enables the models to perform well on a variety of downstream natural language processing tasks without requiring large amounts of task-specific training data.</p>
                 <p class="card-text">I followed <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY" target="_blank">Karpathy's approach</a>, which helped me gain a better understanding of how GPTs work under the hood. I examined through construction the transformer architecture and returned to the seminal AI papers <a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need</a>, which introduced the transformer architecture, and the GPT-3 paper <a href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a>.  Overall, this post is a hands-on exploration of GPTs and the transformer architecture, with the goal of insight into how these models can be used commercially.</p>
-                <a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading for the takeaways from this post ...</a>
+                <a href="{{ url_for('nanogpt') }}" target="_blank" class="card-link">Continue reading for the takeaways from this post ...</a>
                 <p class="card-text"><small class="text-muted">Image prompt: Knowledge in the style of Egon Schiele. Model: SDXL</small></p>
             </div>
           </div>
@@ -186,7 +186,7 @@
               <h4 class="text-white">LSTM</h4>
                 <p class="card-text">I devote considerable effort in this post to a mathematical enunciation of LSTM, based upon the framework set out by Sherstinsky. A thorough derivation of the LSTM network is generally skipped in finance deep learning literature that features the LSTM. </p>
                 <p class="card-text">I seek to understand each aspect of the operation of RNN and LSTM's elegant and effective systems in considerable depth. I describe firstly the RNN, followed by its evolution to the LSTM form, much more completely than is usually the case in finance DL papers.  These include unrolling the RNN, the motivations for the LSTM, namely managing the phenomena of vanishing gradients, and the subsequent mechanics of learning, which are the forward and backward passes and gradient descent.</p>
-                <a href="https://johncollinsai-lstm-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <a href="{{ url_for('lstm') }}" target="_blank" class="card-link">Continue reading ...</a>
                 <p class="card-text"><small class="text-muted">Image prompt: Long and short term memories of Ai Wei Wei. Model: SDXL</small></p>
             </div>
           </div>
@@ -207,7 +207,7 @@
               <h4 class="text-white">High Frequency Data</h4>
                 <p class="card-text">In this post I discuss the preparation of high frequency datasets for Apple (Apple Inc., NASDAQ, ticker: AAPL), JPM (JPMorgan Chase & Co., NYSE, ticker: JPM), and the EURUSD currency pair. I use volatility prediction as my problem setting because the second moment dominates.</p>
                 <p class="card-text">Careful data cleaning is one of the most important aspects of working with high frequency data and it is not always straightforward to construct a time series of interest from raw tick data. The methods I employ to prepare the data and compute a returns series are therefore are not trivial. I shall use these datasets a lot, so a thorough exposition of the steps taken is important. I hope to show, amongst other things, that simply fitting a time series of asset prices to a deep learning neural network, without proper consideration of the data itself and what it means, is a necessary but not sufficient condition for robust results. Put another way, when we obtain a prediction from our model, how certain can we be that what we observe is signal and not noise.</p>
-                <a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <a href="{{ url_for('high_frequency_data') }}" target="_blank" class="card-link">Continue reading ...</a>
                 <p class="card-text"><small class="text-muted">Image prompt: High frequency datasets seen by benoit mandelbrot. Model: SDXL</small></p>
             </div>
           </div>
@@ -228,7 +228,7 @@
               <h4 class="text-white">Deep Learning in Finance</h4>
                 <p class="card-text">In this post I discuss some of the papers I have read and found useful when considering deep learning in finance. I discuss academic literature here because a rigorous consideration of deep learning in finance is important, imho. This is my attempt at that and I hope it provides some useful background and context to my subsequent posts. This post was written around 2020-1, so is not particularly current. However, it covers important ground that is foundational.</p>
                 <p class="card-text">This post is identical to <a href="https://github.com/johncollinsai/dlf" target="_blank">johncollinsai/dlf</a>. However, this post is deployed via Voila, whereas the other is deployed as html via a flask app. I think the voila deployment works better and thought the contrast between the two was interesting, hence having both up, for comparison. The code for both can be found on my github, <a href="https://github.com/johncollinsai/dlf" target="_blank">here</a> and <a href="https://github.com/johncollinsai/deep-learning-finance" target="_blank">here</a>.</p>
-                <a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
+                <a href="{{ url_for('deep_learning_finance') }}" target="_blank" class="card-link">Continue reading ...</a>
                 <p class="card-text"><small class="text-muted">Image prompt: Deep learning in the style of Jenny Saville. Model: SDXL</small></p>
             </div>
           </div>

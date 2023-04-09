@@ -22,4 +22,22 @@ def index():
 def volgpt():
     return render_template('volgpt.html')
 
+@app.route('/gpt4', methods=['GET'])
+def gpt4():
+    return render_template('gpt4.html')
 
+@app.route('/nanogpt', methods=['GET'])
+def nanogpt():
+    return render_template('nanogpt.html')
+
+@app.route('/lstm', methods=['GET'])
+def lstm():
+    return render_template('lstm.html')
+
+@app.route('/high-frequency-data', methods=['GET'])
+def high_frequency_data():
+    return render_template('high-frequency-data.html')
+
+@app.route('/deep-learning-finance', methods=['GET'])
+def deep_learning_finance():
+    return render_template('deep-learning-finance.html')
