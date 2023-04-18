@@ -149,6 +149,27 @@
           <div class="card bg-black border border-secondary">
             <div class="row g-0">
               <div class="col-md-5">
+                <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h4 class="text-white">Using a GPT for volatility prediction in risk management</h4>
+                    <p class="card-text">AI now has many more permutations of input/output, i.e., text-to-image (<a href="https://labs.openai.com/" target="_blank">OpenAI's DALL·E</a>), and text-to-video (<a href="https://imagen.research.google/" target="_blank">Google's Imagen</a>). I trained a small text-to-text GPT (<a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">Karpathy's NanoGPT</a>) on high-frequency OHLC data and it performed well at volatility prediction. This is a very interesting result indeed that suggests LLMs can be trained and used for risk management.</p>
+                    <p class="card-text">NanoGPT is a smaller and more lightweight version of the larger GPT models, like ChatGPT and GPT-4. It uses a simple bigram language model and a transformer architecture with multi-head self-attention. I convert numbers to text and train the text-to-text nanoGPT to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>
+                    <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
+                    <p class="card-text"><small class="text-muted">Image prompt: Cecily Brown compares volatility and returns. Model: SDXL</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="card-group card-group card-spacer">
+          <div class="card bg-black border border-secondary">
+            <div class="row g-0">
+              <div class="col-md-5">
                 <img class="card-img-top" class="img-responsive" src="static/images/analystgpt.png" alt="Card image cap">
               </div>
               <div class="col-md-7">
@@ -159,27 +180,6 @@
                     <p class="card-text">I will also deploy via www.analyst-gpt.com, using GKE/nginix to improve performance.  I will probably re-write the UXUI with React JS to obtain a more intuitive analyst experience.</p>
                     <a href="{{ url_for('analystgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
                     <p class="card-text"><small class="text-muted">Image prompt: Analysts build AnalystGPT in the style of Francis Bacon. Model: SDXL</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="card-group card-group card-spacer">
-          <div class="card bg-black border border-secondary">
-            <div class="row g-0">
-              <div class="col-md-5">
-                <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h4 class="text-white">Using a GPT for volatility prediction in risk management</h4>
-                    <p class="card-text">AI now has many more permutations of input/output, i.e., text-to-image (<a href="https://labs.openai.com/" target="_blank">OpenAI's DALL·E</a>), and text-to-video (<a href="https://imagen.research.google/" target="_blank">Google's Imagen</a>). I trained a small text-to-text GPT (<a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">Karpathy's NanoGPT</a>) on high-frequency OHLC data and it performed well at volatility prediction. This is a very interesting result indeed that suggests LLMs can be trained and used for risk management.</p>
-                    <p class="card-text">NanoGPT is a smaller and more lightweight version of the larger GPT models, like ChatGPT and GPT-4. It uses a simple bigram language model and a transformer architecture with multi-head self-attention. I convert numbers to text and train the text-to-text nanoGPT to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>
-                    <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Cecily Brown compares volatility and returns. Model: SDXL</small></p>
                 </div>
               </div>
             </div>
