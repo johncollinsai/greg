@@ -126,13 +126,26 @@
   </div>
 
   <!-- New section with flat light grey background, border, and content-wrapper, uses iframe to embed analystgpt as microservice -->
+  
+  <!-- <section class="bg-light-grey border border-secondary py-5">
+    <div class="container">
+      <div class="content-wrapper">
+        <h2 class="text-center mb-4 text-blue">I built a GPT4 chatbot, to take a deeper look at LLMs and GPTs</h2>
+        <p class="text-center text-black">AnalystGPT is an advanced conversational AI agent (i.e., a chatbot) I built that leverages the capabilities of <a href="https://platform.openai.com/docs/models/gpt-3-5" target="_blank">text-davinci-003</a> and <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank">GPT4</a> architectures. My objective is to harness the potential of AnalystGPT in performing tasks typically executed by an analyst and to assess the extent of its analytical proficiency. I will explore use of various strategies, such as zero-shot, few-shot, Chain-of-Thought, and automatic prompt configurations, to optimize the prompt and evaluate the AI's performance. Additionally, I aim to investigate the integration of large language models (LLMs) and GPT-based models into UX and workflow. To examine the capabilities of AnalystGPT, pose a question below:</p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://johncollinsai-analystgpt-voqqf4ls3a-as.a.run.app/" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
   <section class="bg-light-grey border border-secondary py-5">
     <div class="container">
       <div class="content-wrapper">
-        <h2 class="text-center mb-4 text-blue">I built this GPT4 chatbot, to show how I can create an AI-Analyst</h2>
+        <h2 class="text-center mb-4 text-blue">I built this GPT4 chatbot as a baseline for creating an AI-Analyst</h2>
         <p class="text-center text-black">AnalystGPT is an advanced conversational AI agent (i.e., a chatbot) I built that leverages the capabilities of <a href="https://platform.openai.com/docs/models/gpt-3-5" target="_blank">text-davinci-003</a> and <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank">GPT4</a> architectures. My objective is to harness the potential of AnalystGPT in performing tasks typically executed by an analyst and to assess the impact of different setups and methods upon its analytical proficiency. I will explore use of various strategies, such as zero-shot, few-shot, Chain-of-Thought, and automatic prompt configurations, to optimize the prompt and evaluate the AI's performance. I will also look at the integration of large language models (LLMs) and GPT-based models into UX and workflow. To examine the capabilities of AnalystGPT, ask a question below:</p>
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://johncollinsai-analystgpt-voqqf4ls3a-as.a.run.app/" allowfullscreen></iframe>
+          <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analystgpt-voqqf4ls3a-as.a.run.app/predefined" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -203,8 +216,8 @@
             </div>
             <div class="col-md-7">
               <div class="card-body">
-                <h4 class="text-white">GPT4 builds a website. In seconds. And it works.</h4>
-                  <p class="card-text">I used GPT4 to create a simple website based upon an instruction typed into the ChatGPT-Plus UI, to see how well instructing a model in this way works in practice.</p>
+                <h4 class="text-white">GPT4 builds a website.</h4>
+                  <p class="card-text">I used GPT4 to create a website, prompting the ChatGPT-Plus UI, to see how well instructing a model in this way works in practice. This is the <a href="https://johncollinsai-gpt4-website-voqqf4ls3a-as.a.run.app" target="_blank">website created by GPT4</a>.</p>
                   <a href="{{ url_for('gpt4') }}" target="_blank" class="card-link">Continue reading ...</a>
               </div>
             </div>
