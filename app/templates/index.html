@@ -5,27 +5,27 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="static/images/jenny-saville-2.png">
+  <meta property="og:image" content="static/images/nanogpt-sdxl-1.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="title" content="johncollins.ai">
-  <meta name="description" content="I build and deploy AI at scale using DL/LLMs/GPTs. This is my personal site, where I share my own work.">
+  <meta name="description" content="I build and deploy AI at scale using DL/LLMs/GPTs. Personal work on this site.">
   <meta property="og:title" content="johncollins.ai">
-  <meta property="og:description" content="I build and deploy AI at scale using DL/LLMs/GPTs. This is my personal site, where I share my own work.">
+  <meta property="og:description" content="I build and deploy AI at scale using DL/LLMs/GPTs. Personal work on this site.">
   <meta property="og:url" content="https://johncollins.ai">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="johncollins.ai">
-  <meta property="og:image" content="https://johncollins.ai/static/images/jenny-saville-2.png">
-  <meta property="og:image:secure_url" content="https://johncollins.ai/static/images/jenny-saville-2.png">
+  <meta property="og:image" content="https://johncollins.ai/app/static/images/nanogpt-sdxl-1.png">
+  <meta property="og:image:secure_url" content="https://johncollins.ai/app/static/images/nanogpt-sdxl-1.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="johncollins.ai">
-  <meta name="twitter:description" content="I build and deploy AI at scale using DL/LLMs/GPTs. This is my personal site, where I share my own work.">
-  <meta name="twitter:image" content="https://johncollins.ai/static/images/jenny-saville-2.png">
+  <meta name="twitter:description" content="I build and deploy AI at scale using DL/LLMs/GPTs. Personal work on this site.">
+  <meta name="twitter:image" content="https://johncollins.ai/app/static/images/nanogpt-sdxl-1.png">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="https://johncollins.ai/static/images/jenny-saville-2.png">
+  <meta name="msapplication-TileImage" content="https://johncollins.ai/app/static/images/nanogpt-sdxl-1.png">
  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -148,7 +148,7 @@
     <div class="container">
       <div class="content-wrapper">
         <h2 class="text-center mb-4 text-blue">I built this GPT4 chatbot as a baseline for creating an AI-Analyst</h2>
-        <p class="text-center text-black">AnalystGPT is an advanced conversational AI agent (i.e., a chatbot) I built that leverages the capabilities of <a href="https://platform.openai.com/docs/models/gpt-3-5" target="_blank">text-davinci-003</a> and <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank">GPT4</a> architectures. My objective is to harness the potential of AnalystGPT in performing tasks typically executed by an analyst and to assess the impact of different setups and methods upon its analytical proficiency. I will explore use of various strategies, such as zero-shot, few-shot, Chain-of-Thought, and automatic prompt configurations, to optimize the prompt and evaluate the AI's performance. I will also look at the integration of large language models (LLMs) and GPT-based models into UX and workflow. To examine the capabilities of AnalystGPT, ask a question below:</p>
+        <p class="text-center text-black">AnalystGPT is an advanced conversational AI agent (i.e., a chatbot) that leverages the capabilities of <a href="https://openai.com/" target="_blank">OpenAI's</a> <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank">GPT4</a> architecture. My objective is to explore AI's potential to perform in different analytical modalities, including analytical (i.e., business analyst), investigative (i.e., investigator), and financial (i.e., financial analyst). I have embedded <a href="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" target="_blank">AnalystGPT</a> into my site to show how GPT capabilities can be easily integrated with any UI or workflow. You can try AnalystGPT below:</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app/predefined" allowfullscreen></iframe>
         </div>
@@ -193,10 +193,10 @@
               <div class="col-md-7">
                 <div class="card-body">
                   <h4 class="text-white">AnalystGPT</h4>
-                    <p class="card-text">AnalystGPT is a GPT app that currently provides responses from <a href="https://platform.openai.com/docs/models/gpt-3-5" target="_blank">text-davinci-003</a> and <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank">GPT4</a>. It is hosted as a web application using a Flask framework for the webapp backend, a modular Blueprint structure, and a combination of HTML, CSS, and JavaScript for the frontend. The application utilizes the <a href="https://pypi.org/project/openai/" target="_blank">OpenAI Python Library</a> to interact with the GPT-4 model, generating text completions based on user input. The application is containerized with Docker and currently deployed as a Cloud Run service on GCP.</p>
-                    <p class="card-text">Via future posts on <a href="https://johncollins.ai/" target="_blank">johncollins.ai</a> I will develop AnalystGPT into a full blown "analyst" chatbot. I want to look at the improvements to its performance obtained from zero-shot vs few-shot vs Chain-of-Thought (CoT) vs automatic prompt setups, and various prompt optimization methods.</p>
-                    <p class="card-text">I will also deploy via www.analyst-gpt.com, using GKE/nginix to improve performance.  I will probably re-write the UXUI with React JS to obtain a more intuitive analyst experience.</p>
-                    <a href="{{ url_for('analystgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
+                    <p class="card-text">AnalystGPT provides responses from <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank">GPT4</a>. It is hosted as a web app with a Flask framework at the backend, a modular Blueprint structure, and HTML, CSS, and JavaScript at the frontend. It utilizes the <a href="https://pypi.org/project/openai/" target="_blank">OpenAI Python Library</a> to interact with the GPT-4 model and explores AI's potential to perform in different analytical modalities, including analytical (i.e., business analyst), investigative (i.e., investigator), and financial (i.e., financial analyst) using a variety of prompt engineering methods.</p>
+                    <p class="card-text">In future posts I will look at the improvements to its performance obtained from zero-shot vs few-shot vs Chain-of-Thought (CoT) vs automatic prompt setups, and various prompt optimization methods.</p>
+                    <p class="card-text">I will also deploy via GKE/nginix to improve performance, and I will probably re-write the UXUI with React JS to obtain a more intuitive analyst experience.</p>
+                    <a href="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Try AnalystGPT ...</a>
                     <p class="card-text"><small class="text-muted">Image prompt: Analysts build AnalystGPT in the style of Francis Bacon. Model: SDXL</small></p>
                 </div>
               </div>
@@ -222,7 +222,7 @@
             <div class="col-md-7">
               <div class="card-body">
                 <h4 class="text-white">GPT4 builds a website.</h4>
-                  <p class="card-text">I used GPT4 to create a website, prompting the ChatGPT-Plus UI, to see how well instructing a model in this way works in practice. This is the <a href="https://johncollinsai-gpt4-website-voqqf4ls3a-as.a.run.app" target="_blank">website created by GPT4</a>.</p>
+                  <p class="card-text">I used GPT4 to create a website from scratch, prompting the ChatGPT-Plus UI, to see how well instructing a model in this way works in practice. This is the <a href="https://johncollinsai-gpt4-website-voqqf4ls3a-as.a.run.app" target="_blank">website created by GPT4</a> in a single response/response exchange.</p>
                   <a href="{{ url_for('gpt4') }}" target="_blank" class="card-link">Continue reading ...</a>
               </div>
             </div>
