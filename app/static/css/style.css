@@ -1,0 +1,63 @@
+.container-fluid.bg-dark.pt-4.pb-5 {
+    border: 2px solid #6F42C1;
+}
+  
+ .container-fluid.bg-black.py-3 {
+    color: white;
+    text-align: center;
+}
+  
+.container {
+    max-width: 1140px;
+}
+
+body {
+background-color: black;
+color: white;
+font-family: "Quicksand", sans-serif;
+}
+
+.bg-black {
+background-color: #000000;
+}
+
+.border {
+border: 0.5px solid;
+}
+
+.border-white {
+border-color: #fff;
+} 
+
+.jumbotron-black-top {
+    border-top: 50px solid #000;
+}
+
+.card-group-2 {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 1rem;
+}
+
+.card-spacer {
+padding: 1rem;
+}
+
+.bg-light-grey {
+background-color: #f2f2f2;
+}
+
+.text-blue {
+color: #007bff;
+}
+
+.text-black {
+color: #000000;
+}
+
+.card:hover {
+background-color: rgba(128, 0, 128, 0.3); /* More vivid purple color with higher opacity */
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Shadow effect when hovered */
+transform: translateY(-5px); /* Raise the card when hovered */
+transition: all 0.3s ease; /* Smooth transition effect */
+}
