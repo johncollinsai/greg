@@ -98,20 +98,7 @@
     </div>
   </div>
 
-  <!-- NEW SECTION FOR NEW THING -->
-  <section class="bg-light-grey border border-secondary py-5">
-    <div class="container">
-      <div class="content-wrapper">
-        <h2 class="text-center mb-4 text-blue">NEW SECTION FOR NEW THING</h2>
-        <p class="text-center text-black">NEW SECTION FOR NEW THING</p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe id="predefined-question" class="embed-responsive-item" src="https://analyst-gpt.com" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POST FOR THE NEW THING IN THIS SECTION TOO -->
+  <!-- Latest post -->
   <section class="container-fluid bg-black py-5">
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -121,16 +108,16 @@
             <div class="card bg-black border border-secondary">
               <div class="row g-0">
                 <div class="col-md-5">
-                  <img class="card-img-top" class="img-responsive" src="static/images/analystgpt.png" alt="Card image cap">
+                  <img class="card-img-top" class="img-responsive" src="static/images/prompt-engineering.png" alt="Card image cap">
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="text-white">AnalystGPT</h4>
-                    <p class="card-text">AnalystGPT provides responses from <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank" class="text-blue">GPT4</a>. It is hosted as a web app with a Flask framework at the backend, a modular Blueprint structure, and HTML, CSS, and JavaScript at the frontend. It utilizes the <a href="https://pypi.org/project/openai/" target="_blank" class="text-blue">OpenAI Python Library</a> to interact with the GPT-4 model and explores AI's potential to perform in different analytical modalities, including analytical (i.e., business analyst), investigative (i.e., investigator), and financial (i.e., financial analyst) using a variety of prompt engineering methods.</p>
-                    <p class="card-text">In future posts I will look at the improvements to its performance obtained from zero-shot vs few-shot vs Chain-of-Thought (CoT) vs automatic prompt setups, and various prompt optimization methods.</p>
-                    <p class="card-text">I will also deploy via GKE/nginix to improve performance, and I will probably re-write the UXUI with React JS to obtain a more intuitive analyst experience.</p>
-                    <a href="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link text-blue">Try AnalystGPT ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Analysts build AnalystGPT in the style of Francis Bacon. Model: SDXL</small></p>
+                    <h4 class="text-white">Prompt engineering</h4>
+                    <p class="card-text">Have you ever wondered why the LLM you are using, say ChatGPT, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses?  One way we obtain more specific answers from our models is "prompt engineering".</p>
+                    <p class="card-text">In this post I talk about prompt engineering from a practical perspective and share some insights based upon my experience.</p>
+                    <p class="card-text">We can get great results with prompt engineering in a Jupyter Notebook, but it can much more involved to achieve similar outcomes in a live AI app that scales.</p>
+                    <a href="{{ url_for('promptengineering') }}" target="_blank" class="card-link">Continue reading ...</a>
+                    <p class="card-text"><small class="text-muted">Image prompt: Engineering optimal outcomes in the style of Chuck Close. Model: SDXL</small></p>
                   </div>
                 </div>
               </div>
@@ -141,14 +128,27 @@
     </div>
   </section>
 
-  <!-- Section uses iframe to embed analystgpt as microservice -->
+  <!-- Showcase latest tool or service -->
+  <section class="bg-light-grey border border-secondary py-5">
+    <div class="container">
+      <div class="content-wrapper">
+        <h2 class="text-center mb-4 text-blue">Prompt engineering</h2>
+        <p class="text-center text-black">We can use this baby webapp to see how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a cleaner response.</p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase an interesting thing re LLMs -->
   <section class="container-fluid pt-4 pb-5" style="background-color: #6F42C1; border: none;">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <h2 class="text-center text-white mb-4">I built this GPT4 chatbot as a baseline for creating an AI-Analyst</h2>
-        <p class="text-center text-white">AnalystGPT is an advanced conversational AI agent (i.e., a chatbot) that leverages the capabilities of <a href="https://openai.com/" target="_blank" class="text-light">OpenAI's</a> <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank" class="text-light">GPT4</a> architecture. My objective is to explore AI's potential to perform in different analytical modalities, including analytical (i.e., business analyst), investigative (i.e., investigator), and financial (i.e., financial analyst). I have embedded <a href="https://analyst-gpt.com" target="_blank" class="text-light">AnalystGPT</a> into my site to show how GPT capabilities can be easily integrated with any UI or workflow. You can try AnalystGPT below:</p>
+        <h2 class="text-center text-white mb-4">Responsible AI</h2>
+        <p class="text-center text-white">This baby webapp leverages <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate a specfic analysis for a company of your choice. It illustrates one way to integrate AI into existing applications and workflow to provide specific information in a controlled and responsible manner. Please enter a company name below to try it. Choose a report type (business, investigation, finance) by clicking on the corresponding button. Enter the company name you wish to analyse in the input field and click the "Submit" button. Wait for the AI-generated report to appear on the webpage.</p>
         <div class="embed-responsive embed-responsive-16by9 border border-light">
-          <iframe id="predefined-question" class="embed-responsive-item" src="https://analyst-gpt.com" allowfullscreen></iframe>
+          <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@
     <div class="container">
       <h2 class="text-center mb-4 text-white">Posts</h2>
 
-      <!-- Most recent posts inside latest post section. Note different structure of first two lines of posts to older posts section -->
+      <!-- Most recent post inside latest post section. Note different structure of first post to older posts section -->
       <div class="container">
         <div class="card-group card-group card-spacer">
           <div class="card bg-black border border-secondary">
@@ -291,6 +291,11 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>Prompt engineering</td>
+              <td>SDXL</td>
+              <td>Prompt engineering optimal outcomes in the style of Chuck Close</td>
+            </tr>
             <tr>
               <td>Using a GPT for volatility prediction in risk management</td>
               <td>SDXL</td>

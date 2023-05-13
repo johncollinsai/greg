@@ -45,3 +45,7 @@ def high_frequency_data():
 @app.route('/deep-learning-finance', methods=['GET'])
 def deep_learning_finance():
     return render_template('deep-learning-finance.html')
+
+@app.route('/promptengineering', methods=['GET'])
+def promptengineering():
+    return render_template('promptengineering.html')
