@@ -102,7 +102,7 @@
   <section class="container-fluid bg-black py-5">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <h2 class="text-center text-blue mb-4">Latest</h2>
+        <h2 class="text-center text-blue my-4">Latest</h2>
         <div class="container">
           <div class="card-group card-spacer">
             <div class="card bg-black border border-secondary">
@@ -113,9 +113,9 @@
                 <div class="col-md-7">
                   <div class="card-body">
                     <h4 class="text-white">Prompt engineering</h4>
-                    <p class="card-text">Have you ever wondered why the LLM you are using, say ChatGPT, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses?  One way we obtain more specific answers from our models is "prompt engineering".</p>
-                    <p class="card-text">In this post I talk about prompt engineering from a practical perspective and share some insights based upon my experience.</p>
-                    <p class="card-text">We can get great results with prompt engineering in a Jupyter Notebook, but it can much more involved to achieve similar outcomes in a live AI app that scales.</p>
+                    <p class="card-text">Have you ever wondered why the LLM you are using, say ChatGPT or Claude, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses?  One way we obtain more specific answers from our models is through "prompt engineering".</p>
+                    <p class="card-text">In this post I talk about prompt engineering from a practical perspective and share some insights based upon my experience. I describe some of the most commonly used approaches.</p>
+                    <p class="card-text">Prompt engineering involves a deep understanding of the model's capabilities, idiosyncrasies, and limitations, making it a blend of both science and art. Implementing apps that use prompt engineering can be technically challenging, so it requires coding and deployment skills too.</p>
                     <a href="{{ url_for('promptengineering') }}" target="_blank" class="card-link">Continue reading ...</a>
                     <p class="card-text"><small class="text-muted">Image prompt: Engineering optimal outcomes in the style of Chuck Close. Model: SDXL</small></p>
                   </div>
@@ -132,7 +132,7 @@
   <section class="bg-light-grey border border-secondary py-5">
     <div class="container">
       <div class="content-wrapper">
-        <h2 class="text-center mb-4 text-blue">Prompt engineering</h2>
+        <h2 class="text-center my-4 text-blue">Prompt engineering</h2>
         <p class="text-center text-black">We can use the webapp below to see how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a more targeted response.</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
@@ -145,7 +145,7 @@
   <section class="container-fluid pt-4 pb-5" style="background-color: #6F42C1; border: none;">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <h2 class="text-center text-white mb-4">Responsible AI</h2>
+        <h2 class="text-center text-white my-4">Responsible AI</h2>
         <p class="text-center text-white">The webapp below leverages <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate a specfic analysis for a company of your choice. It illustrates one way to integrate AI into existing applications and workflow to provide specific information in a controlled and responsible manner. Please enter a company name below to try it. Choose a report type (business, investigation, finance) by clicking on the corresponding button. Enter the company name you wish to analyse in the input field and click the "Submit" button. Wait for the AI-generated report to appear on the webpage.</p>
         <div class="embed-responsive embed-responsive-16by9 border border-light">
           <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
@@ -157,7 +157,7 @@
   <!-- Posts section -->
   <section class="bg-black py-5">
     <div class="container">
-      <h2 class="text-center mb-4 text-white">Posts</h2>
+      <h2 class="text-center my-4 text-blue">Posts</h2>
 
       <!-- Most recent post inside latest post section. Note different structure of first post to older posts section -->
       <div class="container">
@@ -281,7 +281,7 @@
   <div class="container-fluid bg-dark pt-4 pb-5">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <h2 class="text-center text-white mb-4">AI-Generated Images</h2>
+        <h2 class="text-center text-white my-4">AI-Generated Images</h2>
         <table class="table table-dark table-hover" style="border: 2px solid #6F42C1;">
           <thead>
             <tr>
