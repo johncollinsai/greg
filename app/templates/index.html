@@ -104,20 +104,19 @@
       <div class="col-md-8">
         <h2 class="text-center text-blue my-4">Latest</h2>
         <div class="container">
-          <div class="card-group card-spacer">
+          <div class="card-group card-group card-spacer">
             <div class="card bg-black border border-secondary">
               <div class="row g-0">
                 <div class="col-md-5">
-                  <img class="card-img-top" class="img-responsive" src="static/images/prompt-engineering.png" alt="Card image cap">
+                  <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="text-white">Prompt engineering</h4>
-                    <p class="card-text">Have you ever wondered why the LLM you are using, say ChatGPT or Claude, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses?  One way we obtain more specific answers from our models is through "prompt engineering".</p>
-                    <p class="card-text">In this post I talk about prompt engineering from a practical perspective and share some insights based upon my experience. I describe some of the most commonly used approaches.</p>
-                    <p class="card-text">Prompt engineering involves a deep understanding of the model's capabilities, idiosyncrasies, and limitations, making it a blend of both science and art. Implementing apps that use prompt engineering can be technically challenging, so it requires coding and deployment skills too.</p>
-                    <a href="{{ url_for('promptengineering') }}" target="_blank" class="card-link">Continue reading ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Engineering optimal outcomes in the style of Chuck Close. Model: SDXL</small></p>
+                    <h4 class="text-white">Using a GPT for volatility prediction in risk management</h4>
+                      <p class="card-text">AI now has many more permutations of input/output, i.e., text-to-image (<a href="https://labs.openai.com/" target="_blank">OpenAI's DALL·E</a>), and text-to-video (<a href="https://imagen.research.google/" target="_blank">Google's Imagen</a>). I trained a small text-to-text GPT (<a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">Karpathy's NanoGPT</a>) on high-frequency OHLC data and it performed well at volatility prediction. This is a very interesting result indeed that suggests LLMs can be trained and used for risk management.</p>
+                      <p class="card-text">NanoGPT is a smaller and more lightweight version of the larger GPT models, like ChatGPT and GPT-4. It uses a simple bigram language model and a transformer architecture with multi-head self-attention. I convert numbers to text and train the text-to-text nanoGPT to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>
+                      <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
+                      <p class="card-text"><small class="text-muted">Image prompt: Cecily Brown compares volatility and returns. Model: SDXL</small></p>
                   </div>
                 </div>
               </div>
@@ -133,6 +132,28 @@
     <div class="container">
       <div class="content-wrapper">
         <h2 class="text-center my-4 text-blue">Prompt engineering</h2>
+        <div class="container">
+          <div class="card-group card-spacer">
+            <div class="card bg-white">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img class="card-img-top" class="img-responsive" src="static/images/prompt-engineering.png" alt="Card image cap">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h4 class="text-black">Prompt engineering</h4>
+                    <p class="card-text text-black">Have you ever wondered why the LLM you are using, say ChatGPT or Claude, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses?  One way we obtain more specific answers from our models is through "prompt engineering".</p>
+                    <p class="card-text text-black">In this post I talk about prompt engineering, share insights from my experience, and describe some commonly used approaches.</p>
+                    <p class="card-text text-black">Prompt engineering involves a deep understanding of the model's capabilities, idiosyncrasies, and limitations, making it a blend of both science and art. Implementing apps that use prompt engineering can be technically challenging, so it requires coding and deployment skills too.</p>
+                    <a href="{{ url_for('promptengineering') }}" target="_blank" class="card-link">Continue reading ...</a>
+                    <p class="card-text"><small class="text-muted">Image prompt: Engineering optimal outcomes in the style of Chuck Close. Model: SDXL</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p></p> <!-- Spacer -->
         <p class="text-center text-black">We can use the webapp below to see how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a more targeted response.</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
@@ -160,7 +181,7 @@
       <h2 class="text-center my-4 text-blue">Posts</h2>
 
       <!-- Most recent post inside latest post section. Note different structure of first post to older posts section -->
-      <div class="container">
+      <!-- <div class="container">
         <div class="card-group card-group card-spacer">
           <div class="card bg-black border border-secondary">
             <div class="row g-0">
@@ -179,7 +200,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </section>
