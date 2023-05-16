@@ -127,13 +127,40 @@
     </div>
   </section>
 
-  <!-- Showcase latest tool or service -->
+  <!-- Showcase -->
+  <section class="container-fluid pt-4 pb-5" style="background-color: #6F42C1; border: none;">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card bg-transparent custom-card">
+          <div class="card-body text-light">
+            <h2 class="text-center my-4 text-blue">Responsible AI</h2>
+                <p>This webapp employs <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate company-specific analyses. Select a report type (business, investigation, finance), input a valid company name, and the AI generates a tailored report. Notice the application of rigorous input validation and specific response boundaries, a cornerstone of responsible AI.</p>
+                <p>Key principles of responsible AI implementation include:</p>
+                <ul>
+                  <li><strong>Misuse Prevention:</strong> Input validation blocks harmful or inappropriate AI outputs and potential misuse.</li>
+                  <li><strong>User Safety:</strong> Techniques like input validation safeguard sensitive personal information, aligning with privacy laws.</li>
+                  <li><strong>Output Quality:</strong> Prompt engineering steers the AI to generate detailed, accurate responses, in this case specific types of analysis.</li>
+                  <li><strong>Ethical Guidelines Adherence:</strong> Input validation and prompt engineering ensure respect for societal norms and ethical guidelines.</li>
+                  <li><strong>Biases Mitigation:</strong> Careful input validation and prompt engineering can control amplification of existing biases.</li>
+                </ul>
+                <p>This webapp therefore illustrates how input validation and prompt engineering are crucial in maintaining responsible, safe, and high-quality AI outputs.</p>
+              </div>
+            </div>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
   <section class="bg-light-grey border border-secondary py-5">
     <div class="container">
       <div class="content-wrapper">
         <h2 class="text-center my-4 text-blue">Prompt engineering</h2>
         <div class="container">
-          <div class="card-group card-spacer">
+          <div class="card-group card-group card-spacer">
             <div class="card bg-white">
               <div class="row g-0">
                 <div class="col-md-5">
@@ -161,19 +188,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Showcase an interesting thing re LLMs -->
-  <section class="container-fluid pt-4 pb-5" style="background-color: #6F42C1; border: none;">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h2 class="text-center text-white my-4">Responsible AI</h2>
-        <p class="text-center text-white">The webapp below leverages <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate a specfic analysis for a company of your choice. It illustrates one way to integrate AI into existing applications and workflow to provide specific information in a controlled and responsible manner. Please enter a company name below to try it. Choose a report type (business, investigation, finance) by clicking on the corresponding button. Enter the company name you wish to analyse in the input field and click the "Submit" button. Wait for the AI-generated report to appear on the webpage.</p>
-        <div class="embed-responsive embed-responsive-16by9 border border-light">
-          <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
   
   <!-- Posts section -->
   <section class="bg-black py-5">
@@ -181,6 +195,7 @@
       <h2 class="text-center my-4 text-blue">Posts</h2>
 
       <!-- Most recent post inside latest post section. Note different structure of first post to older posts section -->
+      <!-- FIRST POST IS CURRENTLY REM'd OUT, BUT USE BELOW AS TEMPLATE NEXT TIME I MOVE A POST DOWN-->
       <!-- <div class="container">
         <div class="card-group card-group card-spacer">
           <div class="card bg-black border border-secondary">
