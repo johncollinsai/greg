@@ -67,37 +67,39 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
   <!-- navbar -->
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand ml-2" href="{{ url_for('index') }}">johncollins.ai</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="https://twitter.com/johncollinsai" title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter fa-lg fa-inverse fa-fw"></i></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="https://www.linkedin.com/in/johncollins-ai/" title="Connect with me on LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
-            </li>
-            <li class="nav-item ml-2">
-              <a href="https://github.com/johncollinsai"><img src="https://github.githubassets.com/favicon.ico" title="Follow me on GitHub" alt="GitHub icon" style="filter: invert(100%);" target="_blank"></a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand ml-2 text-light" href="{{ url_for('index') }}">johncollins.ai</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="https://twitter.com/johncollinsai" title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter fa-lg fa-inverse fa-fw"></i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="https://www.linkedin.com/in/johncollins-ai/" title="Connect with me on LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+          </li>
+          <li class="nav-item ml-2">
+            <a href="https://github.com/johncollinsai"><img src="https://github.githubassets.com/favicon.ico" title="Follow me on GitHub" alt="GitHub icon" style="filter: invert(100%);" target="_blank"></a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 
   <div class="jumbotron jumbotron-fluid jumbotron-black-top">
     <div class="container">
-      <h1 class="display-4">Personal Work</h1>
-      <p class="lead">I build and deploy AI at scale using DL/LLMs/GPTs. This is my personal site, where I share my own work and explore things that I find interesting. Code repos for everything you see here can be found on my <a href="https://github.com/johncollinsai" target-"_blank">GitHub</a>.</p>
+      <h1 class="display-4 h1-margin-top h1-margin-bottom">AI at Scale: Projects & Insights</h1>
+      <p class="lead">Welcome to my personal space where I build and scale AI using Deep Learning, Language Models, and GPTs. Here, I share my work and explore AI topics that I find interesting.</p>
+      <p>This site is a composite of several AI applications and a variety of HTML-based posts. Each of my AI applications is architected as a microservice, functioning independently while also forming part of an integrated ecosystem.</p>
+      <p>I built the front end using Flask, a lightweight WSGI web application framework, along with the combination of HTML, CSS, and JavaScript to provide intuitive and responsive UI. Flask's ease of use and flexibility is ideal for my purposes.</p>
+      <p>My platform is hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</p>
+      <p>The source code that drives my platform resides across multiple repositories on my <a href="https://github.com/johncollinsai" target-"_blank">GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. If you're interested in delving deeper into the mechanics behind the services you see, you're welcome to explore the GitHub repositories to understand my codebase further.</p>
     </div>
   </div>
-
+  
   <!-- Latest post -->
   <section class="container-fluid bg-black py-5">
     <div class="row justify-content-center">
@@ -129,23 +131,28 @@
 
   <!-- Showcase -->
   <section class="container-fluid pt-4 pb-5" style="background-color: #6F42C1; border: none;">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card bg-transparent custom-card">
-          <div class="card-body text-light">
-            <h2 class="text-center my-4 text-blue">Responsible AI</h2>
-                <p>This webapp employs <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate company-specific analyses. Select a report type (business, investigation, finance), input a valid company name, and the AI generates a tailored report. Notice the application of rigorous input validation and specific response boundaries, a cornerstone of responsible AI.</p>
-                <p>Key principles of responsible AI implementation include:</p>
-                <ul>
-                  <li><strong>Misuse Prevention:</strong> Input validation blocks harmful or inappropriate AI outputs and potential misuse.</li>
-                  <li><strong>User Safety:</strong> Techniques like input validation safeguard sensitive personal information, aligning with privacy laws.</li>
-                  <li><strong>Output Quality:</strong> Prompt engineering steers the AI to generate detailed, accurate responses, in this case specific types of analysis.</li>
-                  <li><strong>Ethical Guidelines Adherence:</strong> Input validation and prompt engineering ensure respect for societal norms and ethical guidelines.</li>
-                  <li><strong>Biases Mitigation:</strong> Careful input validation and prompt engineering can control amplification of existing biases.</li>
-                </ul>
-                <p>This webapp therefore illustrates how input validation and prompt engineering are crucial in maintaining responsible, safe, and high-quality AI outputs.</p>
-              </div>
+    <div class="container">
+      <div class="row justify-content-center" style="display: flex; align-items: stretch;">
+        <!-- Card -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card bg-transparent custom-card">
+            <div class="card-body text-light">
+              <h2 class="text-center my-4 text-white">Responsible AI</h2>
+              <p>I built the AI chatbot opposite, which employs <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate company-specific analyses. Select a report type (business, investigation, finance), input a valid company name, and the AI generates a tailored report. Notice the application of rigorous input validation and specific response boundaries, a cornerstone of responsible AI.</p>
+              <p>Key principles of responsible AI implementation include:</p>
+              <ul>
+                <li><strong>Misuse Prevention:</strong> Input validation blocks harmful or inappropriate AI outputs and potential misuse.</li>
+                <li><strong>User Safety:</strong> Techniques like input validation safeguard sensitive personal information, aligning with privacy laws.</li>
+                <li><strong>Output Quality:</strong> Prompt engineering steers the AI to generate detailed, accurate responses, in this case specific types of analysis.</li>
+                <li><strong>Ethical Guidelines Adherence:</strong> Input validation and prompt engineering ensure respect for societal norms and ethical guidelines.</li>
+                <li><strong>Biases Mitigation:</strong> Careful input validation and prompt engineering can control amplification of existing biases.</li>
+              </ul>
+              <p>This AI chatbot therefore illustrates how input validation and prompt engineering are crucial in maintaining responsible, safe, and high-quality AI outputs.</p>
             </div>
+          </div>
+        </div>
+        <!-- Iframe -->
+        <div class="col-md-6 d-flex align-items-stretch">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
           </div>
@@ -181,7 +188,7 @@
           </div>
         </div>
         <p></p> <!-- Spacer -->
-        <p class="text-center text-black">We can use the webapp below to see how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a more targeted response.</p>
+        <p class="text-center text-black">I built the AI chatbot below to show how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a more targeted response.</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
         </div>
