@@ -1,0 +1,30 @@
+<section class="container-fluid bg-black py-5">
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <!-- <h2 class="text-center text-blue my-4">Building and training language models</h2> -->
+          <div class="container">
+              <div class="card-group card-spacer">
+                  <div class="card bg-black border border-secondary">
+                      <div class="row g-0">
+                          <div class="col-md-5">
+                              <img style="margin-bottom: 15px;" class="card-img-top img-responsive" src="static/images/building-a-gpt.png" alt="Card image cap">
+                              <img class="card-img-top img-fluid" src="static/images/volgpt.GIF" alt="Building and training a GPT" autoplay loop>
+                          </div>
+                          <div class="col-md-7 d-flex flex-column justify-content-between">
+                              <div class="card-body">
+                                  <h4 class="text-white">Training a GPT on OHLC data</h4>
+                                  <p class="card-text">I built and trained a small GPT, following Karpathy, that uses a simple bigram language model and a transformer architecture with multi-head self-attention, on OHLC tick-by-tick stock price data to show it performs well at prediction. I convert numbers to text and train the model to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>  
+                                  <p class="card-text">The model has 0.207149 million parameters, which is of course very small compared to large-scale language models. This means the model might have less capacity to learn complex patterns in the data, though that doesn't seem to be an issue here. The model trains well: the training loss steadily decreases as the number of steps increases, showing the model is learning from the high-frequency data; the validation and test losses also decrease alongside the training loss, indicating the model generalizes well to the unseen data; and there is no significant gap between the training loss and the validation/test losses. The GIF opposite illustrates.</p>
+                                  <p class="card-text">The small GPT performs at least as well as traditional asset pricing models at this task. The MSE's and MAEs are low and t-tests indicate no significant difference between predicted and true values. This suggests good predictive performance, but it's difficult to determine the overall quality of the predictions without comparing them to the performance of other models or benchmarks in the same context.</p> 
+                                  <p class="card-text">I conclude these results are very interesting because they show that it is possible to convert numbers to text and train a small language model specifically for risk management tasks.</p> 
+                                  <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Full article ...</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+                         

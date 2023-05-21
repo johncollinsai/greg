@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="static/images/nanogpt-sdxl-1.png">
+  <meta property="og:image" content="static/images/building-a-gpt.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="title" content="johncollins.ai">
@@ -15,17 +15,17 @@
   <meta property="og:url" content="https://johncollins.ai">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="johncollins.ai">
-  <meta property="og:image" content="https://johncollins.ai/static/images/15.png">
-  <meta property="og:image:secure_url" content="https://johncollins.ai/static/images/15.png">
+  <meta property="og:image" content="https://johncollins.ai/static/images/building-a-gpt.png">
+  <meta property="og:image:secure_url" content="https://johncollins.ai/static/images/building-a-gpt.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="johncollins.ai">
   <meta name="twitter:description" content="AI at Scale: Projects & Insights">
-  <meta name="twitter:image" content="https://johncollins.ai/static/images/15.png">
+  <meta name="twitter:image" content="https://johncollins.ai/static/images/building-a-gpt.png">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="https://johncollins.ai/static/images/15.png">
+  <meta name="msapplication-TileImage" content="https://johncollins.ai/static/images/building-a-gpt.png">
 
   <title>johncollins.ai</title>
  
@@ -42,12 +42,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="static/images/johncollins-favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="static/images/johncollins-favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="static/images/johncollins-favicon/favicon-16x16.png">
-  <link rel="manifest" href="static/images/johncollins-favicon/site.webmanifest">
-  <link rel="shortcut icon" type="image/x-icon" href="static/images/johncollins-favicon/favicon.ico">
-  <a href="https://johncollins.ai/"><img src="https://johncollins.ai/static/images/johncollins-favicon/favicon.ico" alt="Favicon" style="display:none;"></a>
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/building-a-gpt-favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/building-a-gpt-favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/building-a-gpt-favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/images/building-a-gpt-favicon/site.webmanifest">
+  <link rel="shortcut icon" type="image/x-icon" href="static/images/building-a-gpt-favicon/favicon.ico">
+  <a href="https://johncollins.ai/"><img src="https://johncollins.ai/static/images/building-a-gpt-favicon/favicon.ico" alt="Favicon" style="display:none;"></a>
 
   <!-- Include CSS file -->
   <link rel="stylesheet" href="/static/css/style.css">
@@ -95,26 +95,29 @@
       <p>The source code that drives my platform resides across multiple repositories on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. If you're interested in delving deeper into the mechanics behind the services you see here, you're welcome to explore the GitHub repositories to understand my codebase further.</p>
     </div>
   </div>
-  
+
   <!-- BUILDING A GPT -->
-  <section class="container-fluid bg-black py-5">
+  <!-- Access via https://johncollins.ai/#building-a-gpt -->
+  <section id="building-a-gpt" class="container-fluid bg-black py-5">
     <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h2 class="text-center text-blue my-4">Building a GPT</h2>
+      <div class="col-12">
+        <h2 class="text-center text-blue my-4">Building and training language models</h2>
         <div class="container">
-          <div class="card-group card-group card-spacer">
+          <div class="card-group card-spacer">
             <div class="card bg-black border border-secondary">
               <div class="row g-0">
                 <div class="col-md-5">
-                  <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
+                  <img style="margin-bottom: 15px;" class="card-img-top img-responsive" src="static/images/building-a-gpt.png" alt="Card image cap">
+                  <img class="card-img-top img-fluid" src="static/images/volgpt.GIF" alt="Building and training a GPT" autoplay loop>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 d-flex flex-column justify-content-between">
                   <div class="card-body">
-                    <h4 class="text-white">Using a GPT for volatility prediction in risk management</h4>
-                      <p class="card-text">AI now has many more permutations of input/output, i.e., text-to-image (<a href="https://labs.openai.com/" target="_blank">OpenAI's DALL·E</a>), and text-to-video (<a href="https://imagen.research.google/" target="_blank">Google's Imagen</a>). I trained a small text-to-text GPT (<a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">Karpathy's NanoGPT</a>) on high-frequency OHLC data and it performed well at volatility prediction. This is a very interesting result indeed that suggests LLMs can be trained and used for risk management.</p>
-                      <p class="card-text">NanoGPT is a smaller and more lightweight version of the larger GPT models, like ChatGPT and GPT-4. It uses a simple bigram language model and a transformer architecture with multi-head self-attention. I convert numbers to text and train the text-to-text nanoGPT to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>
-                      <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
-                      <p class="card-text"><small class="text-muted">Image prompt: Cecily Brown compares volatility and returns. Model: SDXL</small></p>
+                    <h4 class="text-white">Training a GPT on OHLC data</h4>
+                    <p class="card-text">I built and trained a small GPT, following Karpathy, that uses a simple bigram language model and a transformer architecture with multi-head self-attention, on OHLC tick-by-tick stock price data to show it performs well at prediction. I convert numbers to text and train the model to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>  
+                    <p class="card-text">The model has 0.207149 million parameters, which is of course very small compared to large-scale language models. This means the model might have less capacity to learn complex patterns in the data, though that doesn't seem to be an issue here. The model trains well: the training loss steadily decreases as the number of steps increases, showing the model is learning from the high-frequency data; the validation and test losses also decrease alongside the training loss, indicating the model generalizes well to the unseen data; and there is no significant gap between the training loss and the validation/test losses. The GIF opposite illustrates.</p>
+                    <p class="card-text">The small GPT performs at least as well as traditional asset pricing models at this task. The MSE's and MAEs are low and t-tests indicate no significant difference between predicted and true values. This suggests good predictive performance, but it's difficult to determine the overall quality of the predictions without comparing them to the performance of other models or benchmarks in the same context.</p> 
+                    <p class="card-text">I conclude these results are very interesting because they show that it is possible to convert numbers to text and train a small language model specifically for risk management tasks.</p> 
+                    <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Post: Using a GPT to predict volatility ...</a>
                   </div>
                 </div>
               </div>
@@ -124,41 +127,7 @@
       </div>
     </div>
   </section>
-
-  <!-- FINE TUNING A LARGE LANGUAGE MODEL -->
-  <!-- <section class="bg-light-grey border border-secondary py-5">
-    <div class="container">
-      <div class="content-wrapper">
-        <h2 class="text-center my-4 text-blue">Prompt engineering</h2>
-        <div class="container">
-          <div class="card-group card-group card-spacer">
-            <div class="card bg-white">
-              <div class="row g-0">
-                <div class="col-md-5">
-                  <img class="card-img-top" class="img-responsive" src="static/images/prompt-engineering.png" alt="Card image cap">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="text-black">Prompt engineering</h4>
-                    <p class="card-text text-black">Have you ever wondered why the LLM you are using, say ChatGPT or Claude, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses?  One way we obtain more specific answers from our models is through "prompt engineering".</p>
-                    <p class="card-text text-black">In this post I talk about prompt engineering, share insights from my experience, and describe some commonly used approaches.</p>
-                    <p class="card-text text-black">Prompt engineering involves a deep understanding of the model's capabilities, idiosyncrasies, and limitations, making it a blend of both science and art. Implementing apps that use prompt engineering can be technically challenging, so it requires coding and deployment skills too.</p>
-                    <a href="{{ url_for('promptengineering') }}" target="_blank" class="card-link">Continue reading ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Engineering optimal outcomes in the style of Chuck Close. Model: SDXL</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p></p>
-        <p class="text-center text-black">I built the AI chatbot below to show how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a more targeted response.</p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section> -->
+  
 
   <!-- RESPONSIBLE AI -->
   <section class="container-fluid pt-4 pb-5" style="background-color: #6F42C1; border: none;">
