@@ -18,3 +18,7 @@ rem.*
 .env
 .flaskenv
 
+# GIF and mp4
+*.gif
+*.GIF
+*.mp4
