@@ -49,3 +49,7 @@ def deep_learning_finance():
 @app.route('/promptengineering', methods=['GET'])
 def promptengineering():
     return render_template('promptengineering.html')
+
+@app.route('/volllama', methods=['GET'])
+def volllama():
+    return render_template('volllama.html')

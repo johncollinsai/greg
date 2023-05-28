@@ -88,7 +88,7 @@
     </div>
   </nav>
 
-  <div class="jumbotron jumbotron-fluid jumbotron-black-top">
+  <div class="jumbotron jumbotron-fluid jumbotron-black-top" style="margin-bottom: 75px;">
     <div class="container">
       <h1 class="display-4 h1-margin-top h1-margin-bottom">AI at Scale: Projects & Insights</h1>
       <p class="lead">Welcome to my personal space where I build and scale AI using Deep Learning, Language Models, and GPTs. Here, I share my work and explore AI topics that I find interesting.</p>
@@ -110,17 +110,16 @@
           <div class="card-group card-group card-spacer">
             <div class="card bg-white">
               <div class="row g-0">
-                <div class="col-md-5">
-                  <img class="card-img-top" class="img-responsive" src="static/images/prompt-engineering.png" alt="Card image cap">
+                <div class="col-md-5 d-flex align-items-center">
+                  <img class="card-img-top" class="img-responsive" src="static/images/volllama.png" alt="Card image cap">
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h4 class="text-black">Prompt engineering</h4>
-                    <p class="card-text text-black">Have you ever wondered why the LLM you are using, say ChatGPT or Claude, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses? One way we obtain more specific answers from our models is through "prompt engineering".</p>
-                    <p class="card-text text-black">In this post, I talk about prompt engineering, share insights from my experience, and describe some commonly used approaches.</p>
-                    <p class="card-text text-black">Prompt engineering involves a deep understanding of the model's capabilities, idiosyncrasies, and limitations, making it a blend of both science and art. Implementing apps that use prompt engineering can be technically challenging, so it requires coding and deployment skills too.</p>
-                    <a href="{{ url_for('promptengineering') }}" target="_blank" class="card-link">Continue reading ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Engineering optimal outcomes in the style of Chuck Close. Model: SDXL</small></p>
+                    <h4 class="text-black">Fine-tuning LLMs</h4>
+                    <p class="card-text text-black">In 1-2 years (if not much earlier), I expect that everyone will be running personalized AI assistants and image/video/music generator models either directly, or indirectly via other applications and tools, in their browser and iPhone</p>
+                    <p class="card-text text-black">Imho, this will lead to profound change in work and personal behaviors: you won't need to go to a search site, or look at a workflow queue, in your personal life you won't need to book a flight or go to a shopping site yourself; your personalized AI assistant will do this. You will simply get what you need when you need it.</p>
+                    <p class="card-text text-black">There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat. Fine-tuning an open-source LLM, such as Meta's LLaMA, is a great way to mitigate certain risks, so let's dive in and take a deeper look.</p>
+                    <a href="{{ url_for('volllama') }}" target="_blank" class="card-link">Continue reading ...</a>
                   </div>
                 </div>
               </div>
@@ -211,7 +210,7 @@
           <div class="card-group card-group card-spacer">
             <div class="card bg-white">
               <div class="row g-0">
-                <div class="col-md-5">
+                <div class="col-md-5 d-flex align-items-center">
                   <img class="card-img-top" class="img-responsive" src="static/images/prompt-engineering.png" alt="Card image cap">
                 </div>
                 <div class="col-md-7">
@@ -249,7 +248,7 @@
         <div class="card-group card-group card-spacer">
           <div class="card bg-black border border-secondary">
             <div class="row g-0">
-              <div class="col-md-5">
+              <div class="col-md-5 d-flex align-items-center">
                 <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
               </div>
               <div class="col-md-7">
@@ -277,7 +276,7 @@
       <div class="col-md-6 mb-4">
         <div class="card bg-black border border-secondary">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex align-items-center">
               <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
             </div>
             <div class="col-md-7">
@@ -294,7 +293,7 @@
       <div class="col-md-6 mb-4">
         <div class="card bg-black border border-secondary">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex align-items-center">
               <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-1.png" alt="Card image cap">
             </div>
             <div class="col-md-7">
@@ -311,7 +310,7 @@
       <div class="col-md-6 mb-4">
         <div class="card bg-black border border-secondary">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex align-items-center">
               <img class="card-img-top" class="img-responsive" src="static/images/nanogpt-sdxl-1.png" alt="Card image cap">
             </div>
             <div class="col-md-7">
@@ -328,7 +327,7 @@
       <div class="col-md-6 mb-4">
         <div class="card bg-black border border-secondary">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex align-items-center">
               <img class="card-img-top" class="img-responsive" src="static/images/lstm-sdxl.png" alt="Card image cap">
             </div>
             <div class="col-md-7">
@@ -345,7 +344,7 @@
       <div class="col-md-6 mb-4">
         <div class="card bg-black border border-secondary">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex align-items-center">
               <img class="card-img-top" class="img-responsive" src="static/images/high-frequency-data-sdxl.png" alt="Card image cap">
             </div>
             <div class="col-md-7">
@@ -362,7 +361,7 @@
       <div class="col-md-6 mb-4">
         <div class="card bg-black border border-secondary">
           <div class="row g-0">
-            <div class="col-md-5">
+            <div class="col-md-5 d-flex align-items-center">
               <img class="card-img-top" class="img-responsive" src="static/images/dlf-jenny-saville.png" alt="Card image cap">
             </div>
             <div class="col-md-7">

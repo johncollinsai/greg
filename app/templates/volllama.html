@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="static/images/volllama.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="title" content="johncollins.ai/promptengineering">
+    <meta name="description" content="Prompt Engineering">
+    <meta property="og:title" content="johncollins.ai">
+    <meta property="og:description" content="Prompt Engineering">
+    <meta property="og:url" content="https://johncollins.ai/promptengineering">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="johncollins.ai/promptengineering">
+    <meta property="og:image" content="https://johncollins.ai/app/static/images/volllama.png">
+    <meta property="og:image:secure_url" content="https://johncollins.ai/app/static/images/volllama.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="johncollins.ai/promptengineering">
+    <meta name="twitter:description" content="Prompt Engineering">
+    <meta name="twitter:image" content="https://johncollins.ai/app/static/images/volllama.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://johncollins.ai/app/static/images/volllama.png">
+  
+    <title>johncollins.ai</title>
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.2/dist/umd/popper.min.js" integrity="sha384-ZRQgMf+zD5HtB5x8yhJ4y4Y4YO/7fMeRX/PV/v2t+5Dt7FJ8NpW4LN3ZYpDV7yoA" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+  
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/volllama-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/volllama-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/volllama-favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/images/volllama-favicon/site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="static/images/volllama-favicon/favicon.ico">
+    <a href="https://johncollins.ai/promptengineering"><img src="https://johncollins.ai/static/images/volllama-favicon/favicon.ico" alt="Favicon" style="display:none;"></a>
+  
+    <!-- Include CSS file -->
+    <link rel="stylesheet" href="/static/css/style.css">
+  
+    <!-- Include error handling file -->
+    <script src="/static/js/errorHandling.js"></script>
+  
+    <!-- Include JavaScript file -->
+    <script src="/static/js/scripts.js"></script>
+    
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-- navbar -->
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ml-2" href="{{ url_for('index') }}">johncollins.ai</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://twitter.com/johncollinsai" title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter fa-lg fa-inverse fa-fw"></i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.linkedin.com/in/johncollins-ai/" title="Connect with me on LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+          </li>
+          <li class="nav-item ml-2">
+            <a href="https://github.com/johncollinsai"><img src="https://github.githubassets.com/favicon.ico" title="Follow me on GitHub" alt="GitHub icon" style="filter: invert(100%);" target="_blank"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Title -->
+<div class="jumbotron jumbotron-fluid jumbotron-black-top">
+  <div class="container">
+    <h1 class="display-4 text-center text-blue">Fine-tuning LLMs</h1>
+  </div>
+</div>
+
+<!-- Intro -->
+<div class="container">
+  <h2 class="margin-top-custom text-white">Introduction</h2>
+    <p>In 1-2 years (if not much earlier), I expect that everyone will be running personalized AI assistants and image/video/music generator models either directly, or indirectly via other applications and tools, in their browser and iPhone.</p>
+    <p>TImho, this will lead to profound change in work and personal behaviors: you won't need to go to a search site, or look at a workflow queue, in your personal life you won't need to book a flight or go to a shopping site yourself; your personalized AI assistant will do this. You will simply get what you need when you need it.</p>
+    <p>There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat. Fine-tuning an open-source LLM, such as Meta's LLaMA, is a great way to mitigate certain risks, so let's dive in and take a deeper look.</p>
+</div>
+
+<!-- promtengineering webapp -->
+<section class="bg-black py-5">
+  <div class="container">
+    <div class="content-wrapper">
+      <h2 class="text-center my-4 text-purple">Demonstrating the impact of prompt engineering</h2>
+      <p class="text-center text-light-grey">We can use the webapp below to see how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a more targeted response.</p>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Approaches -->
+<div class="container">
+  <h2 class="margin-top-custom text-white">Approaches</h2>
+  <p>In-progress ...</p>
+</div>
+
+<!-- Technical Challenges -->
+<div class="container">
+  <h2 class="margin-top-custom text-white">Technical Challenges</h2>
+    <p>In progress ...</p>
+</div>
+
+<!-- Source code -->
+<div class="container">
+  <h4 class="margin-top-custom text-light-grey">Source code</h4>
+  <p>Source code for this post can be found on my <a href="https://github.com/johncollinsai/volllama" target-"_blank">GitHub</a>.</p>
+</div>
+
+<!-- References -->
+<div class="container">
+  <h2 class="margin-top-custom text-white">References</h2>
+  <p>Chip Huyen (2023). Building LLM applications for production. <a href="https://huyenchip.com/2023/04/11/llm-engineering.html" target-"_blank">Chip Huyen</a>.</p>
+</div>
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Footer -->
+<div class="container-fluid bg-black py-3">
+  <div class="row">
+    <div class="col text-center text-white">
+      <p>&copy; 2023 johncollins</p>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
+
+                           
