@@ -13,7 +13,7 @@ spec:
         run: johncollins
     spec:
       containers:
-      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.5.17
+      - image: asia-southeast1-docker.pkg.dev/johncollins/johncollins/johncollins:v0.5.18
         imagePullPolicy: IfNotPresent
         name: johncollins
         ports:
