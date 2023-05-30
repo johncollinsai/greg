@@ -1,4 +1,10 @@
-var jQuery = require('jquery');
+var jQuery;
+if (typeof window !== 'undefined') {
+  jQuery = window.jQuery;
+} else {
+  jQuery = require('jquery');
+}
+
 
 // Opens modal when user clicks on a row in the table - NOT WORKING YET, SEE CHATGPT "SHOW IMAGES"
 // Get the modal
@@ -31,4 +37,63 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
   modal.style.display = "none";
+}
+
+// Create Chart.js chart
+var Chart = window.Chart; // Get the chart class from the window object
+
+var ctx = document.getElementById('myChart');
+if (ctx) { // Check if the element exists
+  ctx = ctx.getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'], 
+      datasets: [{
+        label: 'Open-source',
+        data: [8, 7.5, 7, 7.5, 9, 12, 16, 22, 28, 35],
+        borderColor: 'blue',
+        fill: false,
+        tension: 0.4 // This will create a smooth line
+      }, {
+        label: 'Closed-source',
+        data: [10, 12, 14, 16, 18, 20, 22, 24, 26, 28],
+        borderColor: 'red',
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          display: true,
+          title: {
+            display: true,
+            text: 'Time'
+          },
+          ticks: {
+            display: false,
+            drawTicks: false
+          },
+          grid: {
+            drawBorder: true
+          }
+        },
+        y: {
+          display: true,
+          beginAtZero: true,
+          title: {
+            display: false
+          },
+          ticks: {
+            display: false,
+            drawTicks: false
+          },
+          grid: {
+            drawBorder: true
+          }
+        }
+      }
+    }
+  });
 }
