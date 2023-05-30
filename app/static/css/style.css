@@ -131,16 +131,16 @@ transition: all 0.3s ease; /* Smooth transition effect */
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.9);
-  }
+}
   
-  .modal-content {
+.modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
-  }
+}
   
-  .close {
+.close {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -148,11 +148,12 @@ transition: all 0.3s ease; /* Smooth transition effect */
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-  }
+}
   
-  .close:hover, .close:focus {
+.close:hover, .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
   
