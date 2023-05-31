@@ -121,7 +121,7 @@
                     <h4 class="text-black">Fine-tuning LLMs</h4>
                     <p class="card-text text-black">In 1-2 years (if not much earlier), I expect everyone will run personalized AI assistants and image/video/music generator models either directly, or indirectly via other applications and tools, in their browser and iPhone.</p>
                     <p class="card-text text-black">Imho, this will lead to profound change in work and personal behaviors: you won't need to use search, nor workflow queues; and in your personal life you won't need to book flights or restaurants, nor go to shopping sites yourself. Your personalized AI assistant will do this for you.</p>
-                    <p class="card-text text-black">There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat. Fine-tuning an open-source LLM, such as Meta's LLaMA, is a great way to tailor these models to suit specific business requirements (legal, collateral management, to name just two) and mitigate certain risks, so let's dive in and take a deeper look.</p>
+                    <p class="card-text text-black">There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat. Fine-tuning an open-source LLM, such as Meta's LLaMA or Stanford's Alpaca, is a great way to tailor these models to suit specific business requirements (legal, collateral management, to name just two) and mitigate certain risks, so let's dive in and take a deeper look.</p>
                     <a href="{{ url_for('volllama') }}" target="_blank" class="card-link">Continue reading ...</a>
                     <p class="card-text"><small class="text-muted">Image prompt: We are fine-tuning a wonderous fluorescent object. Model: SDXL</small></p>
                   </div>
@@ -143,8 +143,8 @@
                   <tr>
                     <th scope="col">Model</th>
                     <th scope="col">MSE (log returns)</th>
-                    <th scope="col">MAE (log returns)</th>
-                    <th scope="col">Log returns paired t-test</th>
+                    <th scope="col">MAE</th>
+                    <th scope="col">R<sup>2</sup></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -158,11 +158,11 @@
                     <td><a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">VolGPT</a>, my implementation of Karpathy's NanoGPT</td>
                     <td>0.00000192</td>
                     <td>0.00099668</td>
-                    <td>T-statistic = 0.71337283, p-value = 0.49192750</td>
+                    <td>coming shortly ...</td>
                   </tr>
                   <tr data-img="https://johncollins.ai/static/images/jenny-saville-1.png">
-                    <td><a href="https://github.com/johncollinsai/markov-switching-multifractal" target="_blank">Markov-Switching Multifractal</td> stochastic volatility model of Calvet and Fisher</td>
-                    <td>to be updated</td>
+                    <td><a href="https://github.com/johncollinsai/markov-switching-multifractal" target="_blank">MSM(13)</a>Markov-Switching Multifractal stochastic volatility model of Calvet and Fisher implemented with 13 volatility frequencies and 8,192 states</td>
+                    <td>0.36624300</td>
                     <td>to be updated</td>
                     <td>to be updated</td>
                   </tr>
