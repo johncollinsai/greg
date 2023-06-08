@@ -11,10 +11,10 @@
   <meta property="og:image" content="static/images/building-a-gpt.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta name="title" content="johncollins.ai">
-  <meta name="description" content="AI at Scale: Projects & Insights">
+  <meta name="title" content="Greg Hallahan demo">
+  <meta name="description" content="AI analyst for due diligence">
   <meta property="og:title" content="johncollins.ai">
-  <meta property="og:description" content="AI at Scale: Projects & Insights">
+  <meta property="og:description" content="AI analyst for due diligence">
   <meta property="og:url" content="https://johncollins.ai">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="johncollins.ai">
@@ -24,13 +24,13 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="johncollins.ai">
-  <meta name="twitter:description" content="AI at Scale: Projects & Insights">
+  <meta name="twitter:title" content="Greg Hallahan demo">
+  <meta name="twitter:description" content="AI analyst for due diligence">
   <meta name="twitter:image" content="https://johncollins.ai/static/images/building-a-gpt.png">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="https://johncollins.ai/static/images/building-a-gpt.png">
 
-  <title>johncollins.ai</title>
+  <title>Greg Hallahan demo</title>
  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -71,20 +71,16 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
     <div class="container">
-      <a class="navbar-brand ml-2 text-light" href="{{ url_for('index') }}">johncollins.ai</a>
+      <a class="navbar-brand ml-2 text-light" href="{{ url_for('index') }}">Greg Hallahan demo</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link text-light" href="https://twitter.com/johncollinsai" title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter fa-lg fa-inverse fa-fw"></i></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link text-light" href="https://www.linkedin.com/in/johncollins-ai/" title="Connect with me on LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
-          </li>
           <li class="nav-item ml-2">
-            <a href="https://github.com/johncollinsai"><img src="https://github.githubassets.com/favicon.ico" title="Follow me on GitHub" alt="GitHub icon" style="filter: invert(100%);" target="_blank"></a>
+            <a href="https://github.com/johncollinsai" target="_blank">
+              <img src="https://github.githubassets.com/favicon.ico" title="GitHub repo" alt="GitHub icon" style="filter: invert(100%);">
+            </a>    
           </li>
         </ul>
       </div>
@@ -93,7 +89,7 @@
 
   <div class="jumbotron jumbotron-fluid jumbotron-black-top" style="margin-bottom: 75px;">
     <div class="container">
-      <h1 class="display-4 h1-margin-top h1-margin-bottom">AI at Scale: Projects & Insights</h1>
+      <h1 class="display-4 h1-margin-top h1-margin-bottom">AI analyst for due diligence</h1>
       <p class="lead">Welcome to my personal space where I build and scale AI using Deep Learning, Language Models, and GPTs. Here, I share my work and explore AI topics that I find interesting.</p>
       <p>This site is a composite of several AI applications and a variety of HTML-based posts. Each of my AI applications is architected as a microservice, functioning independently while also forming part of an integrated ecosystem.</p>
       <p>The front end uses Flask, a lightweight WSGI web application framework, along with the combination of HTML, CSS, and JavaScript to provide intuitive and responsive UI. Flask's ease of use and flexibility is ideal for my purposes.</p>
@@ -101,162 +97,6 @@
       <p>The source code that drives my platform resides across multiple repositories on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. If you're interested in delving deeper into the mechanics behind the services you see here, you're welcome to explore the GitHub repositories to understand my codebase further.</p>
     </div>
   </div>
-
-
-  <!-- FINE-TUNING LLMs -->
-  <!-- Access via https://johncollins.ai/#finetune-llm -->
-  <section id="finetune-llm" class="bg-light-grey border border-secondary py-5">
-    <div class="container">
-      <div class="content-wrapper">
-        <h2 class="text-center my-4 text-blue">Fine-tuning LLMs</h2>
-        <div class="container">
-          <div class="card-group card-group card-spacer">
-            <div class="card bg-white">
-              <div class="row g-0">
-                <div class="col-md-5 d-flex align-items-center">
-                  <img class="card-img-top" class="img-responsive" src="static/images/volllama.png" alt="Card image cap">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <h4 class="text-black">Fine-tuning LLMs</h4>
-                    <p class="card-text text-black">In 1-2 years (if not much earlier), I expect everyone will run personalized AI assistants and image/video/music generator models either directly, or indirectly via other applications and tools, in their browser and iPhone.</p>
-                    <p class="card-text text-black">Imho, this will lead to profound change in work and personal behaviors: you won't need to use search, nor workflow queues; and in your personal life you won't need to book flights or restaurants, nor go to shopping sites yourself. Your personalized AI assistant will do this for you.</p>
-                    <p class="card-text text-black">There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat. Fine-tuning an open-source LLM, such as Meta's LLaMA or Stanford's Alpaca, is a great way to tailor these models to suit specific business requirements (legal, collateral management, to name just two) and mitigate certain risks, so let's dive in and take a deeper look.</p>
-                    <a href="{{ url_for('volllama') }}" target="_blank" class="card-link">Continue reading ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: We are fine-tuning a wonderous fluorescent object. Model: SDXL</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- NEW: CREATE A TABLE THAT SHOWS VOL PREDICTION RESULTS FOR LLAMA vs NanoGPT vs MSM -->
-        <div class="container bg-light-grey pt-4 pb-5">
-          <div class="row justify-content-center">
-            <div class="col-md-8 full-width-parent">
-              <h2 class="text-center text-purple my-4">Fine-tuned LLaMA vs NanoGPT vs MSM Stochastic Volatility Model</h2>
-              <p></p> <!-- Spacer -->
-              <p class="text-center text-black" style="background-color: #F8F8F8; padding: 10px; margin: 20px 0;">Comparing the performance of fine-tuned LLaMA to <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">my implementation of Karpathy's NanoGPT</a> and the classic Markov-Switching Multifractal Stochastic Volatility model of Calvet and Fisher (i.e., a best-in-class finance model, as a benchmark to the LLMs).</p>
-              <table class="table table-dark table-hover full-width-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Model</th>
-                    <th scope="col">MSE (log returns)</th>
-                    <th scope="col">MAE</th>
-                    <th scope="col">R<sup>2</sup></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-img="https://johncollins.ai/static/images/prompt-engineering.png">
-                    <td>volllama, fine-tuned LLaMA following <a href="https://github.com/Lightning-AI/lit-llama" target="_blank">Lightening AI's Lit-LLaMA</a></td>
-                    <td>coming shortly ...</td>
-                    <td>coming shortly ...</td>
-                    <td>coming shortly ...</td>
-                  </tr>
-                  <tr data-img="https://johncollins.ai/static/images/jenny-saville-2.png">
-                    <td><a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">VolGPT</a>, my implementation of Karpathy's NanoGPT</td>
-                    <td>0.00000192</td>
-                    <td>0.00099668</td>
-                    <td>coming shortly ...</td>
-                  </tr>
-                  <tr data-img="https://johncollins.ai/static/images/jenny-saville-1.png">
-                    <td><a href="https://github.com/johncollinsai/markov-switching-multifractal" target="_blank">MSM(13)</a>Markov-Switching Multifractal stochastic volatility model of Calvet and Fisher implemented with 13 volatility frequencies and 8,192 states</td>
-                    <td>0.36624300</td>
-                    <td>to be updated</td>
-                    <td>to be updated</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal NOT YET WORKING, SEE CHATGPT "SHOW IMAGES" -->
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
-
-        <p></p> <!-- Spacer -->
-        <p class="text-center text-black" style="background-color: #F8F8F8; padding: 10px; margin: 20px 0;">I built the AI chatbot below to show how a fine-tuned LLaMA compares to a raw response from GPT4. Both models are prompted with the company name.  On the left the prompt is passed directly to the GPT4 model, whilst on the right it is passed to the fine-tuned LLaMA model.</p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- BUILDING A GPT -->
-  <!-- Access via https://johncollins.ai/#building-a-gpt -->
-  <section id="building-a-gpt" class="container-fluid bg-black py-5">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <h2 class="text-center text-blue my-4">Building and training GPTs</h2>
-        <div class="container">
-          <div class="card-group card-spacer">
-            <div class="card bg-black border border-secondary">
-              <div class="row g-0">
-                <div class="col-md-5">
-                  <img style="margin-bottom: 15px;" class="card-img-top img-responsive" src="static/images/building-a-gpt.png" alt="Building and training a GPT">
-                  <div>
-                    <canvas id="myChart"></canvas>
-                  </div>
-                </div>
-                <div class="col-md-7 d-flex flex-column justify-content-between">
-                  <div class="card-body">
-                    <h4 class="text-white">Training a GPT on OHLC data</h4>
-                    <p class="card-text">I built and trained a small GPT, following Karpathy, that uses a simple bigram language model and a transformer architecture with multi-head self-attention, on OHLC tick-by-tick stock price data to show it performs well at prediction. I convert numbers to text and train the model to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>  
-                    <p class="card-text">The model has 0.207149 million parameters, which is of course very small compared to large-scale language models. This means the model might have less capacity to learn complex patterns in the data, though that doesn't seem to be an issue here. The model trains well: the training loss steadily decreases as the number of steps increases, showing the model is learning from the high-frequency data; the validation and test losses also decrease alongside the training loss, indicating the model generalizes well to the unseen data; and there is no significant gap between the training loss and the validation/test losses. For specific tasks we see that the chart opposite is correct.</p>
-                    <p class="card-text">The small GPT performs at least as well as traditional asset pricing models at this task. The MSE's and MAEs are low and t-tests indicate no significant difference between predicted and true values. This suggests good predictive performance.</p> 
-                    <p class="card-text">These results are particularly interesting because they show that it is possible to convert numbers to text and train a small language model specifically for risk management tasks.</p> 
-                    <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Post: Using a GPT to predict volatility ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Working in a futuristic super-computer bathed in neon. Model: SDXL</a></small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-  <!-- RESPONSIBLE AI -->
-  <section class="container-fluid pt-4 pb-5" style="background-color: #6F42C1; border: none;">
-    <div class="container">
-      <h2 class="text-center my-4 text-white">Responsible AI</h2>
-      <div class="row justify-content-center" style="display: flex; align-items: stretch;">
-        <!-- Card -->
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="card bg-transparent custom-card custom-border">
-            <div class="card-body text-light">
-              <p>I built the AI chatbot opposite, which employs <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate company-specific analyses. Select a report type (business, investigation, finance), input a valid company name, and the AI generates a tailored report. Notice the application of rigorous input validation and specific response boundaries, a cornerstone of responsible AI.</p>
-              <p>Key principles of responsible AI implementation include:</p>
-              <ul>
-                <li><strong>Misuse Prevention:</strong> Input validation blocks harmful or inappropriate AI outputs and potential misuse.</li>
-                <li><strong>User Safety:</strong> Techniques like input validation safeguard sensitive personal information, aligning with privacy laws.</li>
-                <li><strong>Output Quality:</strong> Prompt engineering steers the AI to generate detailed, accurate responses, in this case specific types of analysis.</li>
-                <li><strong>Ethical Guidelines Adherence:</strong> Input validation and prompt engineering ensure respect for societal norms and ethical guidelines.</li>
-                <li><strong>Biases Mitigation:</strong> Careful input validation and prompt engineering can control amplification of existing biases.</li>
-              </ul>
-              <p>This AI chatbot therefore illustrates how input validation and prompt engineering are crucial in maintaining responsible, safe, and high-quality AI outputs.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Iframe -->
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-analyst-gpt-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- PROMPT ENGINEERING -->
   <section class="bg-light-grey border border-secondary py-5">
@@ -287,223 +127,18 @@
         <p></p> <!-- Spacer -->
         <p class="text-center text-black" style="background-color: #F8F8F8; padding: 10px; margin: 20px 0;">I built the AI chatbot below to show how prompt engineering alters a model's response. The same language model is prompted with the company name. On the left, the prompt is passed directly to the model, while on the right, it is engineered to obtain a more targeted response.</p>
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe id="predefined-question" class="embed-responsive-item" src="https://johncollinsai-promptengineering-voqqf4ls3a-as.a.run.app" allowfullscreen></iframe>
+          <iframe id="predefined-question" class="embed-responsive-item" src="https://analyst-gpt.ai/" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  
-  <!-- Posts section -->
-  <section class="bg-black py-5">
-    <div class="container">
-      <h2 class="text-center my-4 text-blue">Posts</h2>
-
-      <!-- Most recent post inside latest post section. Note different structure of first post to older posts section -->
-      <!-- FIRST POST IS CURRENTLY REM'd OUT, BUT USE BELOW AS TEMPLATE NEXT TIME I MOVE A POST DOWN-->
-      <!-- <div class="container">
-        <div class="card-group card-group card-spacer">
-          <div class="card bg-black border border-secondary">
-            <div class="row g-0">
-              <div class="col-md-5 d-flex align-items-center">
-                <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h4 class="text-white">Using a GPT for volatility prediction in risk management</h4>
-                    <p class="card-text">AI now has many more permutations of input/output, i.e., text-to-image (<a href="https://labs.openai.com/" target="_blank">OpenAI's DALL·E</a>), and text-to-video (<a href="https://imagen.research.google/" target="_blank">Google's Imagen</a>). I trained a small text-to-text GPT (<a href="https://johncollinsai-nanogpt-voqqf4ls3a-as.a.run.app" target="_blank">Karpathy's NanoGPT</a>) on high-frequency OHLC data and it performed well at volatility prediction. This is a very interesting result indeed that suggests LLMs can be trained and used for risk management.</p>
-                    <p class="card-text">NanoGPT is a smaller and more lightweight version of the larger GPT models, like ChatGPT and GPT-4. It uses a simple bigram language model and a transformer architecture with multi-head self-attention. I convert numbers to text and train the text-to-text nanoGPT to understand the patterns in the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>
-                    <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Cecily Brown compares volatility and returns. Model: SDXL</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-    </div>
-  </section>
-
-  <!-- Older posts organized in two-card rows underneath the most recent post -->
-
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-6 mb-4">
-        <div class="card bg-black border border-secondary">
-          <div class="row g-0">
-            <div class="col-md-5 d-flex align-items-center">
-              <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-2.png" alt="Card image cap">
-            </div>
-            <div class="col-md-7">
-              <div class="card-body">
-                <h4 class="text-white">Vol prediction with GPT</h4>
-                  <p class="card-text">I convert numbers to text and train nanoGPT to understand the data well enough to generate text in the form of OHLC stock price data that can be switched back to numbers and used for complex numeric computations.</p>
-                  <a href="{{ url_for('volgpt') }}" target="_blank" class="card-link">Continue reading ...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card bg-black border border-secondary">
-          <div class="row g-0">
-            <div class="col-md-5 d-flex align-items-center">
-              <img class="card-img-top" class="img-responsive" src="static/images/jenny-saville-1.png" alt="Card image cap">
-            </div>
-            <div class="col-md-7">
-              <div class="card-body">
-                <h4 class="text-white">GPT4 builds a website.</h4>
-                  <p class="card-text">I used GPT4 to create a website from scratch, prompting the ChatGPT-Plus UI, to see how well instructing a model in this way works in practice. This is the <a href="https://johncollinsai-gpt4-website-voqqf4ls3a-as.a.run.app" target="_blank">website created by GPT4</a> in a single response/response exchange.</p>
-                  <a href="{{ url_for('gpt4') }}" target="_blank" class="card-link">Continue reading ...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card bg-black border border-secondary">
-          <div class="row g-0">
-            <div class="col-md-5 d-flex align-items-center">
-              <img class="card-img-top" class="img-responsive" src="static/images/nanogpt-sdxl-1.png" alt="Card image cap">
-            </div>
-            <div class="col-md-7">
-              <div class="card-body">
-                <h4 class="text-white">Build and train a GPT</h4>
-                  <p class="card-text">I built and trained a Generative Pretrained Transformer (GPT). This post is a hands-on exploration of GPTs and the transformer architecture, following <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY" target="_blank">Karpathy's approach</a>.</p>
-                  <a href="{{ url_for('nanogpt') }}" target="_blank" class="card-link">Continue reading ...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card bg-black border border-secondary">
-          <div class="row g-0">
-            <div class="col-md-5 d-flex align-items-center">
-              <img class="card-img-top" class="img-responsive" src="static/images/lstm-sdxl.png" alt="Card image cap">
-            </div>
-            <div class="col-md-7">
-              <div class="card-body">
-                <h4 class="text-white">LSTM</h4>
-                  <p class="card-text">Detailed mathematical enunciation of LSTM, based upon Sherstinsky's framework. A thorough derivation of the LSTM network is generally skipped in finance deep learning literature that features the LSTM. </p>
-                  <a href="https://johncollinsai-lstm-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card bg-black border border-secondary">
-          <div class="row g-0">
-            <div class="col-md-5 d-flex align-items-center">
-              <img class="card-img-top" class="img-responsive" src="static/images/high-frequency-data-sdxl.png" alt="Card image cap">
-            </div>
-            <div class="col-md-7">
-              <div class="card-body">
-                <h4 class="text-white">High Frequency Data</h4>
-                  <p class="card-text">In this post I discuss the preparation of high frequency datasets for Apple (Apple Inc., NASDAQ, ticker: AAPL), JPM (JPMorgan Chase & Co., NYSE, ticker: JPM), and the EURUSD currency pair, using volatility prediction as my problem setting.</p>
-                  <a href="https://johncollinsai-high-frequency-data-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card bg-black border border-secondary">
-          <div class="row g-0">
-            <div class="col-md-5 d-flex align-items-center">
-              <img class="card-img-top" class="img-responsive" src="static/images/dlf-jenny-saville.png" alt="Card image cap">
-            </div>
-            <div class="col-md-7">
-              <div class="card-body">
-                <h4 class="text-white">Deep Learning in Finance</h4>
-                  <p class="card-text">In this post I discuss some of the papers I have read and found useful when considering deep learning in finance. I discuss academic literature here because a rigorous consideration of deep learning in finance is important, imho.</p>
-                  <a href="https://johncollinsai-deep-learning-finance-voqqf4ls3a-as.a.run.app" target="_blank" class="card-link">Continue reading ...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-    <!-- AI-Generated Images -->
-  <div class="container bg-black pt-4 pb-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8 full-width-parent">
-        <h2 class="text-center text-white my-4">AI-Generated Images</h2>
-        <p></p> <!-- Spacer -->
-        <p class="text-center text-white" style="background-color: #050505; padding: 10px; margin: 20px 0;">The AI-generated images on this site are inspired by my work. Explore the synergy between prompts and models presented below, and click on a row to see an enhanced view of each image.</p>
-        <table class="table table-dark table-hover full-width-table">
-          <thead>
-            <tr>
-              <th scope="col">Post</th>
-              <th scope="col">Model</th>
-              <th scope="col">Image Prompt</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-img="https://johncollins.ai/static/images/prompt-engineering.png">
-              <td>Prompt engineering</td>
-              <td>SDXL</td>
-              <td>Prompt engineering optimal outcomes in the style of Chuck Close</td>
-            </tr>
-            <tr data-img="https://johncollins.ai/static/images/jenny-saville-2.png">
-              <td>Using a GPT for volatility prediction in risk management</td>
-              <td>SDXL</td>
-              <td>Cecily Brown compares volatility and returns</td>
-            </tr>
-            <tr data-img="https://johncollins.ai/static/images/jenny-saville-1.png">
-              <td>GPT4 builds a website. In seconds. And it works.</td>
-              <td>SDXL</td>
-              <td>Jenny Saville watches GPT build a website</td>
-            </tr>
-            <tr data-img="https://johncollins.ai/static/images/nanogpt-sdxl-1.png">
-              <td>Building a GPT</td>
-              <td>SDXL</td>
-              <td>Knowledge in the style of Egon Schiele</td>
-            </tr>
-            <tr data-img="https://johncollins.ai/static/images/lstm-sdxl.png">
-              <td>LSTM</td>
-              <td>SDXL</td>
-              <td>Long and short term memories of Ai Wei Wei</td>
-            </tr>
-            <tr data-img="https://johncollins.ai/static/images/high-frequency-data-sdxl.png">
-              <td>High Frequency Data</td>
-              <td>SDXL</td>
-              <td>High frequency datasets seen by benoit mandelbrot</td>
-            </tr>
-            <tr data-img="https://johncollins.ai/static/images/dlf-jenny-saville.png">
-              <td>Deep Learning in Finance</td>
-              <td>SDXL</td>
-              <td>Deep learning in the style of Jenny Saville</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Include JavaScript file -->
-  <script src="/static/js/scripts.js" defer></script>
 
   <!-- Footer -->
   <div class="container-fluid bg-black py-3">
     <div class="row">
       <div class="col text-center text-white">
-        <p>&copy; 2023 johncollins</p>
+        <p>&copy; 2023</p>
       </div>
     </div>
   </div>
