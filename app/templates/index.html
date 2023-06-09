@@ -90,18 +90,54 @@
   <div class="jumbotron jumbotron-fluid jumbotron-black-top" style="margin-bottom: 75px;">
     <div class="container">
       <h1 class="display-4 h1-margin-top h1-margin-bottom">AI analyst for due diligence</h1>
-      <p class="lead">Welcome to my personal space where I build and scale AI using Deep Learning, Language Models, and GPTs. Here, I share my work and explore AI topics that I find interesting.</p>
-      <p>This site is a composite of several AI applications and a variety of HTML-based posts. Each of my AI applications is architected as a microservice, functioning independently while also forming part of an integrated ecosystem.</p>
-      <p>The front end uses Flask, a lightweight WSGI web application framework, along with the combination of HTML, CSS, and JavaScript to provide intuitive and responsive UI. Flask's ease of use and flexibility is ideal for my purposes.</p>
-      <p>My platform is hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</p>
-      <p>The source code that drives my platform resides across multiple repositories on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. If you're interested in delving deeper into the mechanics behind the services you see here, you're welcome to explore the GitHub repositories to understand my codebase further.</p>
+      <p class="lead">Welcome to the AI analyst for due diligence demo. In 1-2 years (if not much earlier), I expect everyone will run personalized AI assistants and image/video/music generator models either directly, or indirectly via other applications and tools, in their browser and smartphone. Imho, this will lead to profound change in work and personal behaviors: you won't need to use search, nor workflow queues; and in your personal life you won't need to book flights or restaurants, nor go to shopping sites yourself. Personalized AI assistants will do this for you.</p>
+      <p>There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat. Fine-tuning an open-source LLM, such as Meta's LLaMA or Stanford's Alpaca, is a great way to tailor these models to suit specific business requirements (credit risk, collateral management, to name just two) and mitigate certain risks, so I'm going to fine-tune a 13B LLaMA and apply it to my favorite problem, volatility (i.e., risk) prediction, in order to take a deeper look.</p>
+      <p>In this demo I use various approaches to leveraging pretrained LLMs for novel tasks, including in-context learning, finetuning, parameter-efficient finetuning, quantization, and reinforcement learning with human feedback. These approaches offer different ways to optimize model performance while minimizing computational costs.</p>
     </div>
   </div>
+
+  <!-- BUILDING A GPT -->
+  <!-- Access via https://johncollins.ai/#building-a-gpt -->
+  <section id="building-a-gpt" class="container-fluid bg-black py-5">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h2 class="text-center text-blue my-4">User guide</h2>
+        <div class="container">
+          <div class="card-group card-spacer">
+            <div class="card bg-black border border-secondary">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img style="margin-bottom: 15px;" class="card-img-top img-responsive" src="static/images/greg-userguide.png" alt="Building and training a GPT">
+                  <div>
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+                <div class="col-md-7 d-flex flex-column justify-content-between">
+                  <div class="card-body">
+                    <h4 class="text-white">How to use your AI analyst for due diligence</h4>
+                    <p class="card-text">This AI assistant is a composite of several AI applications and a variety of HTML and JavaScript-based React components. Each of the AI applications is architected as a microservice, functioning independently while also forming part of an extensible integrated ecosystem.</p>
+                    <ul>
+                      <li>The front end uses React for routing, state management, AJAX requests, and UI to provide intuitive and responsive UI. A Flask app serves as an API to the React frontend.</li>
+                      <li>Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens (JWT) provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</li>
+                      <li>The AI assistant is currently hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</li>
+                      <li>The source code that drives this demo resides across multiple repositories on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. There are no black boxes: If you're interested in delving deeper into the mechanics behind the services you see here, you're welcome to explore the GitHub repositories to understand the codebase further.</li>
+                    </ul>
+                    <a href="{{ url_for('greguserguide') }}" target="_blank" class="card-link">Continue reading ...</a>
+                    <p class="card-text"><small class="text-muted">Image prompt: Fine-tuning a fluorescent model whilst bathed in neon. Model: SDXL</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="bg-light-grey border border-secondary py-5">
     <div class="container">
       <div class="content-wrapper">
-        <h2 class="text-center my-4 text-blue">User guide</h2>
+        <h2 class="text-center my-4 text-blue">Demo</h2>
         <div class="container">
           <div class="card-group card-group card-spacer">
             <div class="card bg-white">
@@ -110,11 +146,15 @@
                   <img class="card-img-top" class="img-responsive" src="static/images/greg-userguide.png" alt="Card image cap">
                 </div>
                 <div class="col-md-7">
-                  <div class="card-body">
+                  <div class="card-body text-black">
                     <h4 class="text-black">How to use your AI analyst for due diligence</h4>
-                    <p class="card-text text-black">Have you ever wondered why the LLM you are using, say ChatGPT or Claude, provides a lot of additional information that you are not necessarily looking for and why certain other apps that use the same underlying LLM/GPT models provide more targeted responses? One way we obtain more specific answers from our models is through "prompt engineering".</p>
-                    <p class="card-text text-black">In this post, I talk about prompt engineering, share insights from my experience, and describe some commonly used approaches.</p>
-                    <p class="card-text text-black">Prompt engineering involves a deep understanding of the model's capabilities, idiosyncrasies, and limitations, making it a blend of both science and art. Implementing apps that use prompt engineering can be technically challenging, so it requires coding and deployment skills too.</p>
+                    <p class="card-text">This AI assistant is a composite of several AI applications and a variety of HTML and JavaScript-based React components. Each of the AI applications is architected as a microservice, functioning independently while also forming part of an extensible integrated ecosystem.</p>
+                    <ul>
+                      <li>The front end uses React for routing, state management, AJAX requests, and UI to provide intuitive and responsive UI. A Flask app serves as an API to the React frontend.</li>
+                      <li>Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens (JWT) provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</li>
+                      <li>The AI assistant is currently hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</li>
+                      <li>The source code that drives this demo resides across multiple repositories on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. There are no black boxes: If you're interested in delving deeper into the mechanics behind the services you see here, you're welcome to explore the GitHub repositories to understand the codebase further.</li>
+                    </ul>
                     <a href="{{ url_for('greguserguide') }}" target="_blank" class="card-link">Continue reading ...</a>
                     <p class="card-text"><small class="text-muted">Image prompt: Fine-tuning a fluorescent model whilst bathed in neon. Model: SDXL</small></p>
                   </div>
@@ -124,7 +164,7 @@
           </div>
         </div>
         <p></p> <!-- Spacer -->
-        <p class="text-center text-black" style="background-color: #F8F8F8; padding: 10px; margin: 20px 0;">I built the AI chatbot below to show how prompt engineering alters a model's response. The same language model is prompted with the company name. On the left, the prompt is passed directly to the model, while on the right, it is engineered to obtain a more targeted response.</p>
+        <p class="text-center text-black" style="background-color: #F8F8F8; padding: 10px; margin: 20px 0;">Below I show how the AI due diligence assistance can be easily incorporated into day to day work. Here it is an embedded microservice in the webpage, but we can just as easily install the AI assistant as a Chrome extension or a mobile application.</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe id="predefined-question" class="embed-responsive-item" src="https://analyst-gpt.ai/" allowfullscreen></iframe>
         </div>
