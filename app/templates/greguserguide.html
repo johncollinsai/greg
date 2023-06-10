@@ -221,7 +221,7 @@
 <!-- Parameter-Efficient Finetuning -->
 <div class="container">
   <h2 class="margin-top-custom text-white">Parameter-Efficient Finetuning</h2>
-  <p>I use certain Parameter-Efficient Finetuning Techniques (PEFT). These help to optimize the LLM performance while minimizing computational and resource requirements. These techniques introduce a small number of additional parameters for finetuning, reducing the need to train the entire model. I have tried several approaches, including prefix tuning, adapters, and Low-RAnk (LoRA) adaptation modify multiple layers, yielding better predictive performance at a low cost. PEFT is particularly relevant when working with larger models that strain GPU memory capacity.</p>
+  <p>I use certain Parameter-Efficient Finetuning Techniques (PEFT). These help to optimize the LLM performance while minimizing computational and resource requirements. These techniques introduce a small number of additional parameters for finetuning, reducing the need to train the entire model. I have tried several approaches, including prefix tuning, adapters, and Low-RAnk (LoRA) adaptation to modify multiple layers. PEFT is particularly relevant when working with larger models that strain GPU memory capacity. For the record, all work related to this demo was done on single NVIDIA RTX 3090, running on a Pytorch-Tensorflow-CUDA-cuDNN-NVIDIA Lambda stack.</p>
 </div>
 
 <!-- Quantization -->
@@ -233,12 +233,11 @@
 <!-- Set up -->
 <div class="container">
   <h2 class="margin-top-custom text-white">Setup</h2>
-  <p>The front end uses React for routing, state management, AJAX requests, and UI. A Flask app serves as an API to the React frontend.</p>
-  <p>Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</p>
+  <p>The front end uses React for routing, state management, AJAX requests, and UI. A Flask app serves as an API to the React frontend. +Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</p>
   <p>I use various approaches to leveraging closed and pretrained LLMs, including in-context learning, finetuning, parameter-efficient finetuning, and quantization. I also use several ways to engineer prompts to get responses from models that best fit the specific requirement of due diligence. Few-shot approaches provide the model with a handful of examples to guide its output. An instruction element focuses on the task definition and influences the model's output through specificity, clarity, and context.</p>
   <p>Languages used for this demo include Python, JavaScript, HTML, CSS, and Shell.</p>
   <p>Several libraries are used for this demo, including React, Flask, PyTorch, Tensorflow, openai, and Transformers.</p> 
-  <p>My setup includes Pytorch, Tensorflow, CUDA, cuDNN, and NVIDIA on a Lambda stack. I use GitHub, Copilot, and VS Code.</p>
+  <p>I work on Ubuntu 20.04 using a single NVIDIA RTX 3090 running on a Pytorch-Tensorflow-CUDA-cuDNN-NVIDIA Lambda stack. My dev is GitHub-Copilot-VS Code.</p>
   <p>Several services are used for this demo, including Kubernetes Engine, Cloud DNS, Load Balancing, IAM, Logging, Monitoring, Error Reporting, Debugger, Security Scanner, Web Security Scanner, Secret Manager, Key Management Service, Build, and Artifact Registry.</p>
   <p>Docker is used for containerization.</p>
   <p>The AI assistant is currently hosted via Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes.</p>
@@ -247,9 +246,9 @@
 <!-- Additional reading -->
 <div class="container">
   <h2 class="margin-top-custom text-purple">Additional reading</h2>
-  <p>John Collins (2023). Personal website with several posts that might be useful, including articles on building and fine-tuning LLMs and GPTs, and prompt engineering. <a href="https://johncollins.ai" target-"_blank">johncollins.ai</a>.</p>
-  <p>Lilian Weng (2023). Prompt Engineering. <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/" target-"_blank">Lil'Log</a>.</p>
-  <p>Wei, J., et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. <a href="https://arxiv.org/abs/2201.11903" target-"_blank">arXiv:2201.11903</a>.</p>
+  <p>John Collins (2023). Personal website with several posts that might be useful, including articles on building and fine-tuning LLMs and GPTs, and prompt engineering. <a href="https://johncollins.ai" target="_blank">johncollins.ai</a>.</p>
+  <p>Lilian Weng (2023). Prompt Engineering. <a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/" target="_blank">Lil'Log</a>.</p>
+  <p>Wei, J., et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. <a href="https://arxiv.org/abs/2201.11903" target="_blank">arXiv:2201.11903</a>.</p>
 </div>
 
 <!-- Scripts -->
@@ -261,7 +260,7 @@
 <div class="container-fluid bg-black py-3">
   <div class="row">
     <div class="col text-center text-white">
-      <p>&copy; 2023</p>
+      <p>Greg Hallahan demo</p>
     </div>
   </div>
 </div>
