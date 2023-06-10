@@ -87,17 +87,15 @@
     </div>
   </nav>
 
-  <div class="jumbotron jumbotron-fluid jumbotron-black-top" style="margin-bottom: 75px;">
+  <div class="jumbotron jumbotron-fluid jumbotron-black-top" style="margin-bottom: 10px;">
     <div class="container">
       <h1 class="display-4 h1-margin-top h1-margin-bottom">AI analyst for due diligence</h1>
-      <p class="lead">Welcome to the AI analyst for due diligence demo. In 1-2 years (if not much earlier), I expect everyone will run personalized AI assistants and image/video/music generator models either directly, or indirectly via other applications and tools, in their browser and smartphone. Imho, this will lead to profound change in work and personal behaviors: you won't need to use search, nor workflow queues; and in your personal life you won't need to book flights or restaurants, nor go to shopping sites yourself. Personalized AI assistants will do this for you.</p>
-      <p>There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat. Fine-tuning an open-source LLM, such as Meta's LLaMA or Stanford's Alpaca, is a great way to tailor these models to suit specific business requirements (credit risk, collateral management, to name just two) and mitigate certain risks, so I'm going to fine-tune a 13B LLaMA and apply it to my favorite problem, volatility (i.e., risk) prediction, in order to take a deeper look.</p>
-      <p>In this demo I use various approaches to leveraging pretrained LLMs for novel tasks, including in-context learning, finetuning, parameter-efficient finetuning, quantization, and reinforcement learning with human feedback. These approaches offer different ways to optimize model performance while minimizing computational costs.</p>
+      <p class="lead text-purple">Welcome to the AI analyst for due diligence demo. In 1-2 years (if not much earlier), I expect everyone will run personalized AI assistants and image/video/music generator models either directly, or indirectly via other applications and tools, in their browser and smartphone. Imho, this will lead to profound change in work behaviours: you won't need to use search, nor workflow queues; and on your desktop Microsoft's <a href="https://www.microsoft.com/en-us/research/project/prometheus-microsoft-research/" target-"_blank">Prometheus</a> model, which was built with the help of <a href="https://openai.com/" target-"_blank">OpenAI</a>, has already transformed web searches</a> and is currently being applied to Powerpoint, Excel, and Word. You won't need to create slides, AI assistants will do this for you. There is always risk associated with new technology adoption and AI is no different. It is necessary to embrace AI in order to understand the risks and how to mitigate them. Sitting back and waiting simply means missing the boat.</p>
+      <p>In this demo I use different AI methods, both open and closed. Closed AI involves using models like <a href="https://openai.com/research/gpt-4" target-"_blank">GPT4</a>, OpenAI's current state-of-the-art Large Language Model (LLM) Fine-tuning an open-source LLM, such as <a href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai/" target-"_blank">Meta's LLaMA</a> or <a href="https://crfm.stanford.edu/2023/03/13/alpaca.html" target-"_blank">Stanford's Alpaca</a>, is a great way to tailor these models to suit specific business requirements, such as due diligence, and mitigate certain risks, so one approach involves fine-tuning a 13 billion parameter LLaMA. I want to emphasize how fast AI is moving: none of these models existed 4 months ago and I built this demo in 2 weeks whilst on holiday in Langkawi. It's safe to assume our competitors are moving and inertia on our part represents imho an existential risk for certain parts of our business.</p>
     </div>
   </div>
 
-  <!-- BUILDING A GPT -->
-  <!-- Access via https://johncollins.ai/#building-a-gpt -->
+  <!-- User guide -->
   <section id="building-a-gpt" class="container-fluid bg-black py-5">
     <div class="row justify-content-center">
       <div class="col-12">
@@ -108,20 +106,13 @@
               <div class="row g-0">
                 <div class="col-md-5">
                   <img style="margin-bottom: 15px;" class="card-img-top img-responsive" src="static/images/greg-userguide.png" alt="Building and training a GPT">
-                  <div>
-                    <canvas id="myChart"></canvas>
-                  </div>
                 </div>
                 <div class="col-md-7 d-flex flex-column justify-content-between">
                   <div class="card-body">
-                    <h4 class="text-white">How to use your AI analyst for due diligence</h4>
+                    <!-- <h4 class="text-white">How to use your AI analyst for due diligence</h4> -->
                     <p class="card-text">This AI assistant is a composite of several AI applications and a variety of HTML and JavaScript-based React components. Each of the AI applications is architected as a microservice, functioning independently while also forming part of an extensible integrated ecosystem.</p>
-                    <ul>
-                      <li>The front end uses React for routing, state management, AJAX requests, and UI to provide intuitive and responsive UI. A Flask app serves as an API to the React frontend.</li>
-                      <li>Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens (JWT) provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</li>
-                      <li>The AI assistant is currently hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</li>
-                      <li>The source code that drives this demo resides across multiple repositories on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. There are no black boxes: If you're interested in delving deeper into the mechanics behind the services you see here, you're welcome to explore the GitHub repositories to understand the codebase further.</li>
-                    </ul>
+                    <p>The front end uses React for routing, state management, AJAX requests, and UI. A Flask app serves as an API to the React frontend. Best practices are strictly followed for both client-side (React) and server-side (Flask) security.</p>
+                    <p>I use various approaches to leveraging closed and pretrained LLMs, including in-context learning, finetuning, parameter-efficient finetuning, and quantization. I also use several ways to engineer prompts to get responses from models that best fit the specific requirement of due diligence. Few-shot approaches provide the model with a handful of examples to guide its output. An instruction element focuses on the task definition and influences the model's output through specificity, clarity, and context.</p>
                     <a href="{{ url_for('greguserguide') }}" target="_blank" class="card-link">Continue reading ...</a>
                     <p class="card-text"><small class="text-muted">Image prompt: Fine-tuning a fluorescent model whilst bathed in neon. Model: SDXL</small></p>
                   </div>
@@ -138,33 +129,8 @@
     <div class="container">
       <div class="content-wrapper">
         <h2 class="text-center my-4 text-blue">Demo</h2>
-        <div class="container">
-          <div class="card-group card-group card-spacer">
-            <div class="card bg-white">
-              <div class="row g-0">
-                <div class="col-md-5 d-flex align-items-center">
-                  <img class="card-img-top" class="img-responsive" src="static/images/greg-userguide.png" alt="Card image cap">
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body text-black">
-                    <h4 class="text-black">How to use your AI analyst for due diligence</h4>
-                    <p class="card-text">This AI assistant is a composite of several AI applications and a variety of HTML and JavaScript-based React components. Each of the AI applications is architected as a microservice, functioning independently while also forming part of an extensible integrated ecosystem.</p>
-                    <ul>
-                      <li>The front end uses React for routing, state management, AJAX requests, and UI to provide intuitive and responsive UI. A Flask app serves as an API to the React frontend.</li>
-                      <li>Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens (JWT) provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</li>
-                      <li>The AI assistant is currently hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</li>
-                      <li>The source code that drives this demo resides across multiple repositories on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>. This multi-repo strategy facilitates modular development and efficient version control. There are no black boxes: If you're interested in delving deeper into the mechanics behind the services you see here, you're welcome to explore the GitHub repositories to understand the codebase further.</li>
-                    </ul>
-                    <a href="{{ url_for('greguserguide') }}" target="_blank" class="card-link">Continue reading ...</a>
-                    <p class="card-text"><small class="text-muted">Image prompt: Fine-tuning a fluorescent model whilst bathed in neon. Model: SDXL</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <p></p> <!-- Spacer -->
-        <p class="text-center text-black" style="background-color: #F8F8F8; padding: 10px; margin: 20px 0;">Below I show how the AI due diligence assistance can be easily incorporated into day to day work. Here it is an embedded microservice in the webpage, but we can just as easily install the AI assistant as a Chrome extension or a mobile application.</p>
+        <p class="text-center text-black" style="background-color: #F8F8F8; padding: 10px; margin: 20px 0;">Below I show how the AI due diligence assistant is easily incorporated into day to day work. Here it is an embedded microservice in the webpage, but we can just as easily install the AI assistant as a Chrome extension or a mobile application. Enter a company name, choose an AI-Analyst, wait for up to 3 minutes, copy and paste the response into a report and/or send it to yourself via email.</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe id="predefined-question" class="embed-responsive-item" src="https://analyst-gpt.ai/" allowfullscreen></iframe>
         </div>
@@ -172,12 +138,18 @@
     </div>
   </section>
 
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Include JavaScript file -->
+  <script src="/static/js/scripts.js" defer></script>
 
   <!-- Footer -->
   <div class="container-fluid bg-black py-3">
     <div class="row">
       <div class="col text-center text-white">
-        <p>&copy; 2023</p>
+        <p>Greg Hallahan demo</p>
       </div>
     </div>
   </div>

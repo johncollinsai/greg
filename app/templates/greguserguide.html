@@ -182,15 +182,18 @@
   <p>Reinforcement Learning with Human Feedback (RLHF) combines supervised learning and reinforcement learning to finetune pretrained LLMs. Humans provide feedback in the form of ranking or rating different model outputs, which is then used to train a reward model. The reward model guides the adaptation of the pretrained LLM to human preferences using reinforcement learning algorithms such as proximal policy optimization. This approach addresses the challenge of obtaining real-time feedback from humans, enhancing model performance in a more efficient manner.</p>
 </div>
 
-<!-- Conclusion -->
+<!-- Technical -->
 <div class="container">
-  <h2 class="margin-top-custom text-white">Conclusion</h2>
-  <p>LLMs increasingly dominate artificial intelligence, and there is a growing need for efficient and effective utilization strategies. In this post I have explored various approaches to leveraging pretrained LLMs for new tasks, including in-context learning, finetuning, parameter-efficient finetuning, quantization, and reinforcement learning with human feedback. These approaches offer valuable alternatives to finetuning all layers of a pretrained LLM, enabling users to optimize model performance while minimizing computational costs.</p>
+  <h2 class="margin-top-custom text-white">Technical</h2>
+  <p>The front end uses React for routing, state management, AJAX requests, and UI. A Flask app serves as an API to the React frontend.</p>
+  <p>Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</p>
+  <p>I use various approaches to leveraging closed and pretrained LLMs, including in-context learning, finetuning, parameter-efficient finetuning, and quantization. I also use several ways to engineer prompts to get responses from models that best fit the specific requirement of due diligence. Few-shot approaches provide the model with a handful of examples to guide its output. An instruction element focuses on the task definition and influences the model's output through specificity, clarity, and context.</p>
+  <p>The AI assistant is currently hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</p>
 </div>
 
 <!-- Next steps -->
 <div class="container">
-  <h2 class="margin-top-custom text-white">Next steps</h2>
+  <h2 class="margin-top-custom text-purple">Next steps</h2>
     <p>I will train an open-source LLM, an implementation of LLaMA probably, on trades data and explore various risk management activities. In the set up I envisage, the LLM will replace the typical risk management stack that comprises ETL-database-analytics-visualisation.</p>
 </div>
 
