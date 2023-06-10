@@ -86,35 +86,26 @@
 <!-- Title -->
 <div class="jumbotron jumbotron-fluid jumbotron-black-top" style="margin-bottom: 75px;">
   <div class="container">
-    <h1 class="display-4 text-center h1-margin-top h1-margin-bottom text-blue">AI analyst for due diligence user guide </h1>
+    <h1 class="display-4 text-center h1-margin-top h1-margin-bottom text-blue">User Guide </h1>
   </div>
 </div>
 
-<!-- TL;DR -->
+<!-- Quick start -->
 <div class="container">
-  <h2 class="margin-top-custom text-white">TL;DR</h2>
-  <p>LLMs increasingly dominate artificial intelligence. As always, I will present a specific example of fine-tuning a LLM to illustrate what I wish to say and provide full access to the source code on <a href="https://github.com/johncollinsai" target-"_blank">my GitHub</a>.  However, for now, I want to set the scene. In this post I set out various approaches to leveraging pretrained LLMs for new tasks, including in-context learning, finetuning, parameter-efficient finetuning, quantization, and reinforcement learning with human feedback. These approaches offer different ways to optimize model performance while minimizing computational costs.</p>
+  <h2 class="margin-top-custom text-white">Quick Start</h2>
   <ul>
-    <li>Finetuning all layers of a pretrained LLM remains the preferred approach for adapting models to new target tasks, but alternative strategies provide resource-efficient alternatives.</li>
-    <li>In-context learning allows for task-specific interactions without direct model access, while indexing enables LLMs to function as information retrieval systems.</li>
-    <li>Feature-based approaches offer effective means of adapting LLMs.</li>
-    <li>Parameter-efficient finetuning techniques optimize performance while minimizing computational costs, making them especially valuable for larger models.</li>
-    <li>Reinforcement learning with human feedback enhances LLM performance by incorporating human preferences through a combination of supervised and reinforcement learning methods.</li>
+    <li>Enter a company name.</li>
+    <li>Select 'Due Diligence' as your AI-Analyst. This is the default for this demo and the button should be green.</li>
+    <li>Wait for up to 2 minutes while the model does its work.</li>
+    <li>Copy and paste the response into a report and/or send it to yourself via email.</li>
   </ul>
-</div>
-
-<!-- Intro -->
-<div class="container">
-  <h2 class="margin-top-custom text-white">Introduction</h2>
-  <p>The growing significance of large language models (LLMs) in the field of artificial intelligence has led to an increasing need for efficient and effective utilization strategies. Two prominent methods for leveraging pretrained LLMs in new tasks are in-context learning and finetuning. In-context learning enables specific or novel tasks without further training by providing target examples through input prompts. On the other hand, finetuning involves adapting a pretrained LLM to a target task, and this post explores three conventional approaches to achieve this. Additionally, it delves into parameter-efficient finetuning techniques and reinforcement learning with human feedback as alternative strategies for optimizing LLM performance.</p>
 </div>
 
 <!-- promtengineering webapp -->
 <section class="bg-black py-5">
   <div class="container">
     <div class="content-wrapper">
-      <h2 class="text-center my-4 text-purple">AI analyst for due diligence</h2>
-      <p class="text-center text-light-grey">We can use the webapp below to see how prompt engineering alters a model's response. The same language model is prompted with the company name.  On the left the prompt is passed directly to the model, whilst on the right it is engineered to obtain a more targeted response.</p>
+      <p class="text-center text-purple">You can access the AI assistant below too, to save navigating back to the home page.</p>
       <p></p> <!-- empty paragraph for spacing -->
       <p></p> <!-- empty paragraph for spacing -->
       <div class="embed-responsive embed-responsive-16by9">
@@ -134,7 +125,7 @@
       <div class="col-md-10 d-flex align-items-stretch">
         <div class="card bg-transparent custom-card custom-border">
           <div class="card-body text-light">
-            <p>I built the AI chatbot opposite, which employs <a href="https://labs.openai.com/" target="_blank">OpenAI's GPT-4</a> language model to generate company-specific analyses. Select a report type (business, investigation, finance), input a valid company name, and the AI generates a tailored report. Notice the application of rigorous input validation and specific response boundaries, a cornerstone of responsible AI.</p>
+            <p>The AI assistant provides different analyst modalities: due diligence, business, investigation, finance. Input a valid company name, and the AI generates a tailored report. Notice the application of rigorous input validation and specific response boundaries, a cornerstone of responsible AI.</p>
             <p>Key principles of responsible AI implementation include:</p>
             <ul>
               <li><strong>Misuse Prevention:</strong> Input validation blocks harmful or inappropriate AI outputs and potential misuse.</li>
@@ -143,7 +134,7 @@
               <li><strong>Ethical Guidelines Adherence:</strong> Input validation and prompt engineering ensure respect for societal norms and ethical guidelines.</li>
               <li><strong>Biases Mitigation:</strong> Careful input validation and prompt engineering can control amplification of existing biases.</li>
             </ul>
-            <p>This AI chatbot therefore illustrates how input validation and prompt engineering are crucial in maintaining responsible, safe, and high-quality AI outputs.</p>
+            <p>This demo therefore illustrates how input validation, prompt engineering, and fine-tuning pretrained LLMs are crucial in maintaining responsible, safe, and high-quality AI outputs.</p>
           </div>
         </div>
       </div>
@@ -152,49 +143,105 @@
   </div>
 </section>
 
+<!-- Prompt engineering -->
+<div class="container">
+  <h2 class="margin-top-custom text-white">Prompt Engineering</h2>
+  <p>There are several ways in which I engineer the prompts to get responses from the models that best fit the specific analyst modalities. I use few-shot approaches to provide the model with examples to guide its output. I also use an instruction approach, which focuses on the task definition or command within the input prompt, influencing the model's output through its specificity, clarity, and context. Chain of Thought (CoT) is used to break down complex tasks into a series of simpler, linked prompts.</p>
+</div>
+
+<!-- Input validation -->
+<div class="container">
+  <h2 class="margin-top-custom text-white">Input Validation</h2>
+  <p>Only valid company names are accepted as inputs. The AI assistant validates the company name you enter by checking that it exists in a recognized corporate database or is listed on a stock exchange. It currently checks:
+    <ul>
+      <li>The New York Stock Exchange NYSE</li>
+      <li>The NASDAQ</li>
+      <li>The London Stock Exchange LSE</li>
+      <li>The Tokyo Stock Exchange TSE</li>
+      <li>The Shanghai Stock Exchange SSE</li>
+      <li>The Hong Kong Stock Exchange HKSE</li>
+      <li>The Euronext</li>
+      <li>The Shenzhen Stock Exchange SZSE</li>
+      <li>The Toronto Stock Exchange TSX</li>
+      <li>The Bombay Stock Exchange BSE</li>
+      <li>The National Stock Exchange of India NSE</li>
+      <li>The SIX Swiss Exchange SIX</li>
+      <li>The Korea Exchange KRX</li>
+      <li>The Australian Securities Exchange ASX</li>
+      <li>The JSE Limited JSE</li>
+      <li>The Deutsche Börse XETRA</li>
+      <li>The BME Spanish Exchanges BME</li>
+      <li>The B3 B3</li>
+      <li>The Stock Exchange of Thailand SET</li>
+      <li>The Indonesia Stock Exchange IDX</li>
+      <li>The Bursa Malaysia BHD Bursa Malaysia</li>
+      <li>The Saudi Stock Exchange Tadawul</li>
+      <li>The Tel Aviv Stock Exchange TASE</li>
+      <li>The Singapore Exchange SGX</li>
+      <li>The Philippine Stock Exchange PSE</li>
+      <li>Or that it exists in a recognized corporate database:</li>
+      <ul>
+          <li>The S&amp;P Global Market Intelligence</li>
+          <li>The Bureau van Dijk</li>
+          <li>The Dun &amp; Bradstreet</li>
+          <li>The Experian</li>
+          <li>The Equifax</li>
+          <li>The TransUnion</li>
+          <li>The Moody's Analytics</li>
+          <li>The Fitch Group</li>
+          <li>The A.M. Best</li>
+          <li>The DBRS Morningstar</li>
+          <li>The RapidRatings</li>
+          <li>The S&amp;P Global Ratings</li>
+          <li>The Fitch Ratings</li>
+          <li>The Moody's Investors Service</li>
+          <li>The Kroll Bond Rating Agency</li>
+      </ul>
+      <li><a href="https://www.ciregistry.ky/">https://www.ciregistry.ky/</a></li>
+      <li><a href="https://www.systemday.com/">https://www.systemday.com/</a></li>
+      <li><a href="https://www.caymanresident.com/">https://www.caymanresident.com/</a></li>
+      <li><a href="https://web.caymanchamber.ky/">https://web.caymanchamber.ky/</a></li>
+      <li><a href="https://www.campaign.cima.ky/">https://www.campaign.cima.ky/</a></li>
+  </ul>
+  </p>
+</div>
+
 <!-- In-Context Learning and Indexing -->
 <div class="container">
-  <h2 class="margin-top-custom text-white">In-Context Learning and Indexing</h2>
-  <p>In-context learning allows users to leverage pretrained LLMs for specific tasks without requiring direct access to the model. By providing a few task-related examples in the input prompt, the LLM can generate appropriate responses. In situations where direct model access is limited, such as through an API, in-context learning is the obvious approach. An extension of this concept is hard prompt tuning, which involves modifying input words to improve output quality. Alternatively, soft prompt tuning offers a differentiable version of prompt modification.</p>
+  <h2 class="margin-top-custom text-white">In-Context Learning</h2>
+  <p>I use in-context learning to leverage pretrained LLMs for specific tasks related to due diligence without requiring direct access to the model. By providing a few task-related examples in the input prompt, the LLM I call can generate appropriate responses. As an extension of this concept I also use hard prompt tuning, which involves modifying input words to improve output quality.</p>
 </div>
 
 <!-- Finetuning Approaches -->
 <div class="container">
   <h2 class="margin-top-custom text-white">Finetuning Approaches</h2>
-  <p>Finetuning enables adaptation of pretrained LLMs to target tasks by updating model parameters. The feature-based approach involves extracting output embeddings from the pretrained LLM, using them as input features for training a separate classification model. This approach, commonly used for embedding-focused models like BERT, can also be applied to generative models like GPT. A popular variation of the feature-based approach focuses on training only the newly added output layers while keeping the pretrained LLM parameters frozen. An alternative approach entails updating all layers of the pretrained LLM to achieve superior modeling performance. Although it incurs higher computational costs, it generally outperforms. The choice between the different approaches depends on the target task and domain similarity to the pretrained dataset.</p>
+  <p>Finetuning enables adaptation of pretrained LLMs to target tasks by updating model parameters. The feature-based approach involves extracting output embeddings from the pretrained LLM, using them as input features for training a separate classification model. This approach is undoubtedly the best way forward for full industrialization of a due diligence AI assistant. A popular variation of the feature-based approach focuses on training only the newly added output layers while keeping the pretrained LLM parameters frozen. This would work well for us. An alternative approach entails updating all layers of the pretrained LLM to achieve superior modeling performance. This would work even better but would cost a lot of money.</p>
 </div>
 
 <!-- Parameter-Efficient Finetuning -->
 <div class="container">
   <h2 class="margin-top-custom text-white">Parameter-Efficient Finetuning</h2>
-  <p>Parameter-efficient finetuning techniques (PEFT) are valuable for optimizing LLM performance while minimizing computational and resource requirements. These techniques introduce a small number of additional parameters for finetuning, reducing the need to train the entire model. Approaches such as prefix tuning, adapters, and low-rank adaptation modify multiple layers, yielding better predictive performance at a low cost. PEFT is particularly relevant when working with larger models that strain GPU memory capacity.</p>
+  <p>I use certain Parameter-Efficient Finetuning Techniques (PEFT). These help to optimize the LLM performance while minimizing computational and resource requirements. These techniques introduce a small number of additional parameters for finetuning, reducing the need to train the entire model. I have tried several approaches, including prefix tuning, adapters, and Low-RAnk (LoRA) adaptation modify multiple layers, yielding better predictive performance at a low cost. PEFT is particularly relevant when working with larger models that strain GPU memory capacity.</p>
 </div>
 
 <!-- Quantization -->
 <div class="container">
   <h2 class="margin-top-custom text-white">Quantization</h2>
-  <p>A quantized LLM is a compressed version of the original LLM that uses lower-precision data types for weights and activations. There are several approaches to model quantization for LLMs, including post-training quantization, quantization-aware training, and hybrid quantization. Post-training quantization involves training the LLM using floating-point data types and then quantizing the weights and activations to lower-precision data types post-training. Quantization-aware training involves quantizing the LLM during training, allowing the model to adapt to the reduced precision during training. Hybrid quantization combines both post-training quantization and quantization-aware training, allowing the LLM to adapt to lower-precision data types while also achieving good accuracy. Quantization can significantly improve the efficiency of LLM inference, enabling better real-time inference on large-scale datasets.</p>
+  <p>A quantized LLM is a compressed version of the original LLM that uses lower-precision data types for weights and activations. There are several approaches to model quantization for LLMs, including post-training quantization, quantization-aware training, and hybrid quantization. Post-training quantization involves training the LLM using floating-point data types and then quantizing the weights and activations to lower-precision data types post-training. Quantization-aware training involves quantizing the LLM during training, allowing the model to adapt to the reduced precision during training. Hybrid quantization combines both post-training quantization and quantization-aware training, allowing the LLM to adapt to lower-precision data types while also achieving good accuracy. I have found that quantization can significantly improve the efficiency of LLM inference, enabling better real-time inference on large-scale datasets.</p>
 </div>
 
-<!-- Reinforcement Learning with Human Feedback -->
+<!-- Set up -->
 <div class="container">
-  <h2 class="margin-top-custom text-white">Reinforcement Learning with Human Feedback</h2>
-  <p>Reinforcement Learning with Human Feedback (RLHF) combines supervised learning and reinforcement learning to finetune pretrained LLMs. Humans provide feedback in the form of ranking or rating different model outputs, which is then used to train a reward model. The reward model guides the adaptation of the pretrained LLM to human preferences using reinforcement learning algorithms such as proximal policy optimization. This approach addresses the challenge of obtaining real-time feedback from humans, enhancing model performance in a more efficient manner.</p>
-</div>
-
-<!-- Technical -->
-<div class="container">
-  <h2 class="margin-top-custom text-white">Technical</h2>
+  <h2 class="margin-top-custom text-white">Setup</h2>
   <p>The front end uses React for routing, state management, AJAX requests, and UI. A Flask app serves as an API to the React frontend.</p>
   <p>Best practices are strictly followed for both client-side (React) and server-side (Flask) security. JSON Web Tokens provide robust API authentication. Rate limiting and input validation protect not only against SQL injection, cross-site scripting, and other similar vulnerabilities, but also provide rigorous prompt boundaries, a cornerstone of responsible AI.</p>
   <p>I use various approaches to leveraging closed and pretrained LLMs, including in-context learning, finetuning, parameter-efficient finetuning, and quantization. I also use several ways to engineer prompts to get responses from models that best fit the specific requirement of due diligence. Few-shot approaches provide the model with a handful of examples to guide its output. An instruction element focuses on the task definition and influences the model's output through specificity, clarity, and context.</p>
-  <p>The AI assistant is currently hosted on Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes (K8s) for managing the microservices, ensuring smooth deployment, scaling, and networking.</p>
-</div>
-
-<!-- Next steps -->
-<div class="container">
-  <h2 class="margin-top-custom text-purple">Next steps</h2>
-    <p>I will train an open-source LLM, an implementation of LLaMA probably, on trades data and explore various risk management activities. In the set up I envisage, the LLM will replace the typical risk management stack that comprises ETL-database-analytics-visualisation.</p>
+  <p>Languages used for this demo include Python, JavaScript, HTML, CSS, and Shell.</p>
+  <p>Several libraries are used for this demo, including React, Flask, PyTorch, Tensorflow, openai, and Transformers.</p> 
+  <p>My setup includes Pytorch, Tensorflow, CUDA, cuDNN, and NVIDIA on a Lambda stack. I use GitHub, Copilot, and VS Code.</p>
+  <p>Several services are used for this demo, including Kubernetes Engine, Cloud DNS, Load Balancing, IAM, Logging, Monitoring, Error Reporting, Debugger, Security Scanner, Web Security Scanner, Secret Manager, Key Management Service, Build, and Artifact Registry.</p>
+  <p>Docker is used for containerization.</p>
+  <p>The AI assistant is currently hosted via Google Cloud, utilizing Nginx as a web server and proxy, and orchestrated through Kubernetes.</p>
 </div>
 
 <!-- Additional reading -->
